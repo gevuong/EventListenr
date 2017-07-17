@@ -28,7 +28,7 @@ has_many :tickets
 | organizer_id           | integer    | not null, foreign key (references users), indexed
 | title             | string     | not null, indexed
 | venue             | string     | not null
-| address           | string     | not null
+| location          | string     | not null
 | date              | date       | not null, indexed
 | time              | time       | not null
 | description       | text       |
