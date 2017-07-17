@@ -1,8 +1,8 @@
 # README
 
-EventListener
+EventListenr
 
-EventListener is a web application inspired by EventBrite built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
+EventListenr is a web application inspired by EventBrite built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
   1. New account creation, login, and guest/demo login
   2. A production README, replacing this README (NB: check out the  sample production README -- you'll write this later)
