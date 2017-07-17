@@ -5,15 +5,14 @@ Schema Information
 | column name     | data type  | details  
 |-----------------|------------|------------------------
 | id              | integer    | not null, primary key
-| username        | string     | not null, unique  
+| username        | string     | not null, indexed, unique  
 | email           | string     | not null, unique
 | password_digest | string     | not null
 | session_token   | string     | not null, unique
 
 has_many :events
 has_many :bookmarks
-has_many :events
-has_many :registrations
+has_many :tickets
 
 ## bookmarks
 | column name     | data type  | details  
@@ -26,11 +25,10 @@ has_many :registrations
 | column name       | data type  | details  
 |-------------------|------------|------------------------
 | id                | integer    | not null, primary key
-| host_id           | integer    | not null, foreign key (references users), indexed
+| organizer_id           | integer    | not null, foreign key (references users), indexed
 | title             | string     | not null, indexed
 | venue             | string     | not null
 | address           | string     | not null
-| city_state_zip    | string     | not null
 | date              | date       | not null, indexed
 | time              | time       | not null
 | description       | text       |
@@ -47,15 +45,15 @@ has_many :registrations
 | user_id         | integer    | not null, foreign key (references users), indexed
 
 
-## categories
+## categories (Should be a tag??)
 | column name     | data type  | details  
 |-----------------|------------|------------------------
+| id              | integer    | not null, primary key
 | name            | string     | not null, unique
 
 ## event_categories (bridge column to connect categories to users)
 | column name     | data type  | details  
 |-----------------|------------|------------------------
+| id              | integer    | not null, primary key
 | category_id     | integer    | not null, primary key
 | event_id        | integer    | not null, foreign key (references event), indexed
-| name            | string     | not null
- (event_id & category_id indexed together )
