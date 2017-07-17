@@ -4,11 +4,12 @@
     currentUser: {
       id: 1,
       username: 'gevuong',
+      password: "fruitS123"
     }
   },
-  errors: [],
 
   events: {
+
     1: {
       id: 1,
       organizer_id: 1,
@@ -22,6 +23,7 @@
         'Performance'
         ]
       },
+
     2: {
       id: 2,
       organizer_id: 1,
@@ -36,6 +38,7 @@
         ]
       }
     },
+
   eventDetail: {
     id: 1,
     organizer_id: 1,
@@ -53,6 +56,7 @@
       ]
   },
 
+// categories has many events and its own slice of state
   categories: {
     1: {
       events: 1
@@ -61,6 +65,7 @@
     name: 'Music'
   },
 
+// user has many events, bookmarks, and tickets
   user: {
     events: {
       1   //event_ids for user's registered events
