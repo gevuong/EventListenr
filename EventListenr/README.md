@@ -1,3 +1,5 @@
+#EventListenr
+
 [Trello Link](https://trello.com/b/WcxLln60/eventlistenr)
 
 [Heroku Link](https://eventlistenr.herokuapp.com/)
@@ -18,6 +20,13 @@ EventListenr is a web application inspired by EventBrite built using Ruby on Rai
   9. Bonus: Search
 
 
+## Design Docs
+* [View Wireframes][wireframes]
+* [React Components][components]
+* [API endpoints][api-endpoints]
+* [DB schema][schema]
+* [Sample State][sample-state]
+
 Feature Implementation Timeline:
 
 Phase 1: Backend setup & Frontend User Auth Setup (2 days)
@@ -25,7 +34,6 @@ Phase 1: Backend setup & Frontend User Auth Setup (2 days)
 Phase 2: Events (2 days)
 Users can create events
 Events can be created, deleted or edited through the API
-Drag and drop functionality for uploading images to events
 Events have many tickets
 Users can browse events
 Users can bookmark/unbookmark events through the API
