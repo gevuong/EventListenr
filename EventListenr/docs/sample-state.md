@@ -4,7 +4,10 @@
     currentUser: {
       id: 1,
       username: 'gevuong',
-      password: "fruitS123"
+      password: "fruitS123",
+      events: [4, 2, 7],
+      tickets: [3, 86, 5000000], // each ticket is going to have its own event_id.
+      bookmarks: [3, 6, 2]
     }
   },
 
@@ -18,10 +21,8 @@
       date: 'July 22, 2017',
       image: image_url,
       ticket_price: 30,
-      categories: [
-        'Music',
-        'Performance'
-        ]
+      ticket_quantity: 100,
+      category_id: [1, 2, 3]  
       },
 
     2: {
@@ -31,51 +32,23 @@
       location: 'Crissy Field',
       date: 'September 21, 2017',
       image: image_url,
-      ticket_price: 0
-      categories: [
-        'networking',
-        'Things To Do'
-        ]
+      ticket_price: 0,
+      ticket_quantity: 100,
+      category_id: [1, 2, 3]
       }
-    },
+  }
 
-  eventDetail: {
-    id: 1,
-    organizer_id: 1,
-    title: 'Reggae in the Bay',
-    location: 'Santa Clara County Fairgrounds',
-    date: 'July 22, 2017',
-    time: '11:00am',
-    description: 'All ages event',
-    image: image_url,
-    ticket_price: 30,
-    ticket_quantity: 1000,
-    categories: [
-      'Music',
-      'Performance'
-      ]
-  },
-
-// categories has many events and its own slice of state
-  categories: {
+  bookmarks: {
     1: {
-      events: 1
+      event_id: 1,
+      user_id: 1
     },
-    id: 1,
-    name: 'Music'
-  },
+  }
 
-// user has many events, bookmarks, and tickets
-  user: {
-    events: {
-      1   //event_ids for user's registered events
-    },
-    bookmarks: {
-      1, 2
-    },
-    tickets: {
-      1
-    }
+  errors: {
+    session: [],
+    events: [],
+    bookmarks: []
   }
 }
 ```

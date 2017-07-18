@@ -6,35 +6,38 @@
   Prefix | Verb | URI Pattern | Controller#Action
 - `root`   `GET`      `/`      `static_pages#root`
 
+
 # JSON API
 ## Users
-- `POST /api/users`
-- `PATCH /api/users`
+- `POST /api/users` - Sign Up
+- `PATCH /api/users` - Edit User Info
 
 ## Session
-- `POST /api/users`
-- `PATCH api/users`
+- `POST /api/users` `session#create`- Login
+- `DESTROY api/users/:id` `session#destroy`- Logout
 
 ## Events
-- `GET /api/events`
-- `POST /api/events`
-- `GET /api/events/:id`     
-- `PATCH /api/events/:id`
-- `DELETE /api/events/:id`
+- `GET /api/events`  `events#index` List all events
+- `POST /api/events`  `events#create;
+- "GET /api/events/:id"  `events#show`
+- `PATCH /api/events/:id` 'events#update';
+- `DELETE /api/events/:id` 'events#destroy';
 
-### Tickets
-- `GET /api/users/:id/tickets`
+## Tickets/Registrations
+NB: Does not require users/:id/tickets because current_user is stored in the backend.
+<!-- - `GET /api/tickets` tickets#       -->
 - `POST /api/events/:id/tickets`
-- `GET /api/users/:id/tickets/:id`
-- `DELETE /api/users/:id/tickets/:id`
+- `GET /api/tickets/:id`
+- `DELETE /api/tickets/:id`
 
-### Bookmarks
-- `GET /api/users/bookmarks`
-- `POST /api/users/:user_id/bookmarks`
-- `GET /api/users/bookmarks/:id`
-- `DELETE /api/users/bookmarks`
+## Bookmarks
+- `GET /api/events/:event_id/bookmarks`
+- `POST /api/events/:event_id/bookmarks`
+- `GET /api/bookmarks/:id       bookmarks#show`
+- `DELETE /api/bookmarks/:id    bookmarks#destroy`
 
-### Categories
+## Categories
 - `GET /api/categories`
-- `POST /api/events/:id/categories` (uses event id to make new association to an event)
-- `DELETE /api/categories/:id`
+- `POST /api/categories` (uses event id to make new association to an event)
+- `GET /api/categories/:id` show page for particular category 
+<!-- - `DELETE /api/categories/:id` -->

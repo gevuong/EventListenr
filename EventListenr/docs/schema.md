@@ -26,6 +26,7 @@ has_many :tickets
 |-------------------|------------|------------------------
 | id                | integer    | not null, primary key
 | organizer_id           | integer    | not null, foreign key (references users), indexed
+| category_id           | integer    | not null, foreign key (references users), indexed
 | title             | string     | not null, indexed
 | venue             | string     | not null
 | location          | string     | not null
@@ -45,7 +46,7 @@ has_many :tickets
 | user_id         | integer    | not null, foreign key (references users), indexed
 
 
-## categories (Should be a tag??)
+## categories
 | column name     | data type  | details  
 |-----------------|------------|------------------------
 | id              | integer    | not null, primary key
@@ -57,3 +58,4 @@ has_many :tickets
 | id              | integer    | not null, primary key
 | category_id     | integer    | not null, primary key
 | event_id        | integer    | not null, foreign key (references event), indexed
+| user_id        | integer    | not null, foreign key (references event), indexed

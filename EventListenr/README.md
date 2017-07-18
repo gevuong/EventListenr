@@ -1,4 +1,4 @@
-## EventListenr
+# EventListenr
 
 [Trello Link](https://trello.com/b/WcxLln60/eventlistenr)
 
@@ -53,7 +53,7 @@ Bookmarked events appear/disappear from Saved Events tab of User Dashboard upon 
 
 ### Bonus Features (TBD)
 Google Maps
-Interactive map showing the event's location on the event showpage
+Interactive map showing the event's location on the event show page
 Interactive map showing multiple events on search results page
 Search
 Autocomplete search feature allows users to search for events by category or by event name

@@ -1,7 +1,26 @@
 ## Component Hierarchy
 
+### Frontend Routes
+|Path   | Component   |
+|-------|-------------|
+| "/login" | "AuthFormContainer" |
+| "/sign-in" | "SignUp" |
+| "/" | "HomeContainer" |
+| "/events/:eventId" | "EventsShowContainer" |
+| "/user/events/" | "NewEventFormContainer" |
+| "/user/bookmarks/" | "BookmarkContainer" |
+| "/user/tickets" | "TicketContainer" |
+
 **AuthFormContainer**
 * AuthFormContainer
+
+**UserContainer**
+* TicketContainer
+* BookmarkContainer
+  * BookmarkDetails
+
+**UserDetailContainer**
+* UserDetail
 
 **HomeContainer**
 * Home
@@ -42,5 +61,9 @@
 **NewEventFormContainer**
 * NewEventForm
 
-**CategoriesContainer**
+**CategoriesIndexContainer**
 * CategoryIndex
+
+**CategoryDetailContainer**
+* CategoryDetail
+* EventIndexContainer

@@ -21,12 +21,12 @@ Phase 1: Backend setup & Frontend User Auth Setup (2 days)
 Phase 2: Events (2 days)
 Users can create events
 Events can be created, deleted or edited through the API
-Drag and drop functionality for uploading images to events
+<!-- Drag and drop functionality for uploading images to events -->
 Events have many tickets
 Users can browse events
 Users can bookmark/unbookmark events through the API
 
-Phase 3: Tickets (1 Day)
+Phase 3: Tickets (2 Day)
 Users "register" to events by "purchasing" tickets for events
 Limit quantity of tickets available
 Purchased tickets appear on User Dashboard under "Purchased Tickets"
