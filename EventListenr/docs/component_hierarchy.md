@@ -7,9 +7,12 @@
 | "/sign-in" | "SignUp" |
 | "/" | "HomeContainer" |
 | "/events/:eventId" | "EventsShowContainer" |
-| "/user/events/" | "NewEventFormContainer" |
-| "/user/bookmarks/" | "BookmarkContainer" |
-| "/user/tickets" | "TicketContainer" |
+| "/events/new" | "NewEventFormContainer" |
+| "/profile" | "TicketAndBookmarkContainer" |
+
+<!-- | "/user/bookmarks/" | "BookmarkContainer" | - store beside
+| "/user/tickets" | "TicketContainer" | -->
+incorporate the sign in, signup, and login routes
 
 **AuthFormContainer**
 * AuthFormContainer

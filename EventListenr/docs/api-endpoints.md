@@ -9,8 +9,9 @@
 
 # JSON API
 ## Users
+- `GET /api/users/search` - search for email in ajax
 - `POST /api/users` - Sign Up
-- `PATCH /api/users` - Edit User Info
+<!-- - `PATCH /api/users` - Edit User Info -->
 
 ## Session
 - `POST /api/users` `session#create`- Login
@@ -27,7 +28,7 @@
 NB: Does not require users/:id/tickets because current_user is stored in the backend.
 <!-- - `GET /api/tickets` tickets#       -->
 - `POST /api/events/:id/tickets`
-- `GET /api/tickets/:id`
+- `GET /api/tickets` - returns tickets for current_user
 - `DELETE /api/tickets/:id`
 
 ## Bookmarks
@@ -38,6 +39,5 @@ NB: Does not require users/:id/tickets because current_user is stored in the bac
 
 ## Categories
 - `GET /api/categories`
-- `POST /api/categories` (uses event id to make new association to an event)
-- `GET /api/categories/:id` show page for particular category 
+
 <!-- - `DELETE /api/categories/:id` -->

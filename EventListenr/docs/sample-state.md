@@ -1,6 +1,7 @@
 ```js
 {
   session: {
+    errors: [],
     currentUser: {
       id: 1,
       username: 'gevuong',
@@ -12,43 +13,45 @@
   },
 
   events: {
+    errors: [],
+    all_event {
+      1: {
+        id: 1,
+        organizer_id: 1,
+        title: 'Reggae in the Bay',
+        location: 'Santa Clara County Fairgrounds',
+        date: 'July 22, 2017',
+        image: image_url,
+        ticket_price: 30,
+        ticket_quantity: 100,
+        category_id: [1, 2, 3]  
+        },
 
-    1: {
-      id: 1,
-      organizer_id: 1,
-      title: 'Reggae in the Bay',
-      location: 'Santa Clara County Fairgrounds',
-      date: 'July 22, 2017',
-      image: image_url,
-      ticket_price: 30,
-      ticket_quantity: 100,
-      category_id: [1, 2, 3]  
-      },
-
-    2: {
-      id: 2,
-      organizer_id: 1,
-      title: 'Walk by Golden Gate',
-      location: 'Crissy Field',
-      date: 'September 21, 2017',
-      image: image_url,
-      ticket_price: 0,
-      ticket_quantity: 100,
-      category_id: [1, 2, 3]
-      }
+      2: {
+        id: 2,
+        organizer_id: 1,
+        title: 'Walk by Golden Gate',
+        location: 'Crissy Field',
+        date: 'September 21, 2017',
+        image: image_url,
+        ticket_price: 0,
+        ticket_quantity: 100,
+        category_id: [1, 2, 3]
+        }
+    }
   }
 
-  bookmarks: {
-    1: {
-      event_id: 1,
-      user_id: 1
-    },
-  }
+  // bookmarks: {
+  //   1: {
+  //     event_id: 1,
+  //     user_id: 1
+  //   },
+  // }
 
-  errors: {
-    session: [],
-    events: [],
-    bookmarks: []
-  }
+  // errors: {
+  //   session: [],
+  //   events: [],
+  //   bookmarks: []
+  // }
 }
 ```

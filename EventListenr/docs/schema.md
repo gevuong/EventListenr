@@ -41,7 +41,7 @@ has_many :tickets
 | column name     | data type  | details  
 |-----------------|------------|------------------------
 | id              | integer    | not null, primary key
-| description     | string     | not null
+<!-- | description     | string     | not null -->
 | event_id        | integer    | not null, foreign key (references events), indexed
 | user_id         | integer    | not null, foreign key (references users), indexed
 
