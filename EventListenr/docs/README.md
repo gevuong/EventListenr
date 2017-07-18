@@ -26,7 +26,7 @@ Events have many tickets
 Users can browse events
 Users can bookmark/unbookmark events through the API
 
-Phase 3: Tickets (2 Day)
+Phase 3: Tickets (1 Day)
 Users "register" to events by "purchasing" tickets for events
 Limit quantity of tickets available
 Purchased tickets appear on User Dashboard under "Purchased Tickets"
@@ -41,7 +41,7 @@ Events can be bookmarked or unbookmarked from anywhere on the site (Search, Brow
 Bookmarked events appear/disappear from Saved Events tab of User Dashboard upon toggling bookmark icon
 
 
-Bonus Features (TBD)
+Bonus Features (1 Day - if time permits)
 Google Maps
 Interactive map showing the event's location on the event showpage
 Interactive map showing multiple events on search results page
