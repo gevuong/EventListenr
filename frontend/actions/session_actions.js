@@ -15,16 +15,23 @@ export const receiveErrors = errors => ({
 
 // thunk actions creators
 export const signup = user => dispatch => (
-  APIUtil.signup(user)
-  .then(user => dispatch(receiveCurrentUser(user)))
+  APIUtil.signup(user).then(user =>
+    (dispatch(receiveCurrentUser(user))
+  ), error => (
+    dispatch(receiveErrors(error.responseJSON))
+  ))
 );
 
 export const login = user => dispatch => (
-  APIUtil.login(user)
-  .then(user => dispatch(receiveCurrentUser(user)))
+  APIUtil.login(user).then(user => (
+    dispatch(receiveCurrentUser(user))
+  ), error => (
+    dispatch(receiveErrors(error.responseJSON))
+  ))
 );
 
-export const logout = user => dispatch => (
-  APIUtil.logout(user)
-  .then(user => dispatch(receiveCurrentUser(null)))
+export const logout = () => dispatch => (
+  APIUtil.logout().then(user => (
+    dispatch(receiveCurrentUser(null))
+  ))
 );
