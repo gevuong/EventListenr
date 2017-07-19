@@ -13,12 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch; // just for testing!
 
+  // To test api util functions in console.
+  // window.login = APIUtil.login;
+  // window.signup = APIUtil.signup;
+  // window.logout = APIUtil.logout;
+
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
 });
 
-// To test api util functions in console.
-// window.login = APIUtil.login;
-// window.signup = APIUtil.signup;
-// window.logout = APIUtil.logout;
+
 // signup({user: { username: "george", password: "password"}})

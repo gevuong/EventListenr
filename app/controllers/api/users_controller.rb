@@ -4,8 +4,7 @@ class Api::UsersController < ApplicationController
 
     if @user.save
       login(@user)
-      render 'api/users/show'
-      # renders show.json.jbuilder
+      render 'api/users/show' # renders show.json.jbuilder
     else
       render json: @user.errors.full_messages, status: 422
       #status code: unprocessable entity

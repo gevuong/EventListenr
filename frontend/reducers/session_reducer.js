@@ -11,7 +11,7 @@ const sessionReducer = ( state = nullUser, action ) => {
 
   switch(action.type){
     case RECEIVE_CURRENT_USER:
-      const currentUser = action.current_user;
+      const currentUser = action.currentUser;
       return merge({}, nullUser, { currentUser });
     case RECEIVE_ERRORS:
       const errors = action.errors;
