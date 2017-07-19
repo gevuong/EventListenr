@@ -4,7 +4,7 @@
 |Path   | Component   |
 |-------|-------------|
 | "/login" | "AuthFormContainer" |
-| "/sign-in" | "SignUp" |
+| "/signin" | "SignUp" |
 | "/" | "HomeContainer" |
 | "/events/:eventId" | "EventsShowContainer" |
 | "/events/new" | "NewEventFormContainer" |
