@@ -15,7 +15,7 @@
 
 ## Session
 - `POST /api/users` `session#create`- Login
-- `DESTROY api/users/:id` `session#destroy`- Logout
+- `DELETE api/users/:id` `session#destroy`- Logout
 
 ## Events
 - `GET /api/events`  `events#index` List all events

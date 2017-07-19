@@ -1,10 +1,11 @@
 class Api::UsersController < ApplicationController
   def create
-    @user = User.find_by(user_params)
+    @user = User.new(user_params)
 
     if @user.save
       login(@user)
-      render '/'
+      render 'api/users/show'
+      # renders show.json.jbuilder
     else
       render json: @user.errors.full_messages, status: 422
       #status code: unprocessable entity
@@ -14,5 +15,6 @@ class Api::UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:username, :password)
+    # params format: {user: { username: "george", password: "password"} }
   end
 end

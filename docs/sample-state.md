@@ -1,7 +1,7 @@
 ```js
 {
   session: {
-    errors: [],
+    errors: ["Invalid credentials"],
     currentUser: {
       id: 1,
       username: 'gevuong',

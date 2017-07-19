@@ -12,7 +12,6 @@ class ApplicationController < ActionController::Base
   end
 
   def login(user)
-    user.reset_session_token
     session[:session_token] = user.reset_session_token
     @current_user = user
   end
@@ -24,7 +23,7 @@ class ApplicationController < ActionController::Base
   end
 
   def require_login
-    require json: { base: ['Invalid credentials'] }, status: 401 if !current_user # try alternate method
+    require json: { base: ['Invalid credentials'] }, status: 401 if !current_user
     # status code 401 client error: unauthorized, lacks valid authentication credentials
   end
 
