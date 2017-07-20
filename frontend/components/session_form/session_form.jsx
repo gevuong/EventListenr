@@ -27,12 +27,11 @@ class SessionForm extends React.Component {
 
   }
 
-// not called when component is initially mounts.
-//only
+// always runs when component is mountd.
   componentDidMount() {
     this.props.clearErrors();
   }
-  // supposed to run everytime your prop changes, but it's not
+  // supposed to run everytime your prop changes, but it's not.not called when component is initially mounts.
   // componentWillReceiveProps(nextProps) {
   //
   //     console.log(nextProps);
@@ -84,35 +83,17 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    // // if this.state.modalIsOpen === undefined {
-    // this.openModal
-  // }
-    const customStyles = {
-    content : {
-      top                   : '50%',
-      left                  : '50%',
-      right                 : 'auto',
-      bottom                : 'auto',
-      marginRight           : '-50%',
-      transform             : 'translate(-50%, -50%)'
-    }
-  };
-
-    // if (this.props.location.path === "/guest") {
-    //   return (
-    //     <h3>this.guestAccount()</h3>
-    //   );
-    // }
     return (
       <div>
-        <Modal
+        <Modal className="modal"
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
-          style={customStyles}
+
           contentLabel="Example Modal"
         >
         <button onClick={this.guestLogin}>Demo</button>
+        <br/>
           <div className="login-form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
               Welcome to EventListenr!
@@ -121,21 +102,19 @@ class SessionForm extends React.Component {
               {this.renderErrors()}
               <div className="login-form">
                 <br/>
-                <label>Username:
                   <input type="text"
                     value={this.state.username}
                     onChange={this.update('username')}
                     className="login-input"
+                    placeholder="Username"
                   />
-                </label>
                 <br/>
-                <label>Password:
                   <input type="password"
                     value={this.state.password}
                     onChange={this.update('password')}
                     className="login-input"
+                    placeholder="Password"
                   />
-                </label>
                 <br/>
                 <input type="submit" value="Submit" />
               </div>
@@ -148,3 +127,17 @@ class SessionForm extends React.Component {
 }
 
 export default withRouter(SessionForm);
+
+// {style={customStyles}}
+// const customStyles = {
+//   content : {
+//     top                   : '50%',
+//     left                  : '50%',
+//     right                 : 'auto',
+//     bottom                : 'auto',
+//     height                : '50%',
+//     width                 : '50%',
+//     marginRight           : '-50%',
+//     transform             : 'translate(-50%, -50%)'
+//   }
+// };
