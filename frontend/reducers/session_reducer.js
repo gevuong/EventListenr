@@ -1,5 +1,5 @@
 import merge from 'lodash/merge';
-import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS } from '../actions/session_actions';
+import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS, CLEAR_SESSION_ERRORS } from '../actions/session_actions';
 
 const nullUser = Object.freeze({
   currentUser: null,
@@ -16,6 +16,8 @@ const sessionReducer = ( state = nullUser, action ) => {
     case RECEIVE_ERRORS:
       const errors = action.errors;
       return merge({}, nullUser, { errors }); // merge() is deep dup
+    case CLEAR_SESSION_ERRORS:
+      return merge({}, nullUser, { errors: [] });
     default:
       return state;
   }
