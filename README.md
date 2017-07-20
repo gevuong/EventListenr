@@ -19,11 +19,11 @@ EventListenr is a web application inspired by EventBrite built using Ruby on Rai
   9. Bonus: Search
 
 ## Design Docs
-* [View Wireframes](https://github.com/gevuong/EventListenr/tree/master/EventListenr/docs/wireframes)
-* [React Component Hierarchy](https://github.com/gevuong/EventListenr/blob/master/EventListenr/docs/component_hierarchy.md)
-* [API endpoints](https://github.com/gevuong/EventListenr/blob/master/EventListenr/docs/api-endpoints.md)
-* [DB schema](https://github.com/gevuong/EventListenr/blob/master/EventListenr/docs/schema.md)
-* [Sample State](https://github.com/gevuong/EventListenr/blob/master/EventListenr/docs/sample-state.md)
+* [View Wireframes](https://github.com/gevuong/EventListenr/tree/master/docs/wireframes)
+* [React Component Hierarchy](https://github.com/gevuong/EventListenr/blob/master/docs/component_hierarchy.md)
+* [API endpoints](https://github.com/gevuong/EventListenr/blob/master/docs/api-endpoints.md)
+* [DB schema](https://github.com/gevuong/EventListenr/blob/master/docs/schema.md)
+* [Sample State](https://github.com/gevuong/EventListenr/blob/master/docs/sample-state.md)
 
 ## Feature Implementation Timeline:
 
