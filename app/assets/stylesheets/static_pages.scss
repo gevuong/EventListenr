@@ -1,3 +1,56 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// .login-form-container {
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 100px;
+//   border: solid;
+// }
+
+.header-homepage {
+  font-family: 'Convergence', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  font-size: 100px;
+
+}
+
+#login-signup {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: white;
+  font-size: 25px;
+}
+
+.login-container a {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: right;
+  padding: 10px;
+  background-color: white;
+}
+
+.signup-container a {
+  padding: 10px;
+  background-color: white;
+}
+
+.login-container a:hover {
+  background-color: #EFF2F5;
+}
+
+.signup-container a:hover {
+  background-color: #EFF2F5;
+}
+
+
+body {
+    background-image: url(homepage_test.gif);
+    background-size: cover;
+}
