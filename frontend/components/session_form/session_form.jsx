@@ -116,10 +116,9 @@ class SessionForm extends React.Component {
                     className="login-input"
                     placeholder="Password"
                   />
-                <br/>
+                <br/></div>
                 <input className="session-form-submit-button" type="submit" value={button_text} />
-                <button onClick={this.guestLogin}>Guest Login</button>
-              </div>
+                <button className="guest-login-button" onClick={this.guestLogin}>GUEST</button>
             </form>
           </div>
       </Modal>
@@ -129,17 +128,3 @@ class SessionForm extends React.Component {
 }
 
 export default withRouter(SessionForm);
-
-// {style={customStyles}}
-// const customStyles = {
-//   content : {
-//     top                   : '50%',
-//     left                  : '50%',
-//     right                 : 'auto',
-//     bottom                : 'auto',
-//     height                : '50%',
-//     width                 : '50%',
-//     marginRight           : '-50%',
-//     transform             : 'translate(-50%, -50%)'
-//   }
-// };

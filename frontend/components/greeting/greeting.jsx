@@ -19,11 +19,18 @@ const sessionLinks = () => (
 // and protected route.
 
 const personalGreeting = (currentUser, logout) => (
-	<hgroup className="header-group">
+	<div className="header-group">
+    <nav id="login-signup">
+      <div className="eventListenr-home-container">
+        <Link to="/">EventListenr</Link>
+      </div>
+      <div className="session-link-container">
+        <button className="header-button" onClick={logout}>LOG OUT</button>
+      </div>
+    </nav>
     <h3 className="header-name">Hi, {currentUser.username}!</h3>
-    <button className="header-button" onClick={logout}>Log Out</button>
 
-	</hgroup>
+	</div>
 );
 
 const Greeting = ({ currentUser, logout }) => (

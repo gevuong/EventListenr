@@ -14,7 +14,7 @@
 
   events: {
     errors: [],
-    all_event {
+    all_events: {
       1: {
         id: 1,
         organizer_id: 1,
