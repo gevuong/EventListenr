@@ -5,7 +5,7 @@ module.exports = {
   entry: "./frontend/event_listenr.jsx",
   output: {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
-    filename: "bundle.js"
+    filename: "./bundle.js"
   },
   module: {
     loaders: [
