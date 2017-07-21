@@ -6,9 +6,7 @@ import SessionFormContainer from './session_form/session_form_container';
 const App = () => (
   <div>
     <header className="header-container">
-      <div className="header-homepage">
-        <h1>EventListenr</h1>
-      </div>
+
 
       <GreetingContainer />
     </header>

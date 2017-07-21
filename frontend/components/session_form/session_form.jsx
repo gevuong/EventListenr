@@ -52,8 +52,7 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.processForm({user});
-    this.props.history.push("/");
+    this.props.processForm({user}).then(() => this.props.history.push("/"));
   }
 
   // navLink() {
@@ -66,7 +65,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
-      <ul>
+      <ul className="errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -82,9 +81,12 @@ class SessionForm extends React.Component {
     this.props.history.push("/");
   }
 
+
   render() {
+    let button_text = this.props.formType === 'login' ? "LOGIN" : "SIGN IN";
     return (
       <div>
+        <h3>Let's get started</h3>
         <Modal className="modal"
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
@@ -92,11 +94,10 @@ class SessionForm extends React.Component {
 
           contentLabel="Example Modal"
         >
-        <button onClick={this.guestLogin}>Demo</button>
         <br/>
           <div className="login-form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
-              Welcome to EventListenr!
+              LETS GET STARTED
               <br/>
               {/* Please {this.props.formType} or {this.navLink()}*/}
               {this.renderErrors()}
@@ -116,7 +117,8 @@ class SessionForm extends React.Component {
                     placeholder="Password"
                   />
                 <br/>
-                <input type="submit" value="Submit" />
+                <input className="session-form-submit-button" type="submit" value={button_text} />
+                <button onClick={this.guestLogin}>Guest Login</button>
               </div>
             </form>
           </div>

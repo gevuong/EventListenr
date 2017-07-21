@@ -2,22 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 .login-form-container {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
-  border: solid;
 }
 
-.header-homepage {
+.login-form {
+  text-align: center;
+  input {
+    text-align: center;
+  }
+}
+
+.eventListenr-home-container {
   font-family: 'Convergence', sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  color: white;
-  font-size: 100px;
-
+  padding: 5px;
+  color: #F6682F;
+  // font-size: 100px;
 }
 
 .header-name {
@@ -34,37 +38,40 @@
   background-color: white;
   display: flex;
   align-self: center;
+  border: 1px solid gray;
 }
 
 #login-signup {
+  font-family: 'Convergence', sans-serif;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   background-color: white;
-  font-size: 25px;
-}
 
-.login-container a {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: right;
-  padding: 10px;
-  background-color: white;
-}
+  .session-link-container {
+    height: 36px;
+    display: flex;
 
-.signup-container a {
-  padding: 10px;
-  background-color: white;
-}
+    // padding: 10px;
+  }
 
-.login-container a:hover {
-  background-color: #EFF2F5;
-}
+  a {
+    border: 0;
+    line-height: 26px;
+    text-align: center;
+    background-color: white;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
 
-.signup-container a:hover {
-  background-color: #EFF2F5;
+  a:hover {
+    background-color: #EFF2F5;
+  }
 }
-
 
 body {
     background-image: url(http://res.cloudinary.com/dtluc0y85/image/upload/c_scale,h_370,w_615/v1500534602/homepage_test_ltezbc.gif);
