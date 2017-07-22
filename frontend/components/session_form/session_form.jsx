@@ -86,8 +86,8 @@ class SessionForm extends React.Component {
     let button_text = this.props.formType === 'login' ? "LOGIN" : "SIGN IN";
     return (
       <div>
-        <h3>Let's get started</h3>
         <Modal className="modal"
+
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
@@ -96,7 +96,10 @@ class SessionForm extends React.Component {
         >
         <br/>
           <div className="login-form-container">
+
             <form onSubmit={this.handleSubmit} className="login-form-box">
+              <img className="logo" src="http://res.cloudinary.com/dtluc0y85/image/upload/v1500693476/Logomakr_right_color_feqswx.png"/>
+              <p>{button_text}</p>
               LETS GET STARTED
               <br/>
               {/* Please {this.props.formType} or {this.navLink()}*/}
@@ -119,6 +122,7 @@ class SessionForm extends React.Component {
                 <br/></div>
                 <input className="session-form-submit-button" type="submit" value={button_text} />
                 <button className="guest-login-button" onClick={this.guestLogin}>GUEST</button>
+                <p className="signup-session-terms">By signing up, I agree to Eventbrite's terms of service, privacy policy, and community guidelines.</p>
             </form>
           </div>
       </Modal>

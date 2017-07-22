@@ -16,7 +16,7 @@
   // z-index: 10;
   top: 50%;
   left: 50%;
-  height: 300px;
+  height: 400px;
   width: 400px;
   transform: translate(-50%, -50%);
   display: flex;
@@ -28,29 +28,40 @@
   overflow-x: hidden;
 }
 
-// .modal-overlay {
-//   height: 100%;
-//   width: 100%;
-//   display: fixed;
-//   left: 0px;
-//   top: 0px;
-//   background-color: rgba(0,0,0,0.1);
-// }
+overlay {
+  height: 100%;
+  width: 100%;
+  display: fixed;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(0,0,0,3);
+}
 
 .session-form-submit-button {
   border-radius: 5px;
   display: block;
   margin: 0 auto;
   padding: 5px;
-  // width: 60px;
   background-color: #F6682F;
-  color: white
+  color: white;
+  width: 160px;
+  display: flex;
+  justify-content: center
 }
 
 .guest-login-button {
   border-radius: 5px;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 5px;
   background-color: #F6682F;
-  color: white
+  color: white;
+  width: 160px;
+  display: flex;
+  justify-content: center
 }
+//
+// .logo {
+//   width: 28%;
+//   display: flex;
+//   justify-content: center;
+// }

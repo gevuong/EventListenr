@@ -3,8 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .login-form-container {
+
+}
+
+.login-form-box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .login-form {
@@ -14,14 +20,22 @@
   }
 }
 
+.logo {
+  width: 29%;
+  height: auto;
+}
+.errors {
+}
+
 .eventListenr-home-container {
   font-family: 'Convergence', sans-serif;
+  font-size: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 5px;
   color: #F6682F;
-  // font-size: 100px;
+  // font-size: 15px;
 }
 
 .header-name {
@@ -52,13 +66,17 @@
   .session-link-container {
     height: 36px;
     display: flex;
-
+    background-color: #EFF2F5;
     // padding: 10px;
+  }
+
+  .session-link-container:hover {
+    background-color: #EFF2F5;
   }
 
   a {
     border: 0;
-    line-height: 26px;
+    line-height: 60px;
     text-align: center;
     background-color: white;
     box-sizing: border-box;
@@ -68,9 +86,9 @@
     padding: 0 10px;
   }
 
-  a:hover {
-    background-color: #EFF2F5;
-  }
+  // a:hover {
+  //   background-color: #EFF2F5;
+  // }
 }
 
 body {
