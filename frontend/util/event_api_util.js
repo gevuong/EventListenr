@@ -17,21 +17,26 @@ export const fetchEvent = event => (
 export const createEvent = event => (
   $.ajax({
     method: 'POST',
-    url: 'api/events'
+    url: 'api/events',
+    data: { event }
   })
 );
 
-export const updateEvent = event => (
+window.createEvent = createEvent;
+
+export const updateEvent = id => (
   $.ajax({
     method: 'PATCH',
-    url: `api/events/${event.id}`,
+    url: `api/events/${id}`,
     data: event
   })
 );
 
-export const deleteEvent = event => (
+export const deleteEvent = id => (
   $.ajax({
     method: 'DELETE',
-    url: `api/events/${event.id}`
+    url: `api/events/${id}`
   })
 );
+
+window.deleteEvent = deleteEvent;

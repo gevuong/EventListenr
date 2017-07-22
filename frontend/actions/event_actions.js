@@ -20,9 +20,13 @@ export const removeEvent = event => ({
   event
 });
 
-// async thunk actions
+// async thunk actions, used in container
 export const createEvent = event => dispatch => (
   EventAPIUtil.createEvent(event)
   .then(event => { dispatch(receiveEvent(event))
   })
+);
+
+export const deleteEvent = event => dispatch => (
+  EventAPIUtil.removeEvent(event)
 );
