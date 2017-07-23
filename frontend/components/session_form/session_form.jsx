@@ -62,6 +62,20 @@ class SessionForm extends React.Component {
   //     return <Link to="/login">login instead</Link>;
   //   }
   // }
+  changeFormLink() {
+    if (this.props.formType === 'login') {
+      return (
+        <p className="signup-session-terms">Don't have an account?<Link to='/signup'>Sign Up</Link>
+        <br/>
+          By signing up, I agree to EventListenr's terms of service, privacy policy, and community guidelines.
+        </p>
+      );
+    } else {
+      return (
+        <p>Already have an account? <Link to='/login'>Login</Link></p>
+      );
+    }
+  }
 
   renderErrors() {
     return(
@@ -82,6 +96,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    console.log(this.props.formType);
     let button_text = this.props.formType === 'login' ? "LOGIN" : "SIGN IN";
     return (
       <div>
@@ -122,7 +137,8 @@ class SessionForm extends React.Component {
               </div>
                 <input className="session-form-submit-button" type="submit" value={button_text} />
                 <button className="guest-login-button" onClick={this.guestLogin}>GUEST</button>
-                <p className="signup-session-terms">By signing up, I agree to EventListenr's terms of service, privacy policy, and community guidelines.</p>
+
+                <p>{ this.changeFormLink() }</p>
             </form>
           </div>
       </Modal>
@@ -131,4 +147,5 @@ class SessionForm extends React.Component {
   }
 }
 
+            // <p className="signup-session-terms">By signing up, I agree to EventListenr's terms of service, privacy policy, and community guidelines.</p>
 export default withRouter(SessionForm);

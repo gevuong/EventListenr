@@ -31,34 +31,12 @@ class NavBar extends React.Component {
               </div>
               <div className="session-link-container">
                 <Link to="/events/new">CREATE EVENT</Link>
-                <Link to="/users/userId"><i className="fa fa-user-circle"  aria-hidden="true"></i></Link>
+                <Link to="/users/userId"><i className="fa fa-user-circle"  aria-hidden="true"></i>  { this.props.currentUser.username.toUpperCase() }</Link>
                 <button className="header-button" onClick={this.handleOnClick}>LOG OUT
                 </button>
               </div>
             </nav>
         	</div>
-          <div className='homepage-image'></div>
-
-          <div className="event-index-container">
-            <div className="event-container">
-              <p>Title</p>
-              <p>Description</p>
-              <p>Date</p>
-              <p>Price</p>
-            </div>
-            <div className="event-container">
-              <p>Title2</p>
-              <p>Description2</p>
-              <p>Date2</p>
-              <p>Price2</p>
-            </div>
-            <div className="event-container">
-              <p>Title3</p>
-              <p>Description3</p>
-              <p>Date3</p>
-              <p>Price3</p>
-            </div>
-          </div>
         </div>
       );
     } else {
