@@ -6,11 +6,16 @@
 
 }
 
-.login-form-box {
+.fa {
+  font-size: 20px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #F6682F;
+}
+
+.fa:hover {
+  background-color: #EFF2F5;
 }
 
 .login-form {
@@ -25,6 +30,7 @@
   height: auto;
 }
 .errors {
+  padding: 5px;
 }
 
 .eventListenr-home-container {
@@ -46,6 +52,7 @@
   color: black;
   background-color: white;
   padding-right: 10px;
+  padding-left: 10px;
 }
 
 .login-input {
@@ -62,11 +69,14 @@
   justify-content: space-between;
   align-items: center;
   background-color: white;
+  position: fixed;
+  width: 100%;
 
   .session-link-container {
     height: 36px;
     display: flex;
     background-color: #EFF2F5;
+
     // padding: 10px;
   }
 
@@ -83,7 +93,8 @@
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 12px;
+
   }
 
   // a:hover {
@@ -91,7 +102,9 @@
   // }
 }
 
-body {
+.homepage-image {
+    border: 2px solid black;
+    height: 600px;
     background-image: url(http://res.cloudinary.com/dtluc0y85/image/upload/c_scale,h_370,w_615/v1500534602/homepage_test_ltezbc.gif);
     background-size: cover;
     background-repeat: no-repeat;

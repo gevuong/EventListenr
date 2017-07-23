@@ -22,8 +22,6 @@ export const createEvent = event => (
   })
 );
 
-window.createEvent = createEvent;
-
 export const updateEvent = id => (
   $.ajax({
     method: 'PATCH',
@@ -39,4 +37,5 @@ export const deleteEvent = id => (
   })
 );
 
+window.createEvent = createEvent;
 window.deleteEvent = deleteEvent;

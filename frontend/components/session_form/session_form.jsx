@@ -27,7 +27,7 @@ class SessionForm extends React.Component {
 
   }
 
-// always runs when component is mountd.
+// always runs when component is mounted.
   componentDidMount() {
     this.props.clearErrors();
   }
@@ -81,7 +81,6 @@ class SessionForm extends React.Component {
     this.props.history.push("/");
   }
 
-
   render() {
     let button_text = this.props.formType === 'login' ? "LOGIN" : "SIGN IN";
     return (
@@ -99,7 +98,7 @@ class SessionForm extends React.Component {
 
             <form onSubmit={this.handleSubmit} className="login-form-box">
               <img className="logo" src="http://res.cloudinary.com/dtluc0y85/image/upload/v1500693476/Logomakr_right_color_feqswx.png"/>
-              <p>{button_text}</p>
+              <br/>
               LETS GET STARTED
               <br/>
               {/* Please {this.props.formType} or {this.navLink()}*/}
@@ -119,10 +118,11 @@ class SessionForm extends React.Component {
                     className="login-input"
                     placeholder="Password"
                   />
-                <br/></div>
+                <br/>
+              </div>
                 <input className="session-form-submit-button" type="submit" value={button_text} />
                 <button className="guest-login-button" onClick={this.guestLogin}>GUEST</button>
-                <p className="signup-session-terms">By signing up, I agree to Eventbrite's terms of service, privacy policy, and community guidelines.</p>
+                <p className="signup-session-terms">By signing up, I agree to EventListenr's terms of service, privacy policy, and community guidelines.</p>
             </form>
           </div>
       </Modal>

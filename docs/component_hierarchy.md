@@ -17,18 +17,19 @@ incorporate the sign in, signup, and login routes
 **AuthFormContainer**
 * AuthFormContainer
 
-**UserContainer**
+**UserProfileContainer**
 * TicketContainer
+* NavBarContainer
 * BookmarkContainer
   * BookmarkDetails
 
-**UserDetailContainer**
-* UserDetail
-
 **HomeContainer**
 * Home
+* NavBarContainer
 * EventsIndexContainer
+* EventsDetailContainer
 * CategoriesContainer
+* UserProfileContainer
 
 **NavBarContainer**
 * NavBar

@@ -22,8 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch; // just for testing!
   //
-  window.createEvent = EventAPIUtil.createEvent;
-  window.deleteEvent = EventAPIUtil.deleteEvent;
   //
   // To test api util functions in console.
   // window.login = APIUtil.login;

@@ -1,3 +1,19 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+//
+.event-index-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.event-container {
+  border: 2px solid black;
+  padding: 5px;
+  color: black;
+  margin: 20px;
+  width: 250px;
+  height: 250px;
+}
