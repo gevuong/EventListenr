@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
+import Carousel from '../carousel';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -100,6 +101,7 @@ class SessionForm extends React.Component {
     let button_text = this.props.formType === 'login' ? "LOGIN" : "SIGN IN";
     return (
       <div>
+        <Carousel />
         <Modal className="modal"
 
           isOpen={this.state.modalIsOpen}
@@ -147,5 +149,5 @@ class SessionForm extends React.Component {
   }
 }
 
-            // <p className="signup-session-terms">By signing up, I agree to EventListenr's terms of service, privacy policy, and community guidelines.</p>
+            // <p className="signup-session-terms">By signing up, I agree to EventListenr()'s terms of service, privacy policy, and community guidelines.</p>
 export default withRouter(SessionForm);

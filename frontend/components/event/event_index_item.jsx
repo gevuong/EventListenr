@@ -8,18 +8,21 @@ class EventIndexItem extends React.Component {
 
   render() {
     const { eventItem } = this.props;
+    let eventDescription = eventItem.description.slice(0,25) + "...";
 
     return (
-      <div>
+      <div className="event-index-container">
         <ul>
-          <Link to={`/events/${eventItem.id}`}>SHOW EVENT</Link>
-          EventIndexItem
-          <li>{eventItem.date_time}</li>
-          <li>{eventItem.title}</li>
-          <li>{eventItem.description}</li>
-          <li>{eventItem.image_url}</li>
-          <li>{eventItem.ticket_price}</li>
-          <li>{eventItem.ticket_quantity}</li>
+          <div className="event-container">
+            <Link to={`/events/${eventItem.id}`}>SHOW EVENT</Link>
+            <li>
+              <img src="http://res.cloudinary.com/dtluc0y85/image/upload/v1500534760/homepage_photo_khrkqr.jpg"/>
+            </li>
+            <li>Title: {eventItem.title}</li>
+            <li>Location: {eventItem.location}</li>
+            <li>Description: {eventDescription}</li>
+            <li>Date and Time: {eventItem.date_time}</li>
+          </div>
         </ul>
       </div>
     );

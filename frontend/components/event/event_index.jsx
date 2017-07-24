@@ -25,10 +25,10 @@ class EventIndex extends React.Component {
           eventItem={eventItem}
         />
       ));
-
+      console.log(eventList);
     return (
-      <div>
-        Event Index
+      <div className="event-list-header">
+        Events near you
         { eventList }
       </div>
       );
