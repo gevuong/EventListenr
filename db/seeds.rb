@@ -13,8 +13,8 @@ anastassia = User.create(username: 'Anastassia', password: 'password')
 ravi = User.create(username: 'Ravi', password: 'password')
 syrie = User.create(username: 'Syrie', password: 'password')
 
-Event.destroy_all
 
+Event.destroy_all
 e1 = Event.create(
 organizer_id: noah.id,
 title: 'Hot Air Balloon Tour',
