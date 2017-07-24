@@ -17,6 +17,6 @@ export default configureStore;
 // getState(); // should return initial app state
 //
 // const getSuccess = currentUser => dispatch(receiveCurrentUser(currentUser));
-// fetchAllPokemon().then(getSuccess);
+// fetchAllEvents().then(getSuccess);
 //
 // getState();

@@ -5,17 +5,12 @@ import { withRouter } from 'react-router';
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   currentUser: this.props.currentUser
-    // };
-    console.log(props);
-    console.log(this.props.logout());
+
     this.handleOnClick = this.handleOnClick.bind(this);
   }
 
   handleOnClick(e) {
     e.preventDefault();
-    console.log(this.props.logout());
     this.props.logout().then(() =>
     this.props.history.push("/"));
   }

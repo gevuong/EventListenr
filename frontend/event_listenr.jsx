@@ -6,6 +6,7 @@ import * as APIUtil from './util/session_api_util';
 import configureStore from './store/store';
 import Root from './components/root';
 import * as EventAPIUtil from './util/event_api_util';
+import { requestAllEvents, requestEvent } from './actions/event_actions';
 
 let store;
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // // it can be confusing when debugging, sometimes giving you access to state when you shouldn't
   window.getState = store.getState;
   window.dispatch = store.dispatch; // just for testing!
+  window.requestAllEvents = requestAllEvents;
+  window.requestEvent = requestEvent;
+
   //
   //
   // To test api util functions in console.

@@ -12,12 +12,12 @@ const sessionReducer = ( state = nullUser, action ) => {
   switch(action.type){
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
-      return merge({}, nullUser, { currentUser });
+      return merge({}, state, { currentUser });
     case RECEIVE_ERRORS:
       const errors = action.errors;
-      return merge({}, nullUser, { errors }); // merge() is deep dup
+      return merge({}, state, { errors }); // merge() is deep dup
     case CLEAR_SESSION_ERRORS:
-      return merge({}, nullUser, { errors: [] });
+      return merge({}, state, { errors: [] });
     default:
       return state;
   }

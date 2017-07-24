@@ -6,7 +6,7 @@ export const RECEIVE_EVENT = "RECEIVE_EVENT";
 export const REMOVE_EVENT = "REMOVE_EVENT";
 
 // sync actions
-export const receiveAllEvents = events =>({
+export const receiveAllEvents = events => ({
   type: RECEIVE_ALL_EVENTS,
   events
 });
@@ -22,14 +22,15 @@ export const removeEvent = event => ({
 });
 
 // async thunk actions, used in container
-export const fetchAllEvents = () => dispatch => (
-  EventAPIUtil.fetchAllEvents().then(events => (
+export const requestAllEvents = () => dispatch => {
+  console.log("hi");
+  return (EventAPIUtil.fetchAllEvents().then(events => (
     dispatch(receiveAllEvents(events))
-  )),
-    errors => dispatch(receiveErrors(errors))
-);
+  )));
+};
+    // errors => dispatch(receiveErrors(errors))
 
-export const fetchEvent = id => dispatch => (
+export const requestEvent = id => dispatch => (
   EventAPIUtil.fetchEvent(id).then(event => (
     dispatch(receiveEvent(event))
   )),

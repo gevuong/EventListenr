@@ -1,2 +1,5 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+@events.each do |event|
+  json.set! event.id do
+    json.extract! event, :title, :description, :date_time, :image_url, :ticket_price, :ticket_quantity
+  end
+end

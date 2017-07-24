@@ -1,4 +1,4 @@
-
+// should dispatch an $.ajax request and return a promise. The success function is chained onto this promise in the thunk action creator.
 export const fetchAllEvents = () => (
   $.ajax({
     method: 'GET',
@@ -6,11 +6,10 @@ export const fetchAllEvents = () => (
   })
 );
 
-export const fetchEvent = event => (
+export const fetchEvent = id => (
   $.ajax({
     method: 'GET',
-    url: `api/events/${event.id}`,
-    data: event
+    url: `api/events/${id}`,
   })
 );
 
@@ -26,7 +25,7 @@ export const updateEvent = id => (
   $.ajax({
     method: 'PATCH',
     url: `api/events/${id}`,
-    data: event
+    data: { event }
   })
 );
 
@@ -37,5 +36,9 @@ export const deleteEvent = id => (
   })
 );
 
+
+// window.fetchAllEvents = fetchAllEvents;
+// window.fetchEvent = fetchEvent;
 window.createEvent = createEvent;
+window.updateEvent = updateEvent;
 window.deleteEvent = deleteEvent;
