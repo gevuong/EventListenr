@@ -14,10 +14,10 @@ const eventReducer = (state = nullEvent, action) => {
   switch(action.type){
     case RECEIVE_ALL_EVENTS:
       const events = action.events;
-      return merge({}, nullEvent, { events });
+      return merge({}, state, { events });
     case RECEIVE_EVENT:
       const event = action.event;
-      return merge({}, nullEvent, { event });
+      return merge({}, state, { event });
     case REMOVE_EVENT:
     // first dup current state, then find event and delete item.
       currentState = merge({}, state);

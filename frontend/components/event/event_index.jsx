@@ -6,24 +6,43 @@ class EventIndex extends React.Component {
   constructor(props){
     super(props);
 
+    this.state = {
+      events: this.props.events
+    };
   }
 
   componentDidMount() {
-    this.props.requestAllEvents();
+    this.props.requestAllEvents().then(events => this.setState({events}));
   }
 
+  // componentWillReceiveProps(nextProps) {
+  //   console.log("2", nextProps);
+  // }
+
   render() {
+    console.log('4', this.state.events);
+    console.log('5', this.state);
+    
     const { events } = this.props;
-    return(
-      <div>
-        {events.map(eventItem => (
-            <EventIndexItem eventItem={eventItem} />
-          ))
-        }
-      </div>
-    );
+    // const { events } = this.props;
+    console.log("1", events);
+
+      const allEvents = events.map(eventItem => (
+          <EventIndexItem
+            eventItem={eventItem}
+            key={`event-${eventItem.id}`} />
+        ));
+      return (
+        <div>
+          Hi
+          { events }
+          { allEvents }
+        </div>
+      );
   }
 }
+
+export default EventIndex;
 
 // const EventIndex = () => (
 //   <div className="event-index-container">
@@ -48,5 +67,3 @@ class EventIndex extends React.Component {
 //     </div>
 //   </div>
 // );
-
-export default EventIndex;

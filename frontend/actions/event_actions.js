@@ -23,7 +23,6 @@ export const removeEvent = event => ({
 
 // async thunk actions, used in container
 export const requestAllEvents = () => dispatch => {
-  console.log("hi");
   return (EventAPIUtil.fetchAllEvents().then(events => (
     dispatch(receiveAllEvents(events))
   )));
@@ -38,7 +37,7 @@ export const requestEvent = id => dispatch => (
 );
 
 export const createEvent = event => dispatch => (
-  EventAPIUtil.createEvent(event).then(event => (                       dispatch(receiveEvent(event))
+  EventAPIUtil.createEvent(event).then(event => (                      dispatch(receiveEvent(event))
   )),
   errors => dispatch(receiveErrors(errors))
 );

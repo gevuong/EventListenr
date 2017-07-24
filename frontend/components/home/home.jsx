@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from '../carousel';
-import EventIndex from '../event/event_index';
+import EventIndexContainer from '../event/event_index_container';
 import NavBarContainer from '../navbar/navbar_container';
 import { Route, Switch } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ const Home = () => (
       <NavBarContainer />
     </header>
       <Carousel />
-      <EventIndex />
+      <EventIndexContainer />
   </div>
 );
 

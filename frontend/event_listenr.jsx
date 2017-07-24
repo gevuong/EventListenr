@@ -2,11 +2,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as APIUtil from './util/session_api_util';
+
 // Components
 import configureStore from './store/store';
 import Root from './components/root';
 import * as EventAPIUtil from './util/event_api_util';
 import { requestAllEvents, requestEvent } from './actions/event_actions';
+
 
 let store;
 document.addEventListener('DOMContentLoaded', () => {

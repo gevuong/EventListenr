@@ -1,5 +1,5 @@
 import EventIndex from './event_index';
-import { connect } from 'redux-redux';
+import { connect } from 'react-redux';
 import { requestAllEvents } from '../../actions/event_actions';
 import { selectAllEvents } from '../../reducers/selectors';
 

@@ -1,5 +1,5 @@
 import { values } from 'lodash';
 
-export const selectAllEvents = (state) => (
+export const selectAllEvents = state => (
   values(state)
 );
