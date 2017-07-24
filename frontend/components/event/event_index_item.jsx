@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class EventIndexItem extends React.Component {
   constructor(props){
@@ -6,12 +7,12 @@ class EventIndexItem extends React.Component {
   }
 
   render() {
-    console.log('EventIndexItem', this.props);
     const { eventItem } = this.props;
 
     return (
       <div>
         <ul>
+          <Link to={`/events/${eventItem.id}`}>SHOW EVENT</Link>
           EventIndexItem
           <li>{eventItem.date_time}</li>
           <li>{eventItem.title}</li>

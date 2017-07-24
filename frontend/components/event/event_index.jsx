@@ -5,41 +5,31 @@ import EventIndexItem from './event_index_item';
 class EventIndex extends React.Component {
   constructor(props){
     super(props);
-
-    this.state = {
-      events: this.props.events
-    };
   }
 
   componentDidMount() {
-    this.props.requestAllEvents().then(events => this.setState({events}));
+    this.props.requestAllEvents();
+    // test this.props.requestAllEvents().then(events => (console.log(events)))
   }
 
   // componentWillReceiveProps(nextProps) {
   //   console.log("2", nextProps);
   // }
 
+// when you need to explicitly tell it to (i.e. ajax request) based on change of props
   render() {
-    console.log('4', this.state.events);
-    console.log('4', this.state.events.events);
-    // console.log('5', this.state);
-    // const { events } = this.props;
-    // const eventKeys = Object.keys(this.state.events.events);
+    const { events } = this.props;
 
-    // let allEvents = eventKeys.map(key => (
-    //   this.state.events.events[key]
-    // ));
-    // // console.log('6', allEvents);
-    //
-    //   allEvents.map(eventDetail => (
-    //     <EventIndexItem
-    //       allEvents={allEvents}
-    //     />
-    //   ));
+    let eventList = events.map(eventItem => (
+        <EventIndexItem key={eventItem.id}
+          eventItem={eventItem}
+        />
+      ));
 
     return (
       <div>
-        Hi
+        Event Index
+        { eventList }
       </div>
       );
   }

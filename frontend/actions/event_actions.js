@@ -23,28 +23,42 @@ export const removeEvent = event => ({
 
 // async thunk actions, used in container
 export const requestAllEvents = () => dispatch => {
-  return (EventAPIUtil.fetchAllEvents().then(events => (
-    dispatch(receiveAllEvents(events))
-  )));
+  return EventAPIUtil.fetchAllEvents().then(
+    events => (
+      dispatch(receiveAllEvents(events)),
+      dispatch(clearSessionErrors())
+    ),
+    errors => dispatch(receiveErrors(errors))
+  );
 };
-    // errors => dispatch(receiveErrors(errors))
 
 export const requestEvent = id => dispatch => (
   EventAPIUtil.fetchEvent(id).then(event => (
-    dispatch(receiveEvent(event))
+    dispatch(receiveEvent(event)),
+    dispatch(clearSessionErrors())
   )),
     errors => dispatch(receiveErrors(errors))
 );
 
 export const createEvent = event => dispatch => (
-  EventAPIUtil.createEvent(event).then(event => (                      dispatch(receiveEvent(event))
+  EventAPIUtil.createEvent(event).then(event => (               dispatch(receiveEvent(event)),
+  dispatch(clearSessionErrors())
   )),
   errors => dispatch(receiveErrors(errors))
 );
 
 export const deleteEvent = event => dispatch => (
-  EventAPIUtil.removeEvent(event).then(event => (
-    dispatch(removeEvent(event))
+  EventAPIUtil.deleteEvent(event.id).then(event => (
+    dispatch(removeEvent(event)),
+    dispatch(clearSessionErrors())
+  )),
+    errors => dispatch(receiveErrors(errors))
+);
+
+export const editEvent = event => dispatch => (
+  EventAPIUtil.updateEvent(event.id).then(event => (
+    dispatch(receiveEvent(event)),
+    dispatch(clearSessionErrors())
   )),
     errors => dispatch(receiveErrors(errors))
 );

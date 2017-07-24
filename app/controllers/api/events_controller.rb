@@ -1,6 +1,7 @@
 class Api::EventsController < ApplicationController
   def new
     @event = Event.new
+    render :new
   end
 
   def create
@@ -15,10 +16,12 @@ class Api::EventsController < ApplicationController
 
   def show
     @event = Event.find_by(params[:id])
+    render :show
   end
 
   def index
     @events = Event.all
+    render :index
   end
 
 # .find returns a 404 error

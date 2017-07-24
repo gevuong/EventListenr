@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import { requestAllEvents } from '../../actions/event_actions';
 import { selectAllEvents } from '../../reducers/selectors';
 
-const mapStateToProps = ({ events }) => ({
-  events: selectAllEvents(events)
+const mapStateToProps = ({ event }) => ({
+  events: selectAllEvents(event.events)
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   requestAllEvents: () => dispatch(requestAllEvents())
 });
 

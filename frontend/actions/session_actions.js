@@ -20,8 +20,9 @@ export const clearSessionErrors = () => ({
 
 // thunk actions creators
 export const signup = user => dispatch => (
-  APIUtil.signup(user).then(user =>
-    (dispatch(receiveCurrentUser(user))
+  APIUtil.signup(user).then(user => (
+    dispatch(receiveCurrentUser(user)),
+    dispatch(clearSessionErrors())
   ), error => (
     dispatch(receiveErrors(error.responseJSON))
   ))
@@ -29,7 +30,8 @@ export const signup = user => dispatch => (
 
 export const login = user => dispatch => (
   APIUtil.login(user).then(user => (
-    dispatch(receiveCurrentUser(user))
+    dispatch(receiveCurrentUser(user)),
+    dispatch(clearSessionErrors())
   ), error => (
     dispatch(receiveErrors(error.responseJSON))
   ))
