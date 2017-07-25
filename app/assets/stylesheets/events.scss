@@ -24,16 +24,41 @@
 }
 
 .event-show-container {
-  border: 2px solid black;
+
   padding-top: 100px;
+  display: flex;
+  justify-content: space-around;
+
 }
 
 .show-page-image {
   height: 300px;
-  width: 50%;
+  width: 500px;
 }
 
 .event-list-header {
   display: flex;
   justify-content: center;
+}
+
+.description-show-page {
+  margin: 0 30px 30px 30px;
+}
+
+.tickets-button {
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 5px;
+  background-color: #4ae083;
+  color: white;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", "Open Sans", "Helvetica Neue";
+  font-weight: 100;
+  box-shadow: 0 4px 6px -2px rgba(22,22,22,0.45);
+}
+
+.tickets-button:hover {
+  background-color: #01461c;
 }

@@ -26,7 +26,6 @@ class EventIndex extends React.Component {
       />
     ));
 
-      console.log(eventList);
     return (
       <div>
         <h3 className="event-list-header">

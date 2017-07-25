@@ -15,11 +15,11 @@ class EventShow extends React.Component {
     this.props.requestEvent(this.props.match.params.eventId);
   }
 
-  componentWillReceiveProps() {
-    if (!event) {
-      event = {};
-    }
-  }
+  // componentWillReceiveProps() {
+  //   if (!event) {
+  //     event = {};
+  //   }
+  // }
   // a render occurs when
   //1. a component is instantiated
   //2. when the state changes
@@ -31,22 +31,36 @@ class EventShow extends React.Component {
     let event = this.props.event[key] ? this.props.event[key] : {};
 
     return (
-      <div className="event-show-container">
+      <div>
+        <br />
+        <div className="event-show-container">
+          <h3>
+            <img className="show-page-image" src={event.image_url} />
+          </h3>
 
-        <h3>
-          <img className="show-page-image" src={event.image_url} />
-        </h3>
-        <div>
-          <h3>{event.title}</h3>
-          <p>Location: {event.location}</p>
+          <div>
+            <h3>{event.title}</h3>
+            <h4>Location</h4>
+              <p>{event.location}</p>
+            <br />
+            <h4>Date and Time</h4>
+            <p>{event.date_time}</p>
+            <br />
+            <br />
+            <p>${event.ticket_price}</p>
+            <br />
+            <p>Quantity: {event.ticket_quanity}</p>
+            <br />
 
-          <p>Date and Time: {event.date_time}</p>
-          <p>Price: {event.ticket_price}</p>
-          <p>Quantity: {event.ticket_quanity}</p>
-          <p>REGISTER</p>
+            <h3 className="tickets-button">TICKETS</h3>
+            <br />
+            <br />
+          </div>
         </div>
-        <div>
-          <p>Description: {event.description}</p>
+
+        <div className="description-show-page">
+          <h4>Description</h4>
+          <p>{event.description}</p>
         </div>
       </div>
       );
