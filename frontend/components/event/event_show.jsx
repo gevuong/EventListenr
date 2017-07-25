@@ -5,18 +5,21 @@ class EventShow extends React.Component {
   constructor(props){
     super(props);
 
-    console.log('EventShow', this.props);
   }
 
   componentWillMount(){
     this.props.requestEvent(this.props.match.params.eventId);
   }
 
-  // componentWillReceiveProps() {
-  //   if (!event) {
-  //     event = {};
-  //   }
-  // }
+  componentDidMount(){
+    this.props.requestEvent(this.props.match.params.eventId);
+  }
+
+  componentWillReceiveProps() {
+    if (!event) {
+      event = {};
+    }
+  }
   // a render occurs when
   //1. a component is instantiated
   //2. when the state changes
@@ -30,15 +33,21 @@ class EventShow extends React.Component {
     return (
       <div className="event-show-container">
 
-        <h3>Event Show Page</h3>
-          <h3>Title: {event.title}</h3>
+        <h3>
+          <img className="show-page-image" src={event.image_url} />
+        </h3>
+        <div>
+          <h3>{event.title}</h3>
           <p>Location: {event.location}</p>
-          <p>Description: {event.description}</p>
+
           <p>Date and Time: {event.date_time}</p>
           <p>Price: {event.ticket_price}</p>
           <p>Quantity: {event.ticket_quanity}</p>
-
           <p>REGISTER</p>
+        </div>
+        <div>
+          <p>Description: {event.description}</p>
+        </div>
       </div>
       );
     }

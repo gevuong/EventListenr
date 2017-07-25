@@ -29,9 +29,9 @@ class EventIndex extends React.Component {
       console.log(eventList);
     return (
       <div>
-        <header className="event-list-header">
-          Events Near You
-        </ header>
+        <h3 className="event-list-header">
+          EVENTS NEAR YOU
+        </ h3>
         <div className="event-index-container">
             { eventList }
         </div>
