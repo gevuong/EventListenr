@@ -10,12 +10,26 @@
 }
 
 .event-container {
+  position: relative;
   border: 2px solid black;
   padding: 5px;
   color: black;
   margin: 20px;
   width: 300px;
   height: 400px;
+}
+
+.event-container-hover {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  z-index: 20;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.event-container-hover:hover {
+ background-color: rgba(0,0,0,0.45);
+ ;
 }
 
 .event-form-container {
