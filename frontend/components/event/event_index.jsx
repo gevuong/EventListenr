@@ -21,17 +21,22 @@ class EventIndex extends React.Component {
     const { events } = this.props;
 
     let eventList = events.map(eventItem => (
-        <EventIndexItem key={eventItem.id}
-          eventItem={eventItem}
-        />
-      ));
+      <EventIndexItem key={eventItem.id}
+        eventItem={eventItem}
+      />
+    ));
+
       console.log(eventList);
     return (
-      <div className="event-list-header">
-        Events near you
-        { eventList }
+      <div>
+        <header className="event-list-header">
+          Events Near You
+        </ header>
+        <div className="event-index-container">
+            { eventList }
+        </div>
       </div>
-      );
+    );
   }
 }
 

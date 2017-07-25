@@ -2,7 +2,7 @@ import merge from 'lodash/merge';
 import { RECEIVE_ALL_EVENTS, RECEIVE_EVENT, REMOVE_EVENT } from '../actions/event_actions';
 
 const nullEvent = Object.freeze({
-  events: null,
+  events: {},
   errors: []
 });
 
@@ -17,7 +17,7 @@ const eventReducer = (state = nullEvent, action) => {
       return merge({}, state, { events });
     case RECEIVE_EVENT:
       const event = action.event;
-      return merge({}, state, { event });
+      return merge({}, state, { [event.id]: event });
     case REMOVE_EVENT:
     // first dup current state, then find event and delete item.
       currentState = merge({}, state);

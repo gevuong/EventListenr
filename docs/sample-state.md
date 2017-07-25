@@ -12,9 +12,9 @@
     }
   },
 
-  events: {
+  event: {
     errors: [],
-    all_events: {
+    events: {
       1: {
         id: 1,
         organizer_id: 1,
