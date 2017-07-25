@@ -66,9 +66,8 @@ class SessionForm extends React.Component {
   changeFormLink() {
     if (this.props.formType === 'login') {
       return (
-        <p className="signup-session-terms">Don't have an account?<Link to='/signup'>Sign Up</Link>
-        <br/>
-          By signing up, I agree to EventListenr's terms of service, privacy policy, and community guidelines.
+        <p>Don't have an account? <Link to='/signup'>Sign Up</Link>
+
         </p>
       );
     } else {

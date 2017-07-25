@@ -16,11 +16,10 @@ class EventIndexItem extends React.Component {
           <div className="event-container">
             <div className="event-container-hover"></div>
             <img src={eventItem.image_url}></img>
-
-            <p>{eventItem.title}</p>
-            <p>Location: {eventItem.location}</p>
-            <p>Description: {eventDescription}</p>
             <p>Date and Time: {eventItem.date_time}</p>
+            <h4>{eventItem.title}</h4>
+            <p>{eventItem.location}</p>
+            <p>{eventDescription}</p>
 
           </div>
         </Link>

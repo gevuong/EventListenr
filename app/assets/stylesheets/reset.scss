@@ -23,7 +23,8 @@ ul {
 img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 205px;
+  object-fit: cover;
 }
 
 input[type="password"],

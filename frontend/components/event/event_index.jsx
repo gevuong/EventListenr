@@ -28,6 +28,8 @@ class EventIndex extends React.Component {
 
     return (
       <div>
+        <br />
+        <br />
         <h3 className="event-list-header">
           EVENTS NEAR YOU
         </ h3>

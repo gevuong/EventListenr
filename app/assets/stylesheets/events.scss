@@ -6,25 +6,24 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .event-container {
   position: relative;
-  border: 2px solid black;
-  padding: 5px;
   color: black;
   margin: 20px;
-  width: 300px;
+  width: 325px;
   height: 400px;
+  box-shadow: 0 3px 8px 2px rgba(22,22,22,0.45);
 }
 
 .event-container-hover {
   position: absolute;
-  width: 300px;
+  width: 325px;
   height: 400px;
   z-index: 20;
-  background-color: rgba(0,0,0,0.2);
+
 }
 
 .event-container-hover:hover {
@@ -35,6 +34,11 @@
 .event-form-container {
   border: 2px solid black;
   padding-top: 100px;
+}
+
+.event-show-container-outer {
+  max-width: 850px;
+  margin: auto;
 }
 
 .event-show-container {

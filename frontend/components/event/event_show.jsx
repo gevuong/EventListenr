@@ -11,15 +11,12 @@ class EventShow extends React.Component {
     this.props.requestEvent(this.props.match.params.eventId);
   }
 
-  componentDidMount(){
-    this.props.requestEvent(this.props.match.params.eventId);
-  }
-
   // componentWillReceiveProps() {
   //   if (!event) {
   //     event = {};
   //   }
   // }
+
   // a render occurs when
   //1. a component is instantiated
   //2. when the state changes
@@ -31,7 +28,7 @@ class EventShow extends React.Component {
     let event = this.props.event[key] ? this.props.event[key] : {};
 
     return (
-      <div>
+      <div className="event-show-container-outer">
         <br />
         <div className="event-show-container">
           <h3>
@@ -49,7 +46,7 @@ class EventShow extends React.Component {
             <br />
             <p>${event.ticket_price}</p>
             <br />
-            <p>Quantity: {event.ticket_quanity}</p>
+            <p>Quantity: {event.ticket_quantity}</p>
             <br />
 
             <h3 className="tickets-button">TICKETS</h3>
