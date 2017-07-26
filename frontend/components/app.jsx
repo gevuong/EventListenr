@@ -3,7 +3,7 @@ import NavBarContainer from './navbar/navbar_container';
 import { Route, Switch } from 'react-router-dom';
 import SessionFormContainer from './session_form/session_form_container';
 import { AuthRoute } from '../util/route_util.jsx';
-import EventFormContainer  from './event/event_form_container';
+import EventFormContainer from './event/event_form_container';
 import EventShowContainer from './event/event_show_container';
 import UserProfile from './user/profile';
 import Home from './home/home';

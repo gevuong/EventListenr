@@ -1,4 +1,6 @@
 import React from 'react';
+import Dropzone from 'react-dropzone';
+import request from 'superagent';
 
 class EventForm extends React.Component {
   constructor(props) {
@@ -9,28 +11,24 @@ class EventForm extends React.Component {
       description: "",
       location: "",
       date_time: "",
-      image_url: "",
       ticket_price: 0,
       ticket_quantity: 0,
-
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 // invoked immediately after a component is mounted
-  componentDidMount() {
-    this.props.createEvent();
-  }
+  // componentDidMount() {
+  //   this.props.createEvent();
+  // }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createEvent();
+    const event = Object.assign({}, this.state);
+    this.props.createEvent(event);
   }
 
-  handleCloudinary(e) {
-    e.preventDefault();
-    cloudinary.
-  }
   update(events) {
     return e => this.setState({
       [events]: e.target.value
@@ -38,55 +36,62 @@ class EventForm extends React.Component {
   }
 
   render() {
-    const { title, description, location, date_time, image_url, ticket_price, ticket_quantity} = this.state;
+    const { title, description, location, date_time, image_url, ticket_price, ticket_quantity } = this.state;
+    console.log("render test");
 
     return (
-
-      <div>
+      <div className="event-form-container">
         <h3>Create an Event</h3>
-      <form onSubmit={this.handleSubmit}>
-        <label>Title</label>
-        <input
-          type="text"
-          value={title}
-          onChange={this.update('title')} />
 
-        <label>Description</label>
-        <input
-          type="text"
-          value={description}
-          onChange={this.update('description')}
-        />
-
-        <label>Location</label>
+        <form className="event-form" onSubmit={this.handleSubmit}>
+          <label>Title</label>
           <input
+            className="create-event-title"
             type="text"
-            value={location}
-            onChange={this.update('location')}
+            value={title}
+            onChange={this.update('title')}
           />
 
-        <label>Ticket Price</label>
+          <label>Description</label>
           <input
-            type="number"
-            value={ticket_price}
-            onChange={this.update('ticket_price')}
+            className="create-event-description"
+            type="text"
+            value={description}
+            onChange={this.update('description')}
           />
 
-        <label>Ticket Quantity</label>
-          <input
-            type="number"
-            value={ticket_quantity}
-            onChange={this.update('ticket_quantity')}
-          />
+          <label>Location</label>
+            <input
+              className="create-event-location"
+              type="text"
+              value={location}
+              onChange={this.update('location')}
+            />
 
-        <div>
-          <button
-            onClick={this.handleCloudinary}
-          />
-        </div>
-      </form>
+          <label>Date and Time</label>
+            <input
+              className="create-event-location"
+              type="text"
+              value={location}
+              onChange={this.update('location')}
+            />
 
+          <label>Ticket Price</label>
+            <input
+              className="ticket-price"
+              type="number"
+              value={ticket_price}
+              onChange={this.update('ticket_price')}
+            />
 
+          <label>Ticket Quantity</label>
+            <input
+              className="ticket-quantity"
+              type="number"
+              value={ticket_quantity}
+              onChange={this.update('ticket_quantity')}
+            />
+        </form>
       </div>
     );
   }

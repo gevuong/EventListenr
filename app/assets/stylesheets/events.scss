@@ -28,11 +28,15 @@
 
 .event-container-hover:hover {
  background-color: rgba(0,0,0,0.45);
- ;
+
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
 }
 
 .event-form-container {
-  border: 2px solid black;
   padding-top: 100px;
 }
 
