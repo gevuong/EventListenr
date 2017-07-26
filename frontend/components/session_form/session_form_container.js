@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { login, logout, signup, clearSessionErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
-const mapStateToProps = ({ session }, { location }) => {
+const mapStateToProps = ({ session }) => {
   return {
     loggedIn: Boolean(session.currentUser),
     errors: session.errors,

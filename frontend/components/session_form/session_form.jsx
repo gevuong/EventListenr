@@ -32,6 +32,12 @@ class SessionForm extends React.Component {
   componentDidMount() {
     this.props.clearErrors();
   }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.location.pathname !== nextProps.location.pathname) {
+      this.props.clearErrors();
+    }
+  }
   // supposed to run everytime your prop changes, but it's not.not called when component is initially mounts.
   // componentWillReceiveProps(nextProps) {
   //

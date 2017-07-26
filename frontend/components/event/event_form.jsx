@@ -42,20 +42,19 @@ class EventForm extends React.Component {
 
   updatePicUrl(url) {
     this.setState({
-      image_url: Object.assign(this.state.image_url, { image_url: url })
+      image_url: url
     });
   }
 
   render() {
     const { title, description, location, date_time, image_url, ticket_price, ticket_quantity } = this.state;
-    console.log("render test");
 
     return (
       <div className="event-form-container">
         <h3>EVENT DETAILS</h3>
 
         <form className="event-form" onSubmit={this.handleSubmit}>
-          <label className="event-field">TITLE</label>
+          <label className="event-field-label">TITLE</label>
             <input
               className="event-input"
               type="text"
@@ -64,7 +63,7 @@ class EventForm extends React.Component {
             />
 
         <br />
-        <label className="event-field">DESCRIPTION</label>
+        <label className="event-field-label">DESCRIPTION</label>
           <input
             className="event-input"
             type="text"
@@ -73,7 +72,7 @@ class EventForm extends React.Component {
           />
         <br/>
 
-        <label className="event-field">LOCATION</label>
+        <label className="event-field-label">LOCATION</label>
             <input
               className="event-input"
               type="text"
@@ -82,7 +81,7 @@ class EventForm extends React.Component {
             />
 
           <br/>
-          <label>Date and Time</label>
+          <label className="event-field-label">Date and Time</label>
             <input
               className="event-input"
               type="datetime-local"
@@ -91,11 +90,11 @@ class EventForm extends React.Component {
             />
           <br/>
 
-          <label>Event Image</label>
+          <label className="event-field-label">Event Image</label>
           <DropForm className="image-upload-form" updateUrl={this.updatePicUrl} />
 
           <br />
-          <label>Ticket Price</label>
+          <label className="event-field-label">Ticket Price</label>
             <input
               className="event-input"
               type="number"
@@ -103,7 +102,7 @@ class EventForm extends React.Component {
               onChange={this.update('ticket_price')}
             />
           <br/>
-          <label>Ticket Quantity</label>
+          <label className="event-field-label">Ticket Quantity</label>
             <input
               className="event-input"
               type="number"
@@ -112,7 +111,7 @@ class EventForm extends React.Component {
             />
 
           <br />
-          <button className="session-form-submit-button" onClick={this.handleSubmit}>MAKE YOUR EVENT LIVE</button>
+          <button className="tickets-button" onClick={this.handleSubmit}>MAKE YOUR EVENT LIVE</button>
         </form>
       </div>
     );

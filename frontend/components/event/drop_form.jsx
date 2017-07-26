@@ -1,8 +1,8 @@
 import React from 'react';
 import request from 'superagent';
 import Dropzone from 'react-dropzone';
-const CLOUDINARY_UPLOAD_PRESET = 'ox1h6aai';
-const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dluh2fsyd/upload';
+const CLOUDINARY_UPLOAD_PRESET = 'aopdku36';
+const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dtluc0y85/image/upload';
 
 
 class DropForm extends React.Component {
@@ -29,7 +29,6 @@ class DropForm extends React.Component {
       if (err) {
         console.error(err);
       }
-
       if (response.body.secure_url !== '') {
         this.props.updateUrl(response.body.secure_url);
         this.setState({

@@ -24,6 +24,7 @@
 
 .event-form-container {
   padding-top: 100px;
+
 }
 
 .FileUpload {
@@ -42,8 +43,9 @@
   border: 2px solid black;
 }
 
-.event-field {
-  width: 125px;
-  display: inline-block;
-  margin: 10px;
+.event-field-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 700;
 }
