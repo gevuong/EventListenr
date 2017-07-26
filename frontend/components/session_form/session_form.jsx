@@ -66,13 +66,13 @@ class SessionForm extends React.Component {
   changeFormLink() {
     if (this.props.formType === 'login') {
       return (
-        <p>Don't have an account? <Link to='/signup'>Sign Up</Link>
+        <p>Don't have an account? <Link className="signup-login-link" to='/signup'>Sign Up</Link>
 
         </p>
       );
     } else {
       return (
-        <p>Already have an account? <Link to='/login'>Login</Link></p>
+        <p>Already have an account? <Link className="signup-login-link" to='/login'>Login</Link></p>
       );
     }
   }
@@ -97,7 +97,7 @@ class SessionForm extends React.Component {
 
   render() {
     console.log(this.props.formType);
-    let button_text = this.props.formType === 'login' ? "LOGIN" : "SIGN IN";
+    let button_text = this.props.formType === 'login' ? "LOGIN" : "SIGN UP";
     return (
       <div>
         <Carousel />

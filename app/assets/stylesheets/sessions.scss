@@ -126,9 +126,8 @@
   font-family: "Montserrat", "Open Sans", "Helvetica Neue";
   font-weight: 200;
 }
-//
-// .logo {
-//   width: 28%;
-//   display: flex;
-//   justify-content: center;
-// }
+
+.signup-login-link {
+  text-decoration: underline;
+  color: blue;
+}
