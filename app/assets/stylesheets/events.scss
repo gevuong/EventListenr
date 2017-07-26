@@ -30,32 +30,7 @@
  background-color: rgba(0,0,0,0.45);
 }
 
-.event-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-.create-event-title {
-  border-bottom: 2px solid black;
-  width: 50%;
-}
-
-.create-event-location {
-  border-bottom: 2px solid black;
-  width: 50%;
-}
-
-.create-event-description {
-  border-bottom: 2px solid black;
-  width: 50%;
-}
-
-
-.event-form-container {
-  padding-top: 100px;
-}
 
 .event-show-container-outer {
   max-width: 850px;

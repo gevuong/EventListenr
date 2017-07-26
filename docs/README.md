@@ -23,7 +23,6 @@ Users can create events
 Events can be created, deleted or edited through the API
 <!-- Drag and drop functionality for uploading images to events -->
 Events have many tickets
-Users can browse events
 Users can bookmark/unbookmark events through the API
 
 Phase 3: Tickets (1 Day)

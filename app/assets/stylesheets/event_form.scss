@@ -1,0 +1,49 @@
+.event-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-input {
+  border: 1px solid black;
+  width: 50%;
+  margin: 5px;
+  padding: 2px;
+}
+
+// .create-event-location {
+//   border-bottom: 2px solid black;
+//   width: 50%;
+// }
+//
+// .create-event-description {
+//   border-bottom: 2px solid black;
+//   width: 50%;
+// }
+
+.event-form-container {
+  padding-top: 100px;
+}
+
+.FileUpload {
+  border: 2px solid black;
+}
+
+.dropzone {
+  display: inline-block;
+  width: 150px;
+  height: 75px;
+  margin: 10px;
+  border: 3px solid #73AD21;
+}
+
+.image-upload-form {
+  border: 2px solid black;
+}
+
+.event-field {
+  width: 125px;
+  display: inline-block;
+  margin: 10px;
+}
