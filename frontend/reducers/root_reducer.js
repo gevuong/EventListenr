@@ -4,7 +4,7 @@ import eventReducer from './event_reducer';
 
 const rootReducer = combineReducers({
   session: sessionReducer,
-  event: eventReducer // 
+  event: eventReducer 
 });
 
 export default rootReducer;

@@ -30,7 +30,7 @@ NB: Does not require users/:id/tickets because current_user is stored in the bac
 - `GET /api/tickets/new`
 - `POST /api/events/:id/tickets`
 - `GET /api/tickets` - returns tickets for current_user
-- `DELETE /api/tickets/:id`
+- `DELETE /api/tickets/:id` - tickets#show
 
 ## Bookmarks
 - `GET /api/events/:event_id/bookmarks`

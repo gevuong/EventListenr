@@ -6,8 +6,8 @@
       id: 1,
       username: 'gevuong',
       password: "fruitS123",
-      events: [4, 2, 7],
-      tickets: [3, 86, 5000000], // each ticket is going to have its own event_id.
+      events: [4, 2, 7], // user created event_ids
+      tickets: {3: 1, 86: 3, 2: 5}, // each ticket is going to have its own event_id.;
       bookmarks: [3, 6, 2]
     }
   },

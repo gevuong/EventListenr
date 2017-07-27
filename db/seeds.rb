@@ -104,3 +104,28 @@ e8 = Event.create(
   ticket_price: 0,
   ticket_quantity: 100
 )
+
+Ticket.destroy_all
+Ticket.create(
+  event_id: e8.id,
+  user_id: guest.id,
+  quantity: 5
+)
+
+Ticket.create(
+  event_id: e6.id,
+  user_id: guest.id,
+  quantity: 3
+)
+
+Ticket.create(
+  event_id: e5.id,
+  user_id: noah.id,
+  quantity: 5
+)
+
+Ticket.create(
+  event_id: e4.id,
+  user_id: keith.id,
+  quantity: 1
+)

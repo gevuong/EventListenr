@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
       password: '',
       modalIsOpen: true
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.guestLogin = this.guestLogin.bind(this);
     this.openModal = this.openModal.bind(this);
@@ -68,10 +69,11 @@ class SessionForm extends React.Component {
   //     return <Link to="/login">login instead</Link>;
   //   }
   // }
+
   changeFormLink() {
     if (this.props.formType === 'login') {
       return (
-        <p>Don't have an account? <Link className="signup-login-link" to='/signup'>Sign Up</Link>
+        <p>Don't have an account? <Link     className="signup-login-link" to='/signup'>Sign Up</Link>
 
         </p>
       );
@@ -96,7 +98,25 @@ class SessionForm extends React.Component {
 
   guestLogin(e) {
     e.preventDefault();
-    this.props.guestLogin( {user: {username: "guest", password: "password"}} );
+    let name = "guest";
+    let password = "password";
+
+    for (let i = 0; i < name.length; i++) {
+      setTimeout(() => this.setState({
+        username: name.slice(0, i + 1)}), (i * 80), 1000);
+    }
+    for (let j = 0; j < password.length; j++) {
+      setTimeout(() => this.setState({
+        password: password.slice(0, j + 1)}), ((j + 5) * 80), 1000);
+    }
+
+    const user = {
+      username: 'guest',
+      password: 'password'
+    };
+
+    setTimeout(() => this.props.guestLogin({user}), 1500);
+    // this.props.guestLogin( {user: {username: "guest", password: "password"}} );
     this.props.history.push("/");
   }
 

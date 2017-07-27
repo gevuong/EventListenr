@@ -2,7 +2,7 @@
 export const fetchAllEvents = () => (
   $.ajax({
     method: 'GET',
-    url: 'api/events',
+    url: 'api/events'
   })
 );
 

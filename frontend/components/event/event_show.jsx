@@ -49,8 +49,11 @@ class EventShow extends React.Component {
             <br />
             <p>Quantity: {event.ticket_quantity}</p>
             <br />
-            <TicketForm />
 
+
+            <Link to={`/events/${event.id}/tickets/new`}>
+              <h3 className="tickets-button">TICKETS</h3>
+            </Link>
             <br />
             <br />
           </div>

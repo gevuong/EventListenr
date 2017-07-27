@@ -16,9 +16,10 @@ const App = () => (
     </header>
 
     <Switch>
-      <Route path="/events/:eventId/tickets/new" component={ TicketFormContainer }></Route>
-      <Route path="/events/new" component={ EventFormContainer } />
+      <Route exact path="/events/:eventId/tickets/new" component={ TicketFormContainer }></Route>
+      <Route exact path="/events/new" component={ EventFormContainer } />
       <Route path="/events/:eventId" component={ EventShowContainer } />
+
       <Route path="/users/:userId" component={ UserProfile } />
       <AuthRoute path="/login" component={ SessionFormContainer } />
       <AuthRoute path="/signup" component={ SessionFormContainer } />
@@ -26,5 +27,6 @@ const App = () => (
     </Switch>
   </div>
 );
+
 
 export default App;
