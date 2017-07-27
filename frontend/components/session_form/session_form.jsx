@@ -23,7 +23,6 @@ class SessionForm extends React.Component {
 
   closeModal() {
     this.setState({modalIsOpen: false});
-    // console.log(this.props.history);
     this.props.history.push("/");
 
   }

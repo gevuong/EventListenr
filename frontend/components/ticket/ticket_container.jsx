@@ -8,6 +8,7 @@ const mapStateToProps = ({ event }) => ({
 
 const mapDispatchToProps = dispatch => ({
   requestEvent: id => dispatch(requestEvent(id))
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TicketForm);
