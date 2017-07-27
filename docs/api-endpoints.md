@@ -27,6 +27,7 @@
 ## Tickets/Registrations
 NB: Does not require users/:id/tickets because current_user is stored in the backend.
 <!-- - `GET /api/tickets` tickets#       -->
+- `GET /api/tickets/new`
 - `POST /api/events/:id/tickets`
 - `GET /api/tickets` - returns tickets for current_user
 - `DELETE /api/tickets/:id`

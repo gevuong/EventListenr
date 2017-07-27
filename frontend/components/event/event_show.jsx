@@ -1,5 +1,6 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link, Route } from 'react-router-dom';
+import TicketForm from '../ticket/ticket_form';
 
 class EventShow extends React.Component {
   constructor(props){
@@ -35,7 +36,7 @@ class EventShow extends React.Component {
             <img className="show-page-image" src={event.image_url} />
           </h3>
 
-          <div>
+          <div className="show-page-event-details">
             <h3>{event.title}</h3>
             <h4>Location</h4>
               <p>{event.location}</p>
@@ -48,8 +49,11 @@ class EventShow extends React.Component {
             <br />
             <p>Quantity: {event.ticket_quantity}</p>
             <br />
+            <Link to={`/events/${event.id}/tickets/new`}>
+              <h3 className="tickets-button">TICKETS</h3>
+            </Link>
 
-            <h3 className="tickets-button">TICKETS</h3>
+
             <br />
             <br />
           </div>
@@ -63,6 +67,8 @@ class EventShow extends React.Component {
       );
     }
 }
+
+// <Route path="/events/:eventId/tickets/new" component={ TicketForm } />
 
 export default EventShow;
 // console.log('match', this.props.match.params.eventId);

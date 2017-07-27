@@ -16,8 +16,8 @@ class EventForm extends React.Component {
       ticket_price: 0,
       ticket_quantity: 0,
       category_id: [1],
-      organizer_id: [1]
     };
+
     this.updatePicUrl = this.updatePicUrl.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }

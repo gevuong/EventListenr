@@ -7,6 +7,7 @@ import EventFormContainer from './event/event_form_container';
 import EventShowContainer from './event/event_show_container';
 import UserProfile from './user/profile';
 import Home from './home/home';
+import TicketFormContainer from './ticket/ticket_container';
 
 const App = () => (
   <div>
@@ -15,6 +16,7 @@ const App = () => (
     </header>
 
     <Switch>
+      <Route path="/events/:eventId/tickets/new" component={ TicketFormContainer }></Route>
       <Route path="/events/new" component={ EventFormContainer } />
       <Route path="/events/:eventId" component={ EventShowContainer } />
       <Route path="/users/:userId" component={ UserProfile } />

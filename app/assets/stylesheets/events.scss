@@ -38,11 +38,14 @@
 }
 
 .event-show-container {
-
   padding-top: 100px;
   display: flex;
   justify-content: space-around;
+  background: white;
+}
 
+.show-page-event-details {
+  padding-left: 35px;
 }
 
 .show-page-image {

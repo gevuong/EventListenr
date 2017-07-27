@@ -6,6 +6,7 @@ const Profile = () => (
       <h3>User Profile</h3>
       <p>Bookmarks</p>
       <p>Tickets</p>
+      <p>User Events</p>
       </div>
     </div>
 );
