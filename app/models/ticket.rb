@@ -1,5 +1,5 @@
 class Ticket < ApplicationRecord
-  validates :event_id, :user_id, presence: true, uniqueness: true
+  validates :event_id, :user_id, presence: true
 
   # custom validation to validate that the quantity is <= to remaining amount
 

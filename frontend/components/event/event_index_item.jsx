@@ -16,7 +16,6 @@ class EventIndexItem extends React.Component {
           <div className="event-container">
             <div className="event-container-hover"></div>
             <img src={eventItem.image_url}></img>
-            <p>Date and Time: {eventItem.date_time}</p>
             <h4>{eventItem.title}</h4>
             <p>{eventItem.location}</p>
             <p>{eventDescription}</p>

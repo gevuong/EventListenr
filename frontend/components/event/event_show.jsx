@@ -54,9 +54,6 @@ class EventShow extends React.Component {
             <h4>Location</h4>
               <p>{event.location}</p>
             <br />
-            <h4>Date and Time</h4>
-            <p>{event.date_time}</p>
-            <br />
             <br />
             <p>${event.ticket_price}</p>
             <br />

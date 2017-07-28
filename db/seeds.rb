@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 guest = User.create(username: 'guest', password: 'password')
+george = User.create(username: 'George', password: 'password')
 noah = User.create(username: 'Noah', password: 'password')
 keith = User.create(username: 'Keith', password: 'password')
 anastassia = User.create(username: 'Anastassia', password: 'password')

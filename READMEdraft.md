@@ -4,7 +4,6 @@
 
 EventListenr() is a single page web application inspired by EventBrite, allowing users to discover, host, and create events, and bookmarks events, and register for an event via online ticketing. that built using Ruby on Rails, React/Redux, and PostGreSQL database. Cloudinary was used to host images.
 
-
 ## Technologies
 The backend architecture uses Rails 5.0.4's MVC web framework to fetch and store data to PostGreSQL database. The front end application was written using JavaScript's React library.
 
@@ -15,7 +14,6 @@ The backend architecture uses Rails 5.0.4's MVC web framework to fetch and store
 * User can bookmark/unbookmark events through the API
 * User can purchase tickets and
 * User Dashboard displays purchased tickets and bookmarked events.
-
 
 # Home Page
 [EventListenr() Home page](docs/images/homepage_event_index.png)
