@@ -19,11 +19,11 @@ leo = User.create(username: 'Leo', password: 'password')
 Event.destroy_all
 e1 = Event.create(
 organizer_id: noah.id,
-title: 'Hot Air Balloon Tour',
+title: 'FishPX 101',
 location: 'Fort Mason, San Francisco, CA',
 date_time: DateTime.new(2017, 11, 22, 7, 0, 0),
 description: 'Learn how to capture great images for your next vacation. We will teach you how to capture magical moments on your next vacation. Learn about inexpensive and essential equipment and tools, how to work with complex cultural issues in the field, lighting/exposure tips and time-of-day solutions, and composition and balance in image design.',
-image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1500534760/homepage_photo_khrkqr.jpg',
+image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1500957120/subtle-animated-gif-18_pqgcuc.gif',
 ticket_price: 30,
 ticket_quantity: 5
 )

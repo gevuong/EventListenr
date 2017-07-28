@@ -2,9 +2,10 @@ class Event < ApplicationRecord
   validates :title, :description, :location, :date_time, :ticket_price, :ticket_quantity, presence: true
 
   belongs_to :organizer,
-  class_name: :User,
+  primary_key: :id,
   foreign_key: :organizer_id,
-  primary_key: :id
+  class_name: :User
 
   has_many :tickets
+  has_one :bookmarks
 end

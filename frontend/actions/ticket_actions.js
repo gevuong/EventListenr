@@ -1,5 +1,5 @@
 import * as TicketAPIUtil from '../util/ticket_api_util';
-
+import { receiveCurrentUser } from './session_actions';
 export const RECEIVE_ALL_TICKETS = "RECEIVE_ALL_EVENTS";
 export const RECEIVE_TICKET = "RECEIVE_EVENT";
 
@@ -9,9 +9,9 @@ export const receiveAllTickets = tickets => ({
   tickets
 });
 
-export const receiveTicket = event => ({
+export const receiveTicket = ticket => ({
   type: RECEIVE_TICKET,
-  event
+  ticket
 });
 
 // async thunk actions
@@ -33,8 +33,8 @@ export const requestTicket = id => dispatch => (
 
 export const createTicket = ticket => dispatch => (
   TicketAPIUtil.createTicket(ticket).then(
-    ticket => (
-      dispatch(receiveTicket(ticket))
+    user => (
+      dispatch(receiveCurrentUser(user))
     )
   )
 );

@@ -7,16 +7,11 @@ class TicketForm extends React.Component {
     super(props);
 
     this.state = {
-      event_id: props.event.id,
-      user_id: props.session.id,
-      quantity: 0,
-      modalIsOpen: true
+      quantity: 1,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-    this.openModal = this.openModal.bind(this);
   }
 
   handleChange(e) {
@@ -26,27 +21,23 @@ class TicketForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createTicket(this.state)
+    console.log("state", this.state);
+    let ticket = Object.assign({}, this.state);
+    ticket.event_id = this.props.event.id;
+
+    this.props.createTicket(ticket)
     .then(() => {
-      this.props.closeModal()
-      this.props.history.push(`/events/${this.props.match.params.eventId}`)
+      this.props.closeModal();
       }
     );
   }
 
-  componentWillMount() {
-    this.props.requestEvent(this.props.match.params.eventId);
-    console.log(this.props);
-  }
+  // componentWillMount() {
+  //   this.props.requestTicket(this.props.match.params.eventId);
+  //   console.log(this.props);
+  // }
 
-  openModal() {
-    this.setState({modalIsOpen: true});
-  }
 
-  closeModal() {
-    this.setState({modalIsOpen: false});
-    this.props.history.push(`/events/${this.props.match.params.eventId}/tickets/new`);
-  }
 
   render() {
     console.log('ticketform', this.props);
@@ -54,35 +45,34 @@ class TicketForm extends React.Component {
     const { event } = this.props;
 
     return (
-      <div>
+      <div className="ticket-box">
         <Modal className="modal-ticket-form"
-          isOpen={this.state.modalIsOpen}
-          onAfterOpen={this.afterOpenModal}
-          onRequestClose={this.closeModal}
+          isOpen={this.props.modalIsOpen}
+          onRequestClose={this.props.closeModal}
           contentLabel="Example Modal"
         >
 
-          <div className="ticket-container">
-            <form onSubmit={this.handleSubmit}>
-              <h4>Register for Event</h4>
-              <br />
-              <p>Quantity</p>
-              <select onChange={this.handleChange}>
-                <option disabled selected>0</option>
-                <option value={1}>1</option>
-                <option value={2}>2</option>
-                <option value={3}>3</option>
-                <option value={4}>4</option>
-              </select>
+          <form className="ticket-form" onSubmit={this.handleSubmit}>
+            <h4>Register for Event</h4>
+            <br />
+            <label className="ticket-title">{event.title}</label>
+            <label>{event.ticket_price}</label>
 
-              <footer className="ticket-footer">
-                <label>QTY: { quantity }</label>
-                <label>TOTAL: ${ event.ticket_price * quantity }</label>
-                <button className="tickets-button" onClick={this.handleSubmit}>CHECKOUT</button>
+            <select className="ticket-quantity-selector" onChange={this.handleChange}>
+              <option value={1}>1</option>
+              <option value={2}>2</option>
+              <option value={3}>3</option>
+              <option value={4}>4</option>
+            </select>
 
-              </footer>
-            </form>
-          </div>
+            <footer className="ticket-footer">
+              <label>QTY: { quantity }</label>
+              <br/>
+              <label>TOTAL: ${ parseInt(event.ticket_price) * quantity }</label>
+              <button className="tickets-button" onClick={this.handleSubmit}>CHECKOUT</button>
+
+            </footer>
+          </form>
         </Modal>
       </div>
     );

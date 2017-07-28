@@ -1,4 +1,11 @@
 class Ticket < ApplicationRecord
+  # validate event id and user id and quantity
+  #
+  # custom validation to validate that the quantity is <= to remaining amount
+
+  #
+  # Event.find()
+
   belongs_to :event,
   primary_key: :id,
   foreign_key: :event_id,

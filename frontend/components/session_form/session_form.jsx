@@ -103,11 +103,11 @@ class SessionForm extends React.Component {
 
     for (let i = 0; i < name.length; i++) {
       setTimeout(() => this.setState({
-        username: name.slice(0, i + 1)}), (i * 80), 1000);
+        username: name.slice(0, i + 1)}), (i * 80));
     }
     for (let j = 0; j < password.length; j++) {
       setTimeout(() => this.setState({
-        password: password.slice(0, j + 1)}), ((j + 5) * 80), 1000);
+        password: password.slice(0, j + 1)}), ((j + 5) * 80));
     }
 
     const user = {

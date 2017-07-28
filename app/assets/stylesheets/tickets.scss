@@ -9,6 +9,29 @@
   // border: 2px solid black;
 }
 
+.ticket-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 20px;
+}
+
+.ticket-quantity-selector {
+  max-width: 100%;
+  width: 80px;
+  height: 30px;
+}
+
+.ticket-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  border-top: 1px solid #c6c6c6;
+}
+
 .modal-ticket-form {
   // z-index: 10;
   top: 50%;

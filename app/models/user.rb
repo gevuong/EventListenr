@@ -5,9 +5,14 @@ class User < ApplicationRecord
 
   has_many :events # user created events
   has_many :tickets
+  has_many :bookmarks
 
   has_many :ticketed_events,
   through: :tickets,
+  source: :event
+
+  has_many :bookmarked_events,
+  through: :bookmarks,
   source: :event
 
   after_initialize :ensure_session_token

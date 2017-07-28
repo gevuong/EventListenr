@@ -1,17 +1,30 @@
 import React from 'react';
 import { withRouter, Link, Route } from 'react-router-dom';
-import TicketForm from '../ticket/ticket_form';
+import TicketFormContainer from '../ticket/ticket_container';
 
 class EventShow extends React.Component {
   constructor(props){
     super(props);
 
+    this.state = {
+      modalIsOpen: false
+    };
+
+    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this);
   }
 
   componentWillMount(){
     this.props.requestEvent(this.props.match.params.eventId);
   }
 
+  openModal() {
+    this.setState({modalIsOpen: true});
+  }
+
+  closeModal() {
+    this.setState({modalIsOpen: false});
+  }
   // componentWillReceiveProps() {
   //   if (!event) {
   //     event = {};
@@ -24,12 +37,11 @@ class EventShow extends React.Component {
   //3. when setState is called
 
   render() {
-    // let event = this.props.events[this.props.match.params.eventId];
-    let key = this.props.match.params.eventId;
-    let event = this.props.event[key] ? this.props.event[key] : {};
+    let event = this.props.event;
 
     return (
       <div className="event-show-container-outer">
+        <TicketFormContainer modalIsOpen={this.state.modalIsOpen} closeModal={this.closeModal} event={event}/>
         <br />
         <div className="event-show-container">
           <h3>
@@ -50,10 +62,7 @@ class EventShow extends React.Component {
             <p>Quantity: {event.ticket_quantity}</p>
             <br />
 
-
-            <Link to={`/events/${event.id}/tickets/new`}>
-              <h3 className="tickets-button">TICKETS</h3>
-            </Link>
+              <h3 className="tickets-button" onClick={this.openModal}>TICKETS</h3>
             <br />
             <br />
           </div>
