@@ -14,17 +14,20 @@ class UserProfile extends React.Component {
   render() {
     return(
       <div className='user-profile-container'>
-        <div className='ticketed-event-container'>
           <h3 className="ticketed-event-header">Purchased Tickets</h3>
+        <div className='ticketed-event-container'>
           {this.props.ticketedEvents.map((event) => (
             <EventIndexItem key={event.id} eventItem={event}/>
             ))
           }
+        </div>
         <br/>
+
           <h3 className="ticketed-event-header">Bookmarked Events</h3>
-          {this.props.bookmarkedEvents.map((event) => (<EventIndexItem key={event.id} eventItem={event}/>
-            ))
-          }
+          <div className="bookmark-event-container">
+            {this.props.bookmarkedEvents.map((event) => (<EventIndexItem key={event.id} eventItem={event}/>
+              ))
+            }
         </div>
       </div>
     );

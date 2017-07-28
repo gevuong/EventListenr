@@ -1,3 +1,15 @@
 // Place all the styles related to the bookmarks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bookmark-event-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticketed-event-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
