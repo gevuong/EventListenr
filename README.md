@@ -37,6 +37,8 @@ Users can bookmark/unbookmark events. Bookmarked events are shown in the user pr
 Users "register" to events by "purchasing" tickets for events
 Purchased tickets appear on the User Dashboard under "Purchased Tickets"
 
+### User Dashboard
+![EventListenr() User Dashboard](docs/images/User_profile.png)
 
 ## Additional Resources
 * [View Wireframes](https://github.com/gevuong/EventListenr/tree/master/docs/wireframes)
