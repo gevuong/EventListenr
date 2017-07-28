@@ -20,7 +20,9 @@ class EventIndexItem extends React.Component {
             <h4>{eventItem.title}</h4>
             <p>{eventItem.location}</p>
             <p>{eventDescription}</p>
-
+            <br/>
+            <div className="bookmark">
+            </div>
           </div>
         </Link>
       </div>

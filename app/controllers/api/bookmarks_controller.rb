@@ -13,8 +13,16 @@ class Api::BookmarksController < ApplicationController
     end
   end
 
+  def destroy
+    bookmark = Bookmark.find_by(user_id: current_user.id, event_id: params[:event_id])
+
+    bookmark.destroy
+    @user = current_user
+    render '/api/users/show'
+  end
+
   private
   def bookmark_params
-    params.require(:bookmark).require(:event_id)
+    params.require(:bookmark).permit(:event_id)
   end
 end

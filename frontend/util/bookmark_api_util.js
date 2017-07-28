@@ -19,3 +19,11 @@ export const createBookmark = bookmark => (
     data: { bookmark }
   })
 );
+
+export const deleteBookmark = event_id => (
+  $.ajax({
+    method: 'DELETE',
+    url: 'api/bookmarks',
+    data: { event_id }
+  })
+);

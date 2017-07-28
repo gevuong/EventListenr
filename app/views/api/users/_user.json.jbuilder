@@ -5,3 +5,5 @@ json.tickets do
      json.set! ticket.event_id, ticket.quantity
    end
 end
+
+json.bookmarks user.bookmarks.pluck(:event_id)

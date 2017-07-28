@@ -8,8 +8,13 @@ class Bookmark extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  componentDidMount() {
+    this.props.requestAllEvents();
+  }
+
   bookmarkIcon() {
-    if ( this.props.eventDetail.bookmarked) {
+    console.log(this.props);
+    if ( this.props.currentUser.bookmarks.includes(this.props.event.id)) {
       return (
         <i className="fa fa-bookmark selected" aria-hidden="true"></i>
       );
@@ -21,15 +26,16 @@ class Bookmark extends React.Component {
   }
 
   handleClick() {
-    const bookmark = {}
-
+    if (this.props.currentUser.bookmarks.includes(this.props.event.id)) {
+      this.props.deleteBookmark(this.props.event.id);
+    } else {
+      const event = { event_id: this.props.event.id };
+      this.props.createBookmark(event);
     }
   }
-
-
   render() {
     return(
-      <div className="bookmark-icon" onClick={this.handleClick}>{this.bookmarkIcon()}
+      <div className="bookmark-icon" onClick={this.handleClick}>{ this.bookmarkIcon() }
       </div>
     );
   }

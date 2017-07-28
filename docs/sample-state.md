@@ -9,7 +9,7 @@
       events: [4, 2, 7], // user created event_ids
       tickets: {3: 1, 86: 3, 2: 5}, // each ticket is going to have its own event_id; each event_id has a quantity of tickets
       bookmarks: [3, 6, 2]
-      bookmarks: [{3:3, 6:6, 2:2}]
+      bookmarks: {event_id: 3, :6, 2:2}
     }
   },
 

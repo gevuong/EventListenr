@@ -7,24 +7,22 @@ class UserProfile extends React.Component {
 
   }
 
-
   componentDidMount() {
     this.props.requestAllEvents();
   }
 
   render() {
     return(
-
-      <div className = 'user-profile-container'>
-        <div>
-          <h3>Your Ticketed Events</h3>
-          {Object.keys(this.props.currentUser.tickets).map((id) => (
-            <EventIndexItem eventItem={this.props.events[id]}/>
+      <div className='user-profile-container'>
+        <div className='ticketed-event-container'>
+          <h3 className="ticketed-event-header">Your Ticketed Events</h3>
+          {this.props.ticketedEvents.map((event) => (
+            <EventIndexItem key={event.id} eventItem={event}/>
             ))
           }
         <br/>
-          <p>Your Bookmarked Events</p>
-          {Object.keys(this.props.currentUser.bookmarks).map((id) => ( <EventIndexItem eventItem={this.props.events[id]}/>
+          <h3 className="ticketed-event-header">Your Bookmarked Events</h3>
+          {this.props.bookmarkedEvents.map((event) => (<EventIndexItem key={event.id} eventItem={event}/>
             ))
           }
         </div>

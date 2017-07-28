@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter, Link, Route } from 'react-router-dom';
 import TicketFormContainer from '../ticket/ticket_container';
+import BookmarkContainer from '../bookmark/bookmark_container';
 
 class EventShow extends React.Component {
   constructor(props){
@@ -67,6 +68,9 @@ class EventShow extends React.Component {
             <br />
           </div>
         </div>
+
+        <BookmarkContainer event={event}/>
+
 
         <div className="description-show-page">
           <h4>Description</h4>

@@ -14,17 +14,20 @@ export const receiveBookmark = bookmark => ({
   bookmark
 });
 
-
 // async thunk actions
 export const requestBookmark = id => dispatch => (
   BookmarkAPIUtil.fetchBookmark(id).then(bookmark =>  (dispatch(receiveBookmark(bookmark))
   )
-)
-);
+));
 
 export const createBookmark = bookmark => dispatch => (
   BookmarkAPIUtil.createBookmark(bookmark).then(user => (
     dispatch(receiveCurrentUser(user))
-)
-)
-);
+  )
+));
+
+export const deleteBookmark = event_id => dispatch => (
+  BookmarkAPIUtil.deleteBookmark(event_id).then(user => (
+    dispatch(receiveCurrentUser(user))
+  )
+));

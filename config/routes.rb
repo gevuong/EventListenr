@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     resources :events
     resources :tickets, only: [:create]
     resources :bookmarks, only: [:create]
+
+    delete '/bookmarks', to: 'bookmarks#destroy'
   end
 end

@@ -21,7 +21,6 @@ class TicketForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("state", this.state);
     let ticket = Object.assign({}, this.state);
     ticket.event_id = this.props.event.id;
 
@@ -40,7 +39,6 @@ class TicketForm extends React.Component {
 
 
   render() {
-    console.log('ticketform', this.props);
     const { quantity } = this.state;
     const { event } = this.props;
 
@@ -56,7 +54,7 @@ class TicketForm extends React.Component {
             <h4>Register for Event</h4>
             <br />
             <label className="ticket-title">{event.title}</label>
-            <label>{event.ticket_price}</label>
+            <label>${event.ticket_price}</label>
 
             <select className="ticket-quantity-selector" onChange={this.handleChange}>
               <option value={1}>1</option>
@@ -66,9 +64,11 @@ class TicketForm extends React.Component {
             </select>
 
             <footer className="ticket-footer">
-              <label>QTY: { quantity }</label>
-              <br/>
-              <label>TOTAL: ${ parseInt(event.ticket_price) * quantity }</label>
+              <div>
+                <label>QTY: { quantity }</label>
+
+                <label>TOTAL: ${ parseInt(event.ticket_price) * quantity }</label>
+              </div>
               <button className="tickets-button" onClick={this.handleSubmit}>CHECKOUT</button>
 
             </footer>

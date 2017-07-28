@@ -30,6 +30,12 @@
   width: 100%;
   padding: 10px;
   border-top: 1px solid #c6c6c6;
+
+  div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .modal-ticket-form {
