@@ -17,14 +17,14 @@ The backend architecture uses Rails 5.0.4's MVC web framework to fetch and store
 * User Dashboard displays purchased tickets and bookmarked events.
 
 
-# Home Page
-[EventListenr() Home page](docs/images/homepage_event_index.png)
+### Home Page
+![EventListenr() Home page](docs/images/homepage_event_index.png)
 
-# User Login/Signup format
-[EventListenr()](docs/images/session_form.png)
+### User Login/Signup format
+![EventListenr()](docs/images/session_form.png)
 
-# Event Show Page
-[EventListenr()](docs/images/event_show_page.png)
+### Event Show Page
+![EventListenr()](docs/images/event_show_page.png)
 
 
 ### Create Events
