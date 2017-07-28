@@ -13,7 +13,7 @@ The backend architecture uses Rails 5.0.4's MVC web framework to fetch and store
 * Secure user accounts, using front-end and back-end user authentication using BCrypt
 * User can create events through the API.
 * User can bookmark/unbookmark events through the API
-* User can purchase tickets and
+* User can purchase tickets to events
 * User Dashboard displays purchased tickets and bookmarked events.
 
 
