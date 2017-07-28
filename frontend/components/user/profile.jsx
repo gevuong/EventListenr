@@ -17,15 +17,16 @@ class UserProfile extends React.Component {
 
       <div className = 'user-profile-container'>
         <div>
+          <h3>Your Ticketed Events</h3>
           {Object.keys(this.props.currentUser.tickets).map((id) => (
             <EventIndexItem eventItem={this.props.events[id]}/>
-          ))
+            ))
           }
-
-          <h3>User Profile</h3>
-          <p>Bookmarks</p>
-          <p>Tickets</p>
-          <p>User Events</p>
+        <br/>
+          <p>Your Bookmarked Events</p>
+          {Object.keys(this.props.currentUser.bookmarks).map((id) => ( <EventIndexItem eventItem={this.props.events[id]}/>
+            ))
+          }
         </div>
       </div>
     );

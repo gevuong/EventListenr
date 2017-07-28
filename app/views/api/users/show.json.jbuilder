@@ -6,4 +6,6 @@ json.tickets do
    end
 end
 
-# => {tickets: { event_id: quantity }}
+json.bookmarks(@user.bookmarks) do |bookmark|
+  bookmark.event_id
+end

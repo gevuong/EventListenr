@@ -1,4 +1,3 @@
-
 export const fetchAllTickets = () => (
   $.ajax({
     method: 'GET',
