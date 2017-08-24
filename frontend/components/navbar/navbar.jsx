@@ -22,7 +22,7 @@ class NavBar extends React.Component {
         	<div className="header-group">
             <nav id="login-signup">
               <div className="eventListenr-home-container">
-                <Link to="/">EventListenr()</Link>
+                <Link to="/">Eventlistenr</Link>
               </div>
               <div className="session-link-container">
                 <Link to="/events/new">CREATE EVENT</Link>
@@ -39,7 +39,7 @@ class NavBar extends React.Component {
           <nav id="login-signup">
 
             <div className="eventListenr-home-container">
-              <Link to="/">EventListenr()</Link>
+              <Link to="/">EventListenr</Link>
 
             </div>
             <div className="session-link-container">
