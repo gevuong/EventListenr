@@ -1,12 +1,12 @@
-# EventListenr()
+# EventListenr
 
-[EventListenr() Live](https://eventlistenr.herokuapp.com/)
+[EventListenr Live](https://eventlistenr.herokuapp.com/)
 
-EventListenr() is a single page web application inspired by EventBrite, allowing users to discover, host, and create events, bookmarks events, and register for an event via online ticketing. This full-stack web app was built using Ruby on Rails, React/Redux, and PostGreSQL database.
+EventListenr is a single page web application inspired by Eventbrite, allowing users to discover, host, and create events, bookmarks events, and register for an event via online ticketing. This full-stack web app was built using Ruby on Rails, React/Redux, and PostgreSQL database.
 
 
 ## Technologies
-The backend architecture uses Rails 5.0.4's MVC web framework to fetch and store data to PostGreSQL database. The front end application was written using JavaScript's React library.
+The backend architecture uses Rails 5.0.4's MVC web framework to fetch and store data to PostgreSQL database. The front end application was written using JavaScript's React library.
 
 
 ## Features and Implementation
@@ -18,13 +18,13 @@ The backend architecture uses Rails 5.0.4's MVC web framework to fetch and store
 
 
 ### Home Page
-![EventListenr() Home page](docs/images/homepage_event_index.png)
+![EventListenr Home page](docs/images/homepage_event_index.png)
 
 ### User Login/Signup format
-![EventListenr()](docs/images/session_form.png)
+![EventListenr](docs/images/session_form.png)
 
 ### Event Show Page
-![EventListenr()](docs/images/event_show_page.png)
+![EventListenr](docs/images/event_show_page.png)
 
 ### Create Events
 Users can create events, and created event immediately appears on the home page. Images can be uploaded via drag and drop feature using React Dropzone.
@@ -37,7 +37,7 @@ Users "register" to events by "purchasing" tickets for events.
 Purchased tickets appear on the User Dashboard.
 
 ### User Dashboard
-![EventListenr() User Dashboard](docs/images/User_profile.png)
+![EventListenr User Dashboard](docs/images/User_profile.png)
 
 ## Additional Resources
 * [View Wireframes](https://github.com/gevuong/EventListenr/tree/master/docs/wireframes)
