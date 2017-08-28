@@ -6,7 +6,7 @@ EventListenr is a single page web application inspired by Eventbrite, allowing u
 
 
 ## Technologies
-The backend architecture uses Rails 5.0.4's MVC web framework to fetch and store data to PostgreSQL database. The front end application was written using JavaScript's React library.
+The backend architecture uses Rails 5.0.4's MVC web framework to fetch and store data to PostgreSQL database. The front end application uses React/Redux.
 
 
 ## Features and Implementation
@@ -27,14 +27,14 @@ The backend architecture uses Rails 5.0.4's MVC web framework to fetch and store
 ![EventListenr](docs/images/event_show_page.png)
 
 ### Create Events
-Users can create events, and created event immediately appears on the home page. Images can be uploaded via drag and drop feature using React Dropzone.
+User can create events. User created events immediately show on the home page. Images can be uploaded via drag and drop feature using React Dropzone.
 
 ### Bookmarking Events
-Users can bookmark/unbookmark events. Bookmarked events are shown on the User Dashboard.
+User can bookmark/unbookmark events. Bookmarked events are shown on the User Dashboard.
 
 ### Registering/Ticketing Events
-Users "register" to events by "purchasing" tickets for events.
-Purchased tickets appear on the User Dashboard.
+User can "register" to events by "purchasing" tickets to events.
+Events with purchased tickets appear on the User Dashboard.
 
 ### User Dashboard
 ![EventListenr User Dashboard](docs/images/User_profile.png)
