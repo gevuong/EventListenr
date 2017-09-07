@@ -1,6 +1,4 @@
 import React from 'react';
-import Dropzone from 'react-dropzone';
-import request from 'superagent';
 import DropForm from './drop_form';
 
 class EventForm extends React.Component {
