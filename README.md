@@ -2,7 +2,7 @@
 
 [EventListenr Live](https://eventlistenr.herokuapp.com/)
 
-EventListenr is a single page web application inspired by Eventbrite, allowing users to discover, host, and create events, bookmarks events, and register for an event via online ticketing. This full-stack web app was built using Ruby on Rails, React/Redux, and PostgreSQL database.
+EventListenr is a single-page web application inspired by Eventbrite, enabling users to create secure accounts, host, bookmark, and register for events. The app was built using Ruby on Rails, React/Redux, and PostgreSQL.
 
 
 ## Technologies
