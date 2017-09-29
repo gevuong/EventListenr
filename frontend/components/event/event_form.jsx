@@ -43,25 +43,43 @@ class EventForm extends React.Component {
       image_url: url
     });
   }
-
+//
   render() {
     const { title, description, location, date_time, image_url, ticket_price, ticket_quantity } = this.state;
+    console.log(this.state);
 
     return (
       <div className="event-form-container">
-        <h3>EVENT DETAILS</h3>
+        <div id="createEventDiv">
+          <p className="createEventh3">Create An Event</p>
+        </div>
+        <div className="divider"></div>
 
         <form className="event-form" onSubmit={this.handleSubmit}>
-          <label className="event-field-label">TITLE</label>
+          <div className="eventDetailsDiv">
+            <span className="numberOne">1</span>
+            <span className="eventDetails">Event Details</span>
+          </div>
+          <label className="event-field-label">EVENT TITLE</label>
             <input
               className="event-input"
               type="text"
               value={title}
               onChange={this.update('title')}
+              placeholder='Give it a short distinct name'
             />
 
         <br />
-        <label className="event-field-label">DESCRIPTION</label>
+          <label className="event-field-label">LOCATION</label>
+              <input
+                className="event-input"
+                type="text"
+                value={location}
+                onChange={this.update('location')}
+                placeholder='Specify where it is held'
+              />
+          <br/>
+        <label className="event-field-label">EVENT DESCRIPTION</label>
           <input
             className="event-input"
             type="text"
@@ -70,15 +88,6 @@ class EventForm extends React.Component {
           />
         <br/>
 
-        <label className="event-field-label">LOCATION</label>
-            <input
-              className="event-input"
-              type="text"
-              value={location}
-              onChange={this.update('location')}
-            />
-
-          <br/>
           <label className="event-field-label">Date and Time</label>
             <input
               className="event-input"

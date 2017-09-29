@@ -73,7 +73,7 @@ class SessionForm extends React.Component {
   changeFormLink() {
     if (this.props.formType === 'login') {
       return (
-        <p>Don't have an account? <Link     className="signup-login-link" to='/signup'>Sign Up</Link>
+        <p>Don't have an account? <Link className="signup-login-link" to='/signup'>Sign Up</Link>
 
         </p>
       );
