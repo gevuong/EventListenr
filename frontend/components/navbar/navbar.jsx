@@ -26,7 +26,7 @@ class NavBar extends React.Component {
               </div>
               <div className="session-link-container">
                 <Link to="/events/new">CREATE EVENT</Link>
-                <Link to="/profile"><i className="fa fa-user-circle"  aria-hidden="true"></i>  { this.props.currentUser.username.toUpperCase() }</Link>
+                <Link to="/profile"><i className="fa fa-user-circle" aria-hidden="true"></i>  { this.props.currentUser.username.toUpperCase() }</Link>
                 <button className="header-button" onClick={this.handleOnClick}>LOG OUT
                 </button>
               </div>

@@ -46,7 +46,9 @@ class DropForm extends React.Component {
           multiple={false}
           accept="image/*"
           onDrop={this.onImageDrop.bind(this)}>
-          <p>Choose a compelling image that brings your event to life.</p>
+          <i className="fa fa-camera" aria-hidden="true"></i>
+          <h3 className='addEventImageText'>ADD EVENT IMAGE</h3>
+          <p className='eventImageText'>Choose a compelling image that brings your event to life.</p>
         </Dropzone>
       </div>
     );

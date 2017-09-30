@@ -49,7 +49,7 @@
 
 .eventDetails {
   font-size: 23px;
-  padding-left: 5px;
+  padding-left: 10px;
   color: #666A73;
   font-weight: 300;
   letter-spacing: 1px;
@@ -61,37 +61,64 @@
   background-color: white;
   width: 70%;
   margin-top: 5px;
-  padding: 9px;
+  padding: 9px 12px;
   // background-color: white;
   line-height: 25px;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .event-input-description {
   height: 200px;
   border: 1px solid #D2D6DF;
+  border-radius: 5px;
   background-color: white;
-  width: 70%;
+  width: 60%;
   margin-top: 5px;
   padding: 9px;
 }
 
 .FileUpload {
   border: 1px solid #D2D6DF;
+  background-color: white;
+  border-radius: 5px;
+  width: 340px;
+  height: 190px;
+  margin: 5px 0px;
 }
 
 .dropzone {
   display: inline-block;
-  width: 150px;
-  height: 75px;
+  width: 316px;
+  height: 166px;
   margin: 10px;
-  // color:
-  // border: 1px dotted #D2D6DF;
+  border: 2px dashed #D2D6DF;
+  border-radius: 3px;
 }
 
-.image-upload-form {
-  border: 1px dotted #D2D6DF;
+.fa {
+  // color: #3A96C8;
+  margin: auto;
+  // padding: 20px 0px;
 }
+
+.addEventImageText {
+  font-weight: 300;
+  font-size: 1.4em;
+  text-align: center;
+  color: #3A96C8;
+  margin: auto;
+  padding: 2px;
+}
+
+.eventImageText {
+  text-align: center;
+  color: #666A73;
+  font-size: 0.7em;
+
+}
+// .image-upload-form {
+//   border: 1px dotted #D2D6DF;
+// }
 
 .event-field-label {
   font-size: 14px;
