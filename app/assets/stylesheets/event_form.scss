@@ -1,21 +1,3 @@
-
-.event-input {
-  border: 1px solid black;
-  width: 50%;
-  margin: 5px;
-  padding: 2px;
-}
-
-// .create-event-location {
-//   border-bottom: 2px solid black;
-//   width: 50%;
-// }
-//
-// .create-event-description {
-//   border-bottom: 2px solid black;
-//   width: 50%;
-// }
-
 .event-form-container {
   padding-top: 80px;
 }
@@ -28,6 +10,8 @@
   font-family: "Benton Sans", "Helvetica Neue", Helvetica, "Roboto", Arial, sans-serif;
   // font-family: "Convergence", sans-serif;
   font-size: 1.3em;
+  font-weight: 300;
+  color: #4E5159;
 }
 
 .divider {
@@ -36,36 +20,64 @@
   background-color: #45494e;
 }
 
+.event-form-wrapper {
+  background-color: #F8F8FA;
+}
+
 .event-form {
   display: flex;
   flex-direction: column;
-  margin-left: 15%;
-  align-items: center;
-  color: #F8F8FA;
+  margin: 0px 13%;
+  // align-items: center;
+  font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
 }
 
 .eventDetailsDiv {
   padding-top: 20px;
-  font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif
+  font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+  border-bottom: 1px solid #D2D6DF;
 }
 
-.numberOne {
+.number {
   background-color: #0093D7;
   color: white;
   font-size: 35px;
   line-height: 45px;
-  padding: 2px 13px;
+  padding: 3px 15px;
+  font-weight: 300;
 }
 
 .eventDetails {
   font-size: 23px;
   padding-left: 5px;
   color: #666A73;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 
+.event-input {
+  border: 1px solid #D2D6DF;
+  color: #BBBEC3;
+  background-color: white;
+  width: 70%;
+  margin-top: 5px;
+  padding: 9px;
+  // background-color: white;
+  line-height: 25px;
+  border-radius: 5px;
+}
+
+.event-input-description {
+  height: 200px;
+  border: 1px solid #D2D6DF;
+  background-color: white;
+  width: 70%;
+  margin-top: 5px;
+  padding: 9px;
+}
 
 .FileUpload {
-  border: 2px solid black;
+  border: 1px solid #D2D6DF;
 }
 
 .dropzone {
@@ -73,16 +85,18 @@
   width: 150px;
   height: 75px;
   margin: 10px;
-  border: 3px solid #73AD21;
+  // color:
+  // border: 1px dotted #D2D6DF;
 }
 
 .image-upload-form {
-  border: 2px solid black;
+  border: 1px dotted #D2D6DF;
 }
 
 .event-field-label {
   font-size: 14px;
   text-transform: uppercase;
   color: black;
-  font-weight: 700;
+  font-weight: 600;
+  padding-top: 15px;
 }
