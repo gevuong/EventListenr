@@ -1,0 +1,51 @@
+// Place all the styles related to the Events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//
+.event-index-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  // background-color: #F8F8FA;
+}
+
+.event-container {
+  position: relative;
+  color: black;
+  margin: 15px;
+  width: 275px;
+  height: 265px;
+  box-shadow: 0 3px 8px 2px rgba(22,22,22,0.45);
+  font-family: "Benton Sans","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+}
+
+.event-container-hover {
+  position: absolute;
+  width: 275px;
+  height: 265px;
+  z-index: 20;
+
+}
+
+.event-container-hover:hover {
+  background-color: rgba(0,0,0,0.45);
+}
+
+.eventIndex-detailsDiv {
+  padding-left: 10px;
+}
+
+.eventTitle {
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.eventIndexLocation {
+  font-size: 12px;
+  color: #666A73;
+}
+
+.eventBookmarkDiv {
+  border-top: 1px solid #EEF2E5;
+}

@@ -25,7 +25,7 @@ greg = User.create(username: 'Greg', password: 'password')
 young = User.create(username: 'Young', password: 'password')
 mary = User.create(username: 'Mary', password: 'password')
 isak = User.create(username: 'Isak', password: 'password')
-
+oliver = User.create(username: 'Oliver', password: 'password')
 
 Event.destroy_all
 e1 = Event.create(

@@ -31,7 +31,7 @@ class EventIndex extends React.Component {
         <br />
         <br />
         <h3 className="event-list-header">
-          EVENTS NEAR YOU
+          Events for you in San Francisco, CA, United States
         </ h3>
         <div className="event-index-container">
             { eventList }
