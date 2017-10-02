@@ -9,7 +9,7 @@ class EventIndexItem extends React.Component {
   render() {
     const { eventItem } = this.props;
     let eventDescription = eventItem.description.slice(0,60) + "...";
-
+    console.log(eventItem);
     return (
       <div className='event-index-wrapper'>
         <Link to={`/events/${eventItem.id}`}>

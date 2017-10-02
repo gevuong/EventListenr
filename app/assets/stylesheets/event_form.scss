@@ -67,16 +67,6 @@
   border-radius: 3px;
 }
 
-.event-input-description {
-  height: 200px;
-  border: 1px solid #D2D6DF;
-  border-radius: 5px;
-  background-color: white;
-  width: 60%;
-  margin-top: 5px;
-  padding: 9px;
-}
-
 .FileUpload {
   border: 1px solid #D2D6DF;
   background-color: white;
@@ -114,11 +104,57 @@
   text-align: center;
   color: #666A73;
   font-size: 0.7em;
-
 }
+
+.event-input-description {
+  height: 200px;
+  border: 1px solid #D2D6DF;
+  border-radius: 5px;
+  background-color: white;
+  width: 80%;
+  margin-top: 5px;
+  padding: 9px;
+}
+
+.ticketDetailsDiv {
+  display: inline;
+}
+
+.event-input-ticket {
+  display: inline;
+  padding: 5px 0px;
+  border: 1px solid #D2D6DF;
+  color: #BBBEC3;
+  background-color: white;
+  width: 150px;
+  margin: 10px 5px;
+  padding: 9px 12px;
+  // background-color: white;
+  line-height: 25px;
+  border-radius: 3px;
+}
+
+// .ticketTypeButton {
+//   border: 2px solid #0278b8;
+//   color: #0278b8;
+//   padding: 5px 18px;
+//   margin-left: 10px;
+//   line-height: 30px;
+//   border-radius: 3px;
+//   width: 100px;
+  // background-color: transparent;
+//
+// }
+//
+// .ticketTypeButton:hover {
+//   background-color: #013653;
+//   color: white;
+//
+// }
 // .image-upload-form {
 //   border: 1px dotted #D2D6DF;
 // }
+
 
 .event-field-label {
   font-size: 14px;
@@ -126,4 +162,8 @@
   color: black;
   font-weight: 600;
   padding-top: 15px;
+}
+
+.event-live-button {
+
 }

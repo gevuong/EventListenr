@@ -12,7 +12,7 @@ class EventForm extends React.Component {
       date_time: "",
       image_url: "",
       ticket_price: 0,
-      ticket_quantity: 0,
+      ticket_quantity: 100,
       category_id: [1],
     };
 
@@ -46,7 +46,6 @@ class EventForm extends React.Component {
 //
   render() {
     const { title, description, location, date_time, image_url, ticket_price, ticket_quantity } = this.state;
-    console.log(this.state);
 
     return (
       <div className="event-form-container">
@@ -107,22 +106,19 @@ class EventForm extends React.Component {
               <span className="number">2</span>
               <span className="eventDetails">Create Tickets</span>
             </div>
-            <div className="ticketInputDiv">
-            <label className="event-field-label">Price</label>
+            <div className="ticketDetailsDiv">
               <input
-                className="event-input"
-                type="number"
-                value={ticket_price}
-                onChange={this.update('ticket_price')}
-              />
-            <br/>
-            <label className="event-field-label">Quantity available</label>
-              <input
-                className="event-input"
-                type="number"
+                className="event-input-ticket"
+                type="text"
                 value={ticket_quantity}
                 onChange={this.update('ticket_quantity')}
-              />
+                />
+              <input
+                className="event-input-ticket"
+                type="text"
+                value={ticket_price}
+                onChange={this.update('ticket_price')}
+                ></input>
             </div>
             <br />
             <button className="tickets-button" onClick={this.handleSubmit}>MAKE YOUR EVENT LIVE</button>
@@ -134,3 +130,20 @@ class EventForm extends React.Component {
 }
 
 export default EventForm;
+//
+// <label className="event-field-label">Price</label>
+//   <input
+//     className="event-input"
+//     type="number"
+//     value={ticket_price}
+//     onChange={this.update('ticket_price')}
+//   />
+// <br/>
+// <label className="event-field-label">Quantity available</label>
+//   <input
+//     className="event-input"
+//     type="number"
+//     value={ticket_quantity}
+//     onChange={this.update('ticket_quantity')}
+//   />
+// </div>
