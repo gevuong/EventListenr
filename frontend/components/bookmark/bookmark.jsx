@@ -33,6 +33,7 @@ class Bookmark extends React.Component {
       this.props.createBookmark(event);
     }
   }
+  
   render() {
     return(
       <div className="bookmark-icon" onClick={this.handleClick}>{ this.bookmarkIcon() }

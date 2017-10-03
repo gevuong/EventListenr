@@ -39,7 +39,7 @@ class EventShow extends React.Component {
 
   render() {
     let event = this.props.event;
-
+    console.log('event: ', event.date_time);;
     return (
       <div className="event-show-container-outer">
         <TicketFormContainer modalIsOpen={this.state.modalIsOpen} closeModal={this.closeModal} event={event}/>
@@ -50,28 +50,29 @@ class EventShow extends React.Component {
           </h3>
 
           <div className="show-page-event-details">
-            <h3>{event.title}</h3>
-            <h4>Location</h4>
-              <p>{event.location}</p>
+            <h3 className='eventTitleShow'>{event.title}</h3>
             <br />
-            <br />
-            <p>${event.ticket_price}</p>
-            <br />
-            <p>Quantity: {event.ticket_quantity}</p>
-            <br />
-
-              <h3 className="tickets-button" onClick={this.openModal}>TICKETS</h3>
             <br />
             <br />
           </div>
         </div>
 
-        <BookmarkContainer event={event}/>
+        <div className="bookmark-register-container">
+          <BookmarkContainer event={event}/>
+          <h3 className="register-button" onClick={this.openModal}>REGISTER</h3>
+        </div>
+        <div className="event-show-moreDetails">
+          <div className="description-show-page">
+            <h4 className="event-show-headers">Description</h4>
+            <p>{event.description}</p>
+          </div>
 
-
-        <div className="description-show-page">
-          <h4>Description</h4>
-          <p>{event.description}</p>
+          <div>
+            <h4 className="event-show_headers">DATE AND TIME</h4>
+              <p>{event.date_time}</p>
+            <h4 className="event-show-headers">LOCATION</h4>
+              <p>{event.location}</p>
+          </div>
         </div>
       </div>
       );

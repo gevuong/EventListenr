@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //
+.event-list-header {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 200;
+  font-family: "Benton Sans","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+}
+
 .event-index-container {
   display: flex;
   flex-direction: row;

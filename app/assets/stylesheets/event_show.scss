@@ -8,10 +8,21 @@
   display: flex;
   justify-content: space-around;
   background: white;
+  font-family: "Benton Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  border-bottom: 1px solid #D2D6DF;
 }
 
 .show-page-event-details {
   padding-left: 35px;
+}
+
+.fa-bookmark-o {
+
+}
+
+.eventTitleShow {
+  font-size: 24px;
+  letter-spacing: 1px;
 }
 
 .show-page-image {
@@ -19,38 +30,43 @@
   width: 500px;
 }
 
-.event-list-header {
+.bookmark-register-container {
   display: flex;
-  justify-content: center;
-  font-size: 25px;
-  line-height: 30px;
-  font-weight: 200;
-  font-family: "Benton Sans","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  justify-content: space-between;
+  border-bottom: 1px solid #D2D6DF;
 }
 
-.description-show-page {
-  margin: 0 30px 30px 30px;
-}
-
-.tickets-button {
+.register-button {
   cursor: pointer;
   border-radius: 3px;
-  margin: 15px auto;
+  // margin: 15px auto;
   padding: 5px;
   background-color: #00ab44;
   color: white;
-  width: 200px;
+  width: 300px;
   height:30px;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 1px;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-family: Benton Sans,-apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
   // font-family: "Montserrat", "Open Sans", "Helvetica Neue";
   font-weight: 100;
   box-shadow: 0 4px 6px -2px rgba(22,22,22,0.45);
 }
 
-.tickets-button:hover {
+.register-button:hover {
   background-color: #00451b;
+}
+
+.event-show-moreDetails {
+  font-family: "Benton Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+.description-show-page {
+  margin: 0 30px 30px 30px;
+  max-width: 500px;
 }
