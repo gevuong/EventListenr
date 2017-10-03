@@ -11,8 +11,8 @@ class EventForm extends React.Component {
       location: "",
       date_time: "",
       image_url: "",
-      ticket_price: 0,
-      ticket_quantity: 100,
+      ticket_price: "",
+      ticket_quantity: "",
       category_id: [1],
     };
 
@@ -59,7 +59,7 @@ class EventForm extends React.Component {
               <span className="number">1</span>
               <span className="eventDetails">Event Details</span>
             </div>
-            <label className="event-field-label">EVENT TITLE</label>
+            <label className="event-field-label">EVENT TITLE<span className="asterisk"> *</span></label>
               <input
                 className="event-input"
                 type="text"
@@ -69,7 +69,7 @@ class EventForm extends React.Component {
               />
 
           <br />
-            <label className="event-field-label">LOCATION</label>
+            <label className="event-field-label">LOCATION<span className="asterisk"> *</span></label>
                 <input
                   className="event-input"
                   type="text"
@@ -79,7 +79,7 @@ class EventForm extends React.Component {
                 />
             <br/>
 
-            <label className="event-field-label">Date and Time</label>
+            <label className="event-field-label">Date and Time<span className="asterisk"> *</span></label>
               <input
                 className="event-input"
                 type="datetime-local"
@@ -92,7 +92,7 @@ class EventForm extends React.Component {
             <DropForm className="image-upload-form" updateUrl={this.updatePicUrl} />
             <br />
 
-            <label className="event-field-label">EVENT DESCRIPTION</label>
+            <label className="event-field-label">EVENT DESCRIPTION<span className="asterisk"> *</span></label>
 
               <textarea
                 className="event-input-description"
@@ -107,23 +107,43 @@ class EventForm extends React.Component {
               <span className="eventDetails">Create Tickets</span>
             </div>
             <div className="ticketDetailsDiv">
-              <input
-                className="event-input-ticket"
-                type="text"
-                value={ticket_quantity}
-                onChange={this.update('ticket_quantity')}
-                />
-              <input
-                className="event-input-ticket"
-                type="text"
-                value={ticket_price}
-                onChange={this.update('ticket_price')}
-                ></input>
+              <div className="ticketTitleDiv">
+                  <span className='quantity'>Quantity Available </span><span className="asterisk">  *</span>
+                  <span className='price'>Price </span><span className="asterisk">  *</span>
+              </div>
+              <div className='ticketsDiv'>
+                <input
+                  className="event-input-quantity"
+                  type="text"
+                  placeholder="100"
+                  value={ticket_quantity}
+                  onChange={this.update('ticket_quantity')}
+                  />
+                <input
+                  className="event-input-price"
+                  type="text"
+                  placeholder="$0"
+                  value={ticket_price}
+                  onChange={this.update('ticket_price')}
+                  ></input>
+              </div>
             </div>
             <br />
-            <button className="tickets-button" onClick={this.handleSubmit}>MAKE YOUR EVENT LIVE</button>
           </form>
+          <div className='eventLiveDiv'>
+            <button className="tickets-button" onClick={this.handleSubmit}>MAKE YOUR EVENT LIVE</button>
+          </div>
         </div>
+        <div className="bottomDivider"></div>
+        <footer className='footerContainer'>
+          <div className="github-linkedin">
+            <a href="https://github.com/gevuong"><i className="fa fa-github fa-3x"></i></a>
+          </div>
+          <div>
+
+            <a href="https://www.linkedin.com/in/george-vuong/"><i className="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+          </div>
+        </footer>
       </div>
     );
   }

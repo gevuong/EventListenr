@@ -57,7 +57,7 @@
 
 .event-input {
   border: 1px solid #D2D6DF;
-  color: #BBBEC3;
+  // color: #BBBEC3;
   background-color: white;
   width: 70%;
   margin-top: 5px;
@@ -117,23 +117,92 @@
 }
 
 .ticketDetailsDiv {
-  display: inline;
+  border: 1px solid #D2D6DF;
+  border-radius: 3px;
+  margin: 20px 0px;
+  width: 367px;
 }
 
-.event-input-ticket {
-  display: inline;
-  padding: 5px 0px;
-  border: 1px solid #D2D6DF;
-  color: #BBBEC3;
+.ticketTitleDiv {
+  border-bottom: 1px solid #D2D6DF;
+  background-color: #eff2f5;
+  color: #6f737c;
+  display: flex;
+  padding: 15px;
+}
+
+.ticketsDiv {
   background-color: white;
-  width: 150px;
-  margin: 10px 5px;
+}
+
+.price {
+  padding-left: 36px;
+}
+
+.event-input-quantity {
+  border: 1px solid #D2D6DF;
+  background-color: white;
+  width: 130px;
+  margin: 10px 0px;
+  margin-left: 15px;
   padding: 9px 12px;
-  // background-color: white;
   line-height: 25px;
   border-radius: 3px;
 }
 
+.event-input-price {
+  border: 1px solid #D2D6DF;
+  color: #BBBEC3;
+  background-color: white;
+  width: 140px;
+  margin: 10px 0px;
+  margin-left: 15px;
+  padding: 9px 12px;
+  line-height: 25px;
+  border-radius: 3px;
+}
+
+.eventLiveDiv {
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: white;
+  border-top: 1px solid #D2D6DF;
+  width: 100%;
+  // border-bottom: 2px solid black;
+}
+
+.bottomDivider {
+  width: 100%;
+  height: 7px;
+  background-color: #666A73;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #45494e;
+}
+
+.github-linkedin {
+  padding: 20px;
+  font-size: 10em;
+}
+
+ul {
+  padding: 10px;
+}
+
+li {
+  display: inline;
+  font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+  padding: 30px;
+  color: #B7BBC4;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
 // .ticketTypeButton {
 //   border: 2px solid #0278b8;
 //   color: #0278b8;
@@ -164,6 +233,10 @@
   padding-top: 15px;
 }
 
-.event-live-button {
+.asterisk {
+  color: red;
+}
 
+::-webkit-input-placeholder { /* Chrome */
+  color: #BBBEC3;
 }
