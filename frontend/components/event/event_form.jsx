@@ -136,12 +136,16 @@ class EventForm extends React.Component {
         </div>
         <div className="bottomDivider"></div>
         <footer className='footerContainer'>
-          <div className="github-linkedin">
-            <a href="https://github.com/gevuong"><i className="fa fa-github fa-3x"></i></a>
+          <div className="links">
+            <div className="github-linkedin">
+              <a href="https://github.com/gevuong"><i className="fa fa-github fa-3x"></i></a>
+            </div>
+            <div className="github-linkedin">
+              <a href="https://www.linkedin.com/in/george-vuong/"><i className="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+            </div>
           </div>
           <div>
-
-            <a href="https://www.linkedin.com/in/george-vuong/"><i className="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+            <p className="footer-copyright">2017 EventListenr</p>
           </div>
         </footer>
       </div>

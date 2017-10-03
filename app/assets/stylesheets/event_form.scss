@@ -179,29 +179,28 @@
 }
 
 .footerContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
+  height: 80px;
   background-color: #45494e;
 }
 
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .github-linkedin {
-  padding: 20px;
+  padding: 10px;
   font-size: 10em;
 }
 
-ul {
-  padding: 10px;
-}
-
-li {
-  display: inline;
-  font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
-  padding: 30px;
-  color: #B7BBC4;
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Convergence', sans-serif;
+  color: #D2D6DF;
   font-weight: 300;
-  letter-spacing: 1px;
 }
 // .ticketTypeButton {
 //   border: 2px solid #0278b8;
