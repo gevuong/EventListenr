@@ -51,7 +51,7 @@ class TicketForm extends React.Component {
         >
 
           <form className="ticket-form" onSubmit={this.handleSubmit}>
-            <h4>Register for Event</h4>
+            <h4 className="ticket-modal-header">Register</h4>
             <br />
             <label className="ticket-title">{event.title}</label>
             <label>${event.ticket_price}</label>

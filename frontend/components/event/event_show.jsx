@@ -39,18 +39,27 @@ class EventShow extends React.Component {
 
   render() {
     let event = this.props.event;
-    console.log('event: ', event.date_time);;
+    let currentUser = this.props.currentUser;
+    console.log('event: ', event);
+    console.log('event_date: ', event.date_time);
+    console.log('currentUser: ', currentUser);
     return (
       <div className="event-show-container-outer">
         <TicketFormContainer modalIsOpen={this.state.modalIsOpen} closeModal={this.closeModal} event={event}/>
         <br />
         <div className="event-show-container">
-          <h3>
+          <div>
             <img className="show-page-image" src={event.image_url} />
-          </h3>
+          </div>
 
           <div className="show-page-event-details">
             <h3 className='eventTitleShow'>{event.title}</h3>
+            <div className="event-authorDiv">
+              by {currentUser.username.toUpperCase()}
+            </div>
+            <div className="ticket-priceDiv">
+              ${event.ticket_price}
+            </div>
             <br />
             <br />
             <br />
@@ -63,15 +72,15 @@ class EventShow extends React.Component {
         </div>
         <div className="event-show-moreDetails">
           <div className="description-show-page">
-            <h4 className="event-show-headers">Description</h4>
-            <p>{event.description}</p>
+            <h4 className="event-show-headers">DESCRIPTION</h4>
+            <p className="description-paragraph">{event.description}</p>
           </div>
 
-          <div>
-            <h4 className="event-show_headers">DATE AND TIME</h4>
-              <p>{event.date_time}</p>
+          <div className="eventDateTimeLocation">
+            <h4 className="event-show-headers">DATE AND TIME</h4>
+              <p className="date-location">{event.date_time}</p>
             <h4 className="event-show-headers">LOCATION</h4>
-              <p>{event.location}</p>
+              <p className="date-location">{event.location}</p>
           </div>
         </div>
       </div>

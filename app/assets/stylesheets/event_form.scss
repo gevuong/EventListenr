@@ -59,7 +59,7 @@
   border: 1px solid #D2D6DF;
   // color: #BBBEC3;
   background-color: white;
-  width: 70%;
+  width: 77%;
   margin-top: 5px;
   padding: 9px 12px;
   // background-color: white;
@@ -71,24 +71,26 @@
   border: 1px solid #D2D6DF;
   background-color: white;
   border-radius: 5px;
-  width: 340px;
-  height: 190px;
+  width: 408px;
+  height: 212px;
   margin: 5px 0px;
 }
 
 .dropzone {
   display: inline-block;
-  width: 316px;
-  height: 166px;
+  width: 384px;
+  height: 189px;
   margin: 10px;
   border: 2px dashed #D2D6DF;
   border-radius: 3px;
 }
 
-.fa {
-  // color: #3A96C8;
+.fa-camera {
+  color: #3A96C8;
   margin: auto;
-  // padding: 20px 0px;
+  padding: 29px 0px 15px 0px;
+  font-size: 1.7em;
+
 }
 
 .addEventImageText {
@@ -98,12 +100,13 @@
   color: #3A96C8;
   margin: auto;
   padding: 2px;
+  letter-spacing: 2px;
 }
 
 .eventImageText {
   text-align: center;
   color: #666A73;
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 
 .event-input-description {
@@ -111,7 +114,7 @@
   border: 1px solid #D2D6DF;
   border-radius: 5px;
   background-color: white;
-  width: 80%;
+  width: 77%;
   margin-top: 5px;
   padding: 9px;
 }
@@ -179,9 +182,9 @@
   padding: 5px;
   background-color: #00ab44;
   color: white;
-  width: 200px;
-  height:30px;
-  font-size: 13px;
+  width: 210px;
+  height:33px;
+  font-size: 14px;
   letter-spacing: 1px;
   display: flex;
   justify-content: center;
@@ -250,7 +253,7 @@
 
 
 .event-field-label {
-  font-size: 14px;
+  font-size: 15px;
   text-transform: uppercase;
   color: black;
   font-weight: 600;

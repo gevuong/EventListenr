@@ -1,51 +1,67 @@
 .event-show-container-outer {
-  max-width: 850px;
+  max-width: 1080px;
   margin: auto;
+  margin-bottom: 50px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
 }
 
 .event-show-container {
   padding-top: 100px;
   display: flex;
-  justify-content: space-around;
+  // justify-content: space-around;
   background: white;
-  font-family: "Benton Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Benton Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", "sans-serif";
   border-bottom: 1px solid #D2D6DF;
+  font-weight: 300;
+}
+
+.show-page-image {
+  height: 360px;
+  width: 715px;
 }
 
 .show-page-event-details {
   padding-left: 35px;
-}
-
-.fa-bookmark-o {
-
+  background-color: #F4F2F1;
+  width: 100%;
 }
 
 .eventTitleShow {
   font-size: 24px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
 }
 
-.show-page-image {
-  height: 300px;
-  width: 500px;
+.event-authorDiv {
+  color: #666A73;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.ticket-priceDiv {
+  // display: block;
+  // position: absolute;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .bookmark-register-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   border-bottom: 1px solid #D2D6DF;
 }
 
 .register-button {
   cursor: pointer;
+  margin-left: 655px;
   border-radius: 3px;
   // margin: 15px auto;
   padding: 5px;
   background-color: #00ab44;
   color: white;
-  width: 300px;
+  width: 315px;
   height:30px;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 1px;
   display: flex;
   justify-content: center;
@@ -63,10 +79,39 @@
 .event-show-moreDetails {
   font-family: "Benton Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-around;
+  padding-bottom: 50px;
 }
 
 .description-show-page {
-  margin: 0 30px 30px 30px;
-  max-width: 500px;
+  margin: 0 30px 30px 110px;
+  max-width: 575px;
+}
+
+.event-show-headers {
+  font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+  font-size: 12px;
+  padding-top: 30px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #282C35;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.description-paragraph {
+  color: #666A73;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  font-size: 15px;
+}
+.eventDateTimeLocation {
+  margin-left: 130px;
+}
+
+.date-location {
+  color: #45494E;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
 }
