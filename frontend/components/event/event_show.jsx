@@ -55,7 +55,7 @@ class EventShow extends React.Component {
           <div className="show-page-event-details">
             <h3 className='eventTitleShow'>{event.title}</h3>
             <div className="event-authorDiv">
-              by {currentUser.username.toUpperCase()}
+              by {currentUser.username}
             </div>
             <div className="ticket-priceDiv">
               ${event.ticket_price}
