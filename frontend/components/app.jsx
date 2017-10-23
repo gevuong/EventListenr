@@ -19,9 +19,6 @@ const App = () => (
       <Route path="/" component={ HomePage } />
     </Switch>
   </div>
-
 );
-
-
 
 export default App;
