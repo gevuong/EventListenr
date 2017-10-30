@@ -1,3 +1,4 @@
+@import 'navbar.css';
 @import 'sessions.scss';
 @import 'users.scss';
 @import 'static_pages.scss';
@@ -10,9 +11,4 @@
 .login-input {
   border: none;
   border-bottom: 1px solid black;
-}
-
-body {
-  // font-family: sans-serif;
-  // font-family: "Open Sans", "Roboto", helvetica, sans-serif
 }

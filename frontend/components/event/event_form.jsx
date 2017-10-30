@@ -21,12 +21,6 @@ class EventForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-
-// invoked immediately after a component is mounted
-  // componentDidMount() {
-  //   this.props.createEvent();
-  // }
-
   handleSubmit(e) {
     e.preventDefault();
     const event = Object.assign({}, this.state);

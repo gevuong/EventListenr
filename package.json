@@ -28,7 +28,8 @@
   "devDependencies": {},
   "scripts": {
     "postinstall": "webpack",
-    "heroku-postbuild": "webpack"
+    "heroku-postbuild": "webpack",
+    "start": "webpack --w"
   },
   "engines": {
     "node": "6.10.1",
