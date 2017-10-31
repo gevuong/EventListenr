@@ -3,14 +3,11 @@ import { login, logout } from '../../actions/session_actions';
 import NavBar from './navbar';
 
 const mapStateToProps = ({ session }) => ({
-  currentUser: session.currentUser
+  currentUser: session.currentUser,
 });
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout())
+  logout: () => dispatch(logout()),
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(NavBar);
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

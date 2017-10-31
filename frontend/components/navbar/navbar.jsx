@@ -13,7 +13,7 @@ class NavBar extends Component {
   handleClick(e) {
     e.preventDefault();
     this.props.logout().then(() =>
-    this.props.history.push("/"));
+    this.props.history.push("/")); // produces a console warning in dev mode when on same URL. Warning is disabled in prod mode.
   }
 
   // selectNavbar() {
@@ -55,25 +55,49 @@ class NavBar extends Component {
           { isLoggedIn ?
             (
             <div className="right-nav">
-              <Link to="/events/new">CREATE EVENT</Link>
-              <Link to="/profile"><i className="fa fa-user-circle"aria-hidden="true"></i>
-                { this.props.currentUser.username.toUpperCase() }
+              <Link to="/events/browse">
+                <div className="navlink-container">
+                  BROWSE EVENTS
+                </div>
               </Link>
-              <button className="header-button" onClick={this.handleClick}>LOG OUT
-              </button>
+
+              <div className="dropdown" style={{float:"right"}}>
+                <div className='navlink-container'>
+                  <i className="fa fa-user-circle" aria-hidden="true"></i>
+                  {this.props.currentUser.username.toUpperCase()}
+                  <i className="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div className="dropdown-content">
+                  <Link to="/profile">DASHBOARD</Link>
+                  <button onClick={this.handleClick}>LOG OUT
+                  </button>
+                </div>
+              </div>
+
+              <Link to="/events/new">
+                <div className="create-event-link">
+                  CREATE EVENT
+                </div>
+              </Link>
             </div>
             ) :
             (
             <div className="right-nav">
-              <div className="session-link-container">
-                <Link to="/login">LOGIN</Link>
-              </div>
-              <div className="session-link-container">
-                <Link to="/signup">SIGN UP</Link>
-              </div>
-              <div className="create-event-link">
-                <Link id='creat-event-link' to="/signup">CREATE EVENT</Link>
-              </div>
+              <Link to="/login">
+                <div className="navlink-container">
+                  LOGIN
+                </div>
+              </Link>
+              <Link to="/signup">
+                <div className="navlink-container">
+                  SIGN UP
+                </div>
+              </Link>
+              <Link to="/signup">
+                <div className="create-event-link">
+                  CREATE EVENT
+                </div>
+              </Link>
             </div>
             )
           }
