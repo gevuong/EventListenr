@@ -10,15 +10,6 @@
   line-height: 60px;
 }
 
-// .main-nav a {
-//   border: 0;
-//   text-align: center;
-//   background-color: white;
-//   box-sizing: border-box;
-//   height: 100%;
-//   padding: 0 20px;
-// }
-
 .left-nav {
   /*// font-family: "Benton Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;*/
   font-family: 'Convergence', sans-serif;
@@ -52,16 +43,17 @@
   background-color: #EFF2F5;
 }
 
-.fa-user-circle {
+i.fa-user-circle {
   font-size: 20px;
   color: #F6682F;
   padding-right: 5px;
 }
 
-.fa-angle-down {
+i.fa-angle-down {
   font-size: 20px;
   padding-left: 5px;
   font-weight: 300;
+  color: inherit;
 }
 
 .create-event-link {
@@ -73,14 +65,12 @@
   color: #013653;
 }
 
-
 // Container <div> - needed to position dropdown content
 .dropdown {
   position: relative;
   display: inline-block;
   cursor: pointer;
 }
-
 // Dropdown Content (Hidden by default)
 .dropdown-content {
   display: none;
@@ -109,7 +99,7 @@
 .dropdown:hover .dropbtn {
   background-color: #EFF2F5;
 }
-
+// className added to highlight entire background of button
 .logout-button-container {
   background-color: #fff;
   min-width: 170px;
