@@ -76,36 +76,45 @@
 
 // Container <div> - needed to position dropdown content
 .dropdown {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 
 // Dropdown Content (Hidden by default)
 .dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 2;
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
 }
 // Links inside dropdown
 .dropdown-content a, button {
-    padding: 0px 16px;
-    text-decoration: none;
-    display: block;
+  padding: 0px 16px;
+  text-decoration: none;
+  display: block;
 }
 // change color of dropdown links on hover
-.dropdown-content a:hover, button:hover {
+.dropdown-content a:hover {
   background-color: #EFF2F5;
 }
 // show dropdown menu on hover
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 // change background color of dropdown button when dropdown content is shown
 .dropdown:hover .dropbtn {
-    background-color: #EFF2F5;
+  background-color: #EFF2F5;
+}
+
+.logout-button-container {
+  background-color: #fff;
+  min-width: 170px;
+}
+.logout-button-container:hover {
+  background-color: #EFF2F5;
+  min-width: 170px;
 }
