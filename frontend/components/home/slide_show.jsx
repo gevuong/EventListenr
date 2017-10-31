@@ -29,23 +29,27 @@ class SimpleSlider extends React.Component {
         dots: true,
         infinite: true,
         // autoplay: true,
-        autoplayspeed: 5000,
+        // autoplayspeed: 5000,
         pauseOnHover: false,
         // speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         // nextArrow: <NextArrow />,
         // prevArrow: <PrevArrow />,
         fade: true,
       };
       return (
+
         <Slider {...settings}>
-          <div className='homepage-image'><img className="splash-image" src="https://res.cloudinary.com/dtluc0y85/image/upload/c_crop,g_custom:face/v1509476016/motorcycles-race-helmets-pilots-163414_kkrfeo.jpg"/></div>
-          <div className='homepage-image'><img className='splash-image' src='http://res.cloudinary.com/dtluc0y85/image/upload/c_scale,w_1080/v1509476893/dirtbike_zhdljo.jpg'></img></div>
-          <div className='homepage-image'><img className='splash-image' src='https://res.cloudinary.com/dtluc0y85/image/upload/c_scale,h_370,w_615/v1500534602/homepage_test_ltezbc.gif'></img>
+
+          <div className='img-wrapper'><img className="splash-image" src="https://res.cloudinary.com/dtluc0y85/image/upload/c_crop,g_custom:face/v1509476016/motorcycles-race-helmets-pilots-163414_kkrfeo.jpg"/>
+          </div>
+          <div className='img-wrapper'><img className='splash-image' src='http://res.cloudinary.com/dtluc0y85/image/upload/c_scale,w_1080/v1509476893/dirtbike_zhdljo.jpg'></img></div>
+          <div className='img-wrapper'><img className='splash-image' src='https://res.cloudinary.com/dtluc0y85/image/upload/c_scale,h_370,w_615/v1500534602/homepage_test_ltezbc.gif'></img>
           </div>
         </Slider>
+
       );
   }
 }

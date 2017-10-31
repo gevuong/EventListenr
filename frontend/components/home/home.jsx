@@ -9,8 +9,12 @@ const Home = () => (
   <div>
     <header>
       <NavBarContainer />
+
     </header>
     <SimpleSlider />
+      <div className='splash-text-container'>
+        <p className='splash-text'>Find your next track day experience</p>
+      </div>
     <EventIndexContainer />
   </div>
 );
