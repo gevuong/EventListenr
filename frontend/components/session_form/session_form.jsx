@@ -1,9 +1,13 @@
-import React from 'react';
+// Libs
+import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
-import Carousel from '../carousel';
 
-class SessionForm extends React.Component {
+// Components
+import NavbarContainer from '../navbar/navbar_container';
+import SlideShow from '../home/slide_show';
+
+class SessionForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -125,7 +129,8 @@ class SessionForm extends React.Component {
     let button_text = this.props.formType === 'login' ? "LOGIN" : "SIGN UP";
     return (
       <div>
-        <Carousel />
+        <NavbarContainer />
+        <SlideShow />
         <Modal className="modal"
 
           isOpen={this.state.modalIsOpen}

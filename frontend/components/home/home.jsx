@@ -1,17 +1,19 @@
+// Libs
 import React from 'react';
-import Carousel from '../carousel';
-import EventIndexContainer from '../event/event_index_container';
-import NavBarContainer from '../navbar/navbar_container';
-import { Route, Switch } from 'react-router-dom';
-import SimpleSlider from './slide_show';
 
+// Components
+import EventIndexContainer from '../event/event_index_container';
+import NavbarContainer from '../navbar/navbar_container';
+import SlideShow from './slide_show';
+
+// Pure, stateless, presentational component that does not manage its own state or use lifecycle events.
 const Home = () => (
   <div>
     <header>
-      <NavBarContainer />
+      <NavbarContainer />
 
     </header>
-    <SimpleSlider />
+    <SlideShow />
       <div className='splash-text-container'>
         <p className='splash-text'>Find your next track day experience</p>
       </div>
