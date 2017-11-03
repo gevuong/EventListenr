@@ -31,7 +31,7 @@
   "scripts": {
     "postinstall": "webpack",
     "heroku-postbuild": "webpack",
-    "start": "webpack --w"
+    "start": "webpack --w --progress"
   },
   "engines": {
     "node": "6.10.1",
