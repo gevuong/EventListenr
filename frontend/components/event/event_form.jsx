@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DropForm from './drop_form';
 import NavbarContainer from '../navbar/navbar_container';
+import Footer from '../home/footer';
 
 class EventForm extends Component {
   constructor(props) {
@@ -133,20 +134,7 @@ class EventForm extends Component {
               <button className="tickets-button" onClick={this.handleSubmit}>MAKE YOUR EVENT LIVE</button>
             </div>
           </div>
-          <div className="bottomDivider"></div>
-          <footer className='footerContainer'>
-            <div className="links">
-              <div className="github-linkedin">
-                <a href="https://github.com/gevuong"><i className="fa fa-github fa-3x"></i></a>
-              </div>
-              <div className="github-linkedin">
-                <a href="https://www.linkedin.com/in/george-vuong/"><i className="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
-              </div>
-            </div>
-            <div>
-              <p className="footer-copyright">2017 EventListenr</p>
-            </div>
-          </footer>
+
         </div>
       </div>
     );

@@ -5,6 +5,7 @@ import React from 'react';
 import EventIndexContainer from '../event/event_index_container';
 import NavbarContainer from '../navbar/navbar_container';
 import SlideShow from './slide_show';
+import Footer from './footer';
 
 // Pure, stateless, presentational component that does not manage its own state or use lifecycle events.
 const Home = () => (
@@ -18,6 +19,7 @@ const Home = () => (
         <p className='splash-text'>Find your next track day experience</p>
       </div>
     <EventIndexContainer />
+
   </div>
 );
 

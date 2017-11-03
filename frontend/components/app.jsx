@@ -7,7 +7,7 @@ import EventFormContainer from './event/event_form_container';
 import EventShowContainer from './event/event_show_container';
 import UserProfileContainer from './user/profile_container';
 import HomePage from './home/home';
-
+import Footer from './home/footer';
 const App = () => (
   <div>
     <Switch>
@@ -18,6 +18,7 @@ const App = () => (
       <AuthRoute path="/signup" component={ SessionFormContainer } />
       <Route path="/" component={ HomePage } />
     </Switch>
+    <Footer />
   </div>
 );
 
