@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-class NavBar extends Component {
+class Navbar extends Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
@@ -68,4 +68,4 @@ class NavBar extends Component {
   }
 }
 
-export default withRouter(NavBar);
+export default withRouter(Navbar);
