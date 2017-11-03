@@ -29,7 +29,7 @@ const SlideShow = () => {
     dots: true,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 7000,
     pauseOnHover: false,
     // speed: 500,
     slidesToShow: 1,

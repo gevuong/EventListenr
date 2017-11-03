@@ -63,7 +63,7 @@ class SessionForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.processForm({user}).then(() => this.props.history.push("/"));
+    this.props.processForm({ user }).then(() => this.props.history.push("/"));
   }
 
   // navLink() {
@@ -77,13 +77,15 @@ class SessionForm extends Component {
   changeFormLink() {
     if (this.props.formType === 'login') {
       return (
-        <p>Don't have an account? <Link className="signup-login-link" to='/signup'>Sign Up</Link>
-
+        <p>Don't have an account?
+          <Link className="signup-login-link" to='/signup'>Sign Up</Link>
         </p>
       );
     } else {
       return (
-        <p>Already have an account? <Link className="signup-login-link" to='/login'>Login</Link></p>
+        <p>Already have an account?
+          <Link className="signup-login-link" to='/login'>Login</Link>
+        </p>
       );
     }
   }
@@ -93,7 +95,7 @@ class SessionForm extends Component {
       <ul className="errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
-            {error}
+            { error }
           </li>
         ))}
       </ul>
@@ -145,7 +147,7 @@ class SessionForm extends Component {
             <form onSubmit={this.handleSubmit} className="login-form-box">
               <img className="logo" src="http://res.cloudinary.com/dtluc0y85/image/upload/v1500693476/Logomakr_right_color_feqswx.png"/>
               <br/>
-              LETS GET STARTED
+              <p className='modal-header-text'>Let's get started</p>
               <br/>
               {/* Please {this.props.formType} or {this.navLink()}*/}
               {this.renderErrors()}
