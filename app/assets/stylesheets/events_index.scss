@@ -24,18 +24,19 @@
 .event-container {
   position: relative;
   color: black;
-  margin: 15px;
-  width: 275px;
-  height: 265px;
+  margin: 17px;
+  width: 330px;
+  height: 300px;
   box-shadow: 0 3px 8px 2px rgba(22,22,22,0.45);
+  // font-family: 'Convergence', sans-serif;
   font-family: "Benton Sans","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
 }
 
 .event-container-hover {
   position: absolute;
-  width: 275px;
-  height: 265px;
-  z-index: 20;
+  width: 330px;
+  height: 300px;
+  z-index: 10;
 
 }
 
@@ -45,16 +46,25 @@
 
 .eventIndex-detailsDiv {
   padding-left: 10px;
+  letter-spacing: 0.5px;
 }
 
-.eventTitle {
+.datetime-p {
+  padding-top: 10px;
+  font-size: 13px;
+  color: #666A73;
+  text-transform: uppercase;
+}
+
+.event-title {
   font-size: 15px;
   line-height: 19px;
   color: #4c4c4c;
+  margin: 5px 0px;
 }
 
-.eventIndexLocation {
-  font-size: 12px;
+.event-index-location {
+  font-size: 13px;
   color: #666A73;
 }
 
