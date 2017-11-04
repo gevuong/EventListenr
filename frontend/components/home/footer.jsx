@@ -5,12 +5,12 @@ const Footer = () => {
     <div>
       <div className="bottomDivider"></div>
       <footer className='footerContainer'>
-        <div className="links">
+        <div className="footer-links">
           <div className="github-linkedin">
-            <a href="https://github.com/gevuong"><i className="fa fa-github fa-3x"></i></a>
+            <a href="https://github.com/gevuong"><i className="fa fa-github fa-2x"></i></a>
           </div>
           <div className="github-linkedin">
-            <a href="https://www.linkedin.com/in/george-vuong/"><i className="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/george-vuong/"><i className="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
           </div>
         </div>
         <div>

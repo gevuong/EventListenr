@@ -1,0 +1,45 @@
+
+.bottomDivider {
+  width: 100%;
+  height: 7px;
+  background-color: #666A73;
+}
+
+.footerContainer {
+  height: 115px;
+  background-color: #45494e;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.github-linkedin {
+  padding: 0px 10px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+
+.fa-github, .fa-linkedin-square {
+  color: #666A73;
+}
+
+.fa-github:hover, .fa-linkedin-square:hover {
+  color: #F6682F;
+}
+
+.fa-2x {
+  font-size: 2.5em;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Convergence', sans-serif;
+  color: #D2D6DF;
+  font-weight: 300;
+}
