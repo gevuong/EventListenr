@@ -56,21 +56,21 @@ organizer_id: ravi.id,
 title: 'Cal Academy of Sciences NightLife',
 location: 'California Academy of Sciences, San Francisco, CA',
 date_time: DateTime.new(2017,10,3,20,0,0),
-description: 'A new adventure unfolds every Thursday night from 6-10pm. Enjoy music, creatures, and cocktails as you set out with friends on a journey to the stars and the depths of the sea.A variety of food options are available at NightLife from 6-9:30 pm, including the Academy Café, The Terrace (located in the West Garden), and convenient food cart in the front lobby.',
+description: 'A new adventure unfolds every Thursday night from 6-10pm. Enjoy music, creatures, and cocktails as you set out with friends on a journey to the stars and the depths of the sea. A variety of food options are available at NightLife from 6-9:30 pm, including the Academy Café, The Terrace (located in the West Garden), and convenient food cart in the front lobby.',
 image_url: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495485317/mezcal-nightlife-celebration-of-cinco-de-mayo-mex-i-am-sf-4_ziu0nu.jpg',
-ticket_price: 15,
+ticket_price: 250,
 ticket_quantity: 300
 )
 
 e4 = Event.create(
 organizer_id: anastassia.id,
-title: 'Warriors vs Cavaliers',
-location: 'Oakland, CA',
-date_time: DateTime.new(2018,5,25,19,0,0),
+title: 'Ferrari Trackday',
+location: 'Willows, CA',
+date_time: DateTime.new(2018,3,25,8,0),
 description: 'Outside the Oracle, this is the biggest Warriors game watch party in San Francisco! We have everything you need to cheer on the Dubs as they battle through the 2018 playoffs. Watch the game in good company, with the loyal members of dubnation living it up outdoors with tons of seating, TVs, beer specials and food trucks.',
-image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1500999587/nbafinasl_y5dfxi.png',
+image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/c_scale,w_1080/v1509756836/car-race-ferrari-racing-car-pirelli-50704_xvesli.png',
 ticket_price: 45,
-ticket_quantity: 10000
+ticket_quantity: 30
 )
 
 e5 = Event.create(
@@ -109,7 +109,7 @@ e7 = Event.create(
 e8 = Event.create(
   organizer_id: keith.id,
   title: 'Off the Grid',
-  location: 'Fort Mason, San Francisco, CA',
+  location: 'Fort Mason, San Francisco',
   date_time: DateTime.new(2018, 4, 22, 7, 0),
   description: 'Off the Grid is a weekly outdoor food truck bonanza. Nearly 30 food vendors in a huge circle with a full bar and bands in the middle? Now that is what I call a party!',
   image_url: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495487769/off_the_grid_image1_am73xl.jpg',
