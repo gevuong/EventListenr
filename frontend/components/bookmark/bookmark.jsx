@@ -13,7 +13,6 @@ class Bookmark extends React.Component {
   }
 
   bookmarkIcon() {
-    console.log(this.props);
     if ( this.props.currentUser.bookmarks.includes(this.props.event.id)) {
       return (
         <i className="fa fa-bookmark selected" aria-hidden="true"></i>

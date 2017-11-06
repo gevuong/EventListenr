@@ -42,8 +42,6 @@ class EventShow extends Component {
     let event = this.props.event;
     let currentUser = this.props.currentUser;
     console.log('event: ', event);
-    console.log('event_date: ', event.date_time);
-    console.log('currentUser: ', currentUser);
 
     let date = new Date(event.date_time).toDateString();
     let time = new Date(event.date_time).toLocaleTimeString('en-US', { hour: "numeric", minute: "2-digit", pattern: "{hour}:{minute}" });
