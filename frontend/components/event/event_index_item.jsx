@@ -38,7 +38,7 @@ class EventIndexItem extends Component {
               </div>
             <br/>
             <div className="eventBookmarkDiv">
-              <BookmarkContainer event={ eventItem }/>
+              {/*<BookmarkContainer event={ eventItem }/>*/}
 
             </div>
           </div>

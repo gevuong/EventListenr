@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
-class Bookmark extends React.Component {
+class Bookmark extends Component {
   constructor(props) {
     super(props);
 
@@ -25,6 +26,7 @@ class Bookmark extends React.Component {
   }
 
   handleClick() {
+    console.log('handleClick: ', this.props.currentUser);
     if (this.props.currentUser.bookmarks.includes(this.props.event.id)) {
       this.props.deleteBookmark(this.props.event.id);
     } else {
@@ -34,6 +36,7 @@ class Bookmark extends React.Component {
   }
 
   render() {
+    // console.log('bookmark: ', this.props.currentUser);
     return(
       <div className="bookmark-icon" onClick={ this.handleClick }>{ this.bookmarkIcon() }
       </div>

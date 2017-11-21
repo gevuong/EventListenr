@@ -45,15 +45,12 @@ const SlideShow = () => {
     <Slider {...settings}>
       <div className='img-wrapper'><img className="splash-image" src="https://res.cloudinary.com/dtluc0y85/image/upload/c_crop,g_custom:face/v1509476016/motorcycles-race-helmets-pilots-163414_kkrfeo.jpg"/>
       </div>
-      <div className='img-wrapper'><img className="splash-image" src="http://res.cloudinary.com/dtluc0y85/image/upload/v1509953509/cartrackday2_zqrbfa.png"/>
+      <div className='img-wrapper'><img className="splash-image" src="https://res.cloudinary.com/dtluc0y85/image/upload/v1509953509/cartrackday2_zqrbfa.png"/>
       </div>
-      <div className='img-wrapper'><img className='splash-image' src='http://res.cloudinary.com/dtluc0y85/image/upload/c_scale,w_1080/v1509476893/dirtbike_zhdljo.jpg'></img></div>
-      <div className='img-wrapper'><img className='splash-image' src='http://res.cloudinary.com/dtluc0y85/image/upload/v1509953517/cartrackday_wxrsfq.png'></img></div>
-      <div className='img-wrapper'><img className='splash-image' src='http://res.cloudinary.com/dtluc0y85/image/upload/v1509758695/Motobot_thunderhill_test_valentino_rossi_11_bycscn.png'></img>
+      <div className='img-wrapper'><img className='splash-image' src='https://res.cloudinary.com/dtluc0y85/image/upload/c_scale,w_1080/v1509476893/dirtbike_zhdljo.jpg'></img></div>
+      <div className='img-wrapper'><img className='splash-image' src='https://res.cloudinary.com/dtluc0y85/image/upload/v1509758695/Motobot_thunderhill_test_valentino_rossi_11_bycscn.png'></img>
       </div>
-      <div className='img-wrapper'><img className='splash-image' src='http://res.cloudinary.com/dtluc0y85/image/upload/v1509954631/lagunaseca_ttsqt6.png'></img>
-      </div>
-      <div className='img-wrapper'><img className='splash-image' src='http://res.cloudinary.com/dtluc0y85/image/upload/v1509954952/Tim_gcfmde.png'></img>
+      <div className='img-wrapper'><img className='splash-image' src='https://res.cloudinary.com/dtluc0y85/image/upload/v1509954631/lagunaseca_ttsqt6.png'></img>
       </div>
     </Slider>
   );
