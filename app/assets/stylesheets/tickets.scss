@@ -2,25 +2,63 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.ticket-container {
-  margin-top: 10px;
-  // display: flex;
-  // flex-direction: center;
-  // border: 2px solid black;
+.modal-ticket-form {
+  // z-index: 10;
+  top: 50%;
+  left: 50%;
+  height: 500px;
+  width: 700px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.3);
+  // background-color: rgba(0,0,0, 0.2); rgb(0,0,0)
+  overflow-x: hidden;
+  opacity: 0;
+  animation: myFade 0.5s linear 0.5s ;
+  animation-fill-mode: forwards;
 }
 
 .ticket-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  font-family: "Benton Sans","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  background-color: #f8f8fa;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  // align-items: center;
   height: 100%;
-  margin: 20px;
+}
+
+.ticket-header-container {
+  background-color: #eff2f5;
+  width: 100%;
 }
 
 .ticket-modal-header {
   font-family: "Benton Sans","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  letter-spacing: 0.5px;
+  text-align: center;
+  font-size: 19px;
+  line-height: 60px;
+  font-weight: 500;
+  -webkit-margin-before: 0em;
+}
 
+.sale-ends-header {
+  color: #45494E;
+  letter-spacing: 0.5px;
+}
+
+.ticket-title-container {
+  border: 1px solid black;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .ticket-quantity-selector {
@@ -36,30 +74,17 @@
   padding: 10px;
   border-top: 1px solid #c6c6c6;
 
-  div{
+  div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 }
 
-.modal-ticket-form {
-  // z-index: 10;
-  top: 50%;
-  left: 50%;
-  height: 400px;
-  width: 450px;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
-  background-color: white;
-  border-radius: 3px;
-  box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.3);
-  // background-color: rgba(0,0,0, 0.2); rgb(0,0,0)
-  overflow-x: hidden;
-  opacity: 0;
-  animation: myFade 0.5s linear 0.5s ;
-  animation-fill-mode: forwards;
+.quantity-cost-checkout-container {
+  color: #45494E;
+}
+
+.tickets-button {
+  width: 110px;
 }

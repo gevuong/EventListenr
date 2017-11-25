@@ -36,9 +36,8 @@ class TicketForm extends React.Component {
   //   console.log(this.props);
   // }
 
-
-
   render() {
+    console.log('tickets: ', this.props);
     const { quantity } = this.state;
     const { event } = this.props;
 
@@ -49,22 +48,31 @@ class TicketForm extends React.Component {
           onRequestClose={this.props.closeModal}
           contentLabel="Example Modal"
         >
-
           <form className="ticket-form" onSubmit={this.handleSubmit}>
-            <h4 className="ticket-modal-header">Register</h4>
-            <br />
-            <label className="ticket-title">{event.title}</label>
-            <label>${event.ticket_price}</label>
+            <div className="ticket-header-container">
+              <h4 className="ticket-modal-header">Register</h4>
+            </div>
+            <div className="sale-ends-header">
+              <p>Sales end on May 17</p>
+            </div>
+            <div className="ticket-title-container">
+              <div className="left-ticket-title-price">
+                <label className="ticket-title">{event.title}</label>
+                <div>
+                  <label>${event.ticket_price}</label>
+                </div>
+              </div>
 
-            <select className="ticket-quantity-selector" onChange={this.handleChange}>
-              <option value={1}>1</option>
-              <option value={2}>2</option>
-              <option value={3}>3</option>
-              <option value={4}>4</option>
-            </select>
+              <select className="ticket-quantity-selector" onChange={this.handleChange}>
+                <option value={1}>1</option>
+                <option value={2}>2</option>
+                <option value={3}>3</option>
+                <option value={4}>4</option>
+              </select>
+            </div>
 
             <footer className="ticket-footer">
-              <div>
+              <div className="quantity-cost-checkout-container">
                 <label>QTY: { quantity }</label>
 
                 <label>TOTAL: ${ parseInt(event.ticket_price) * quantity }</label>
