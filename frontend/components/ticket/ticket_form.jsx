@@ -75,7 +75,7 @@ class TicketForm extends React.Component {
               </select>
             </div>
             <div className="filler-div"></div>
-              
+
             <footer className="ticket-footer">
               <div className="quantity-cost-container">
                 <p>QTY: { quantity }</p>

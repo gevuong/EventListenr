@@ -124,6 +124,23 @@
 }
 
 .tickets-button {
-  width: 110px;
+  cursor: pointer;
+  border-radius: 3px;
   margin: 14px 20px;
+  padding: 5px;
+  background-color: #00ab44;
+  color: white;
+  width: 110px;
+  height: 33px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  font-family: Benton Sans,-apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
+  font-weight: 100;
+  box-shadow: 0 4px 6px -2px rgba(22,22,22,0.45);
+}
+
+.tickets-button:hover {
+  background-color: #00451b;
 }

@@ -108,8 +108,8 @@ class EventForm extends Component {
               </div>
               <div className="ticketDetailsDiv">
                 <div className="ticketTitleDiv">
-                    <span className='quantity'>Quantity Available </span><span className="asterisk">  *</span>
-                    <span className='price'>Price </span><span className="asterisk">  *</span>
+                  <span className='quantity'>Quantity Available </span><span className="asterisk">  *</span>
+                  <span className='price'>Price </span><span className="asterisk">  *</span>
                 </div>
                 <div className='ticketsDiv'>
                   <input
@@ -131,7 +131,7 @@ class EventForm extends Component {
               <br />
             </form>
             <div className='eventLiveDiv'>
-              <button className="tickets-button" onClick={this.handleSubmit}>MAKE YOUR EVENT LIVE</button>
+              <button className="make-event-live-button" onClick={this.handleSubmit}>MAKE YOUR EVENT LIVE</button>
             </div>
           </div>
 

@@ -19,7 +19,10 @@ class EventIndexItem extends Component {
     let ticketPrice;
     if (eventItem.ticket_price === 0) {
       ticketPrice = 'FREE';
-    } else {
+    } else if (eventItem.ticket_price === undefined){
+      ticketPrice = '';
+    }
+      else {
       ticketPrice = '$' + eventItem.ticket_price.toString();
     }
 

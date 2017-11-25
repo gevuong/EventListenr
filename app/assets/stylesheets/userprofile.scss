@@ -1,0 +1,44 @@
+// Place all the styles related to the api/users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-profile-container {
+  padding-top: 100px;
+  font-family: "Benton Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", "sans-serif";
+  letter-spacing: 0.5px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+  h1 {
+    font-size: 35px;
+    line-height: 50px;
+    font-weight: 500;
+    color: #282C35;
+    margin-top: 10px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3 {
+    font-family: "Benton Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #45494e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+  }
+}
+
+// .ticketed-event-header {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//
+//
+// }

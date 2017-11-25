@@ -50,7 +50,7 @@ class EventShow extends Component {
     let ticketPrice;
     if (event.ticket_price === 0) {
       ticketPrice = 'FREE';
-    } else if (event.ticket_price === undefined ) {
+    } else if (event.ticket_price === undefined) {
       ticketPrice = '';
     } else {
       ticketPrice = '$' + event.ticket_price.toString();
