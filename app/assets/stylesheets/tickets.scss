@@ -6,8 +6,8 @@
   // z-index: 10;
   top: 50%;
   left: 50%;
-  height: 500px;
-  width: 700px;
+  height: 488px;
+  width: 660px;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
@@ -26,10 +26,6 @@
 .ticket-form {
   font-family: "Benton Sans","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
   background-color: #f8f8fa;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
-  // align-items: center;
   height: 100%;
 }
 
@@ -43,48 +39,91 @@
   letter-spacing: 0.5px;
   text-align: center;
   font-size: 19px;
-  line-height: 60px;
+  line-height: 58px;
   font-weight: 500;
   -webkit-margin-before: 0em;
+  margin-bottom: 20px;
 }
 
 .sale-ends-header {
   color: #45494E;
   letter-spacing: 0.5px;
+
+  p {
+    margin: 10px 18px;
+    font-size: 15px;
+  }
 }
 
 .ticket-title-container {
-  border: 1px solid black;
   background: #fff;
+  line-height: 3;
+  margin: 12px 18px;
+  padding: 20px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.25);
+  border-radius: 2px;
+  border-left: 14px solid #0093d7;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.ticket-title-container {
+  h2 {
+    margin-top: -10px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    line-height: 0;
+    padding-bottom: 10px;
+    color: #45494E;
+  }
+}
+
 .ticket-quantity-selector {
   max-width: 100%;
   width: 80px;
-  height: 30px;
+  height: 45px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid lightgray;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.filler-div {
+  height: 202px;
 }
 
 .ticket-footer {
   display: flex;
+  align-items: flex-end;
   justify-content: space-between;
+  background: #fff;
   width: 100%;
-  padding: 10px;
   border-top: 1px solid #c6c6c6;
 
   div {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    // flex-direction: column;
+    // justify-content: space-between;
   }
 }
 
-.quantity-cost-checkout-container {
+.quantity-cost-container {
   color: #45494E;
+  letter-spacing: 0.5px;
+  padding: 25px;
+
+  p {
+    padding-right: 100px;
+    font-weight: 300;
+  }
 }
 
 .tickets-button {
   width: 110px;
+  margin: 14px 20px;
 }

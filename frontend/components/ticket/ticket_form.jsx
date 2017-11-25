@@ -57,9 +57,9 @@ class TicketForm extends React.Component {
             </div>
             <div className="ticket-title-container">
               <div className="left-ticket-title-price">
-                <label className="ticket-title">{event.title}</label>
+                <h2 className="ticket-title">{event.title}</h2>
                 <div>
-                  <label>${event.ticket_price}</label>
+                  <p>${event.ticket_price}</p>
                 </div>
               </div>
 
@@ -68,14 +68,19 @@ class TicketForm extends React.Component {
                 <option value={2}>2</option>
                 <option value={3}>3</option>
                 <option value={4}>4</option>
+                <option value={5}>5</option>
+                <option value={6}>6</option>
+                <option value={7}>7</option>
+                <option value={8}>8</option>
               </select>
             </div>
-
+            <div className="filler-div"></div>
+              
             <footer className="ticket-footer">
-              <div className="quantity-cost-checkout-container">
-                <label>QTY: { quantity }</label>
+              <div className="quantity-cost-container">
+                <p>QTY: { quantity }</p>
 
-                <label>TOTAL: ${ parseInt(event.ticket_price) * quantity }</label>
+                <p>TOTAL: ${ parseInt(event.ticket_price) * quantity }</p>
               </div>
               <button className="tickets-button" onClick={this.handleSubmit}>CHECKOUT</button>
 
