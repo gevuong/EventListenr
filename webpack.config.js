@@ -9,14 +9,15 @@ module.exports = {
     filename: "./bundle.js"
   },
   // to unleash efficient webpack production build, uncomment the following:
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin()
-  ],
+  // plugins: [
+  //   new webpack.DefinePlugin({
+  //     'process.env': {
+  //       NODE_ENV: JSON.stringify('production')
+  //     }
+  //   }),
+  //   new webpack.optimize.UglifyJsPlugin()
+  // ],
+  // uncomment until here
   module: {
     loaders: [
       {
