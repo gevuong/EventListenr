@@ -27,14 +27,12 @@ class EventIndex extends React.Component {
     ));
 
     return (
-      <div>
-        <br />
-        <br />
+      <div className="event-index-wrapper">
         <h3 className="event-list-header">
           Events for you in San Francisco, CA, United States
         </ h3>
         <div className="event-index-container">
-            { eventList }
+          { eventList }
         </div>
       </div>
     );
