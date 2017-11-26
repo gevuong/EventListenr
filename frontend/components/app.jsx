@@ -8,6 +8,7 @@ import EventShowContainer from './event/event_show_container';
 import UserProfileContainer from './user/profile_container';
 import HomePage from './home/home';
 import Footer from './home/footer';
+
 const App = () => (
   <div>
     <Switch>

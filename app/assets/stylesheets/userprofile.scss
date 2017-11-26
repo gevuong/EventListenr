@@ -7,7 +7,6 @@
   font-family: "Benton Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", "sans-serif";
   letter-spacing: 0.5px;
   align-content: center;
-  // border-bottom: 4px solid #0093d7;
 
   h1 {
     font-size: 35px;
@@ -24,13 +23,25 @@
   h3 {
     font-family: "Benton Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 13px;
-    line-height: 18px;
+    line-height: 8px;
     text-transform: uppercase;
     color: #45494e;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 400;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      padding: 0px 30px;
+      border-bottom: 4px solid #0093d7;
+    }
   }
 }
 
@@ -41,7 +52,7 @@
   align-items: center;
   background: #f8f8fa;
   border-top: 1px solid lightgray;
-  padding: 38px 0px;
+  padding: 30px 0px;
 
   li {
     min-width: 425px;
@@ -52,20 +63,21 @@
   display: flex;
   justify-content: white;
   box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
-  background: color;
-  margin: 10px 0px;
+  background: white;
+  margin: 5px 0px;
 }
 
 .upcoming-eventItem-img {
   object-fit: cover;
-  height: 120px;
-  width: 200px;
+  height: 100px;
+  width: 190px;
+  padding: 10px;
 }
 
 .upcoming-eventItem-info {
   font-family: "Benton Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   letter-spacing: 0.5px;
-  padding-left: 15px;
+  padding: 17px 3px;
 
   p {
     font-size: 12px;
@@ -74,5 +86,7 @@
 
   h4 {
     font-size: 15px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 2.5em;
   }
 }
