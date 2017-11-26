@@ -29,7 +29,7 @@ oliver = User.create(username: 'Oliver', password: 'password')
 
 Event.destroy_all
 e1 = Event.create(
-organizer_id: "Noah",
+organizer_id: noah.id,
 title: 'Photography Walk',
 location: 'Fort Mason, San Francisco, CA',
 # date_time: DateTime.new(2017, 11, 22, 7, 0, 0),

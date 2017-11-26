@@ -19,7 +19,7 @@ class EventIndex extends React.Component {
 // when you need to explicitly tell it to (i.e. ajax request) based on change of props
   render() {
     const { events } = this.props;
-
+    console.log("event_index: ", this.props);
     let eventList = events.map(eventItem => (
       <EventIndexItem key={ eventItem.id }
         eventItem={ eventItem }

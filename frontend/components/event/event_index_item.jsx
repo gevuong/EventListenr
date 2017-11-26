@@ -1,3 +1,4 @@
+// Libraries
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -10,9 +11,9 @@ class EventIndexItem extends Component {
 
   render() {
     const { eventItem } = this.props;
-
+    // console.log("props: ", this.props);
     let date = new Date(eventItem.date_time).toDateString();
-    let month = date.slice(4, 7);
+    let month = date.slice(3, 7);
     let day = date.slice(8, 10);
     let dateParsed = date.slice(0, date.length - 5);
     let time = new Date(eventItem.date_time).toLocaleTimeString('en-US', { hour: "numeric", minute: "2-digit", pattern: "{hour}:{minute}" });
@@ -31,17 +32,19 @@ class EventIndexItem extends Component {
       <div>
         <Link to={`/events/${eventItem.id}`}>
           <div className="event-container">
-            <div className="event-container-hover"></div>
+            <div></div>
               <img src={ eventItem.image_url }></img>
               <span className="event-price-span">{ ticketPrice }</span>
               <div className="eventIndex-detailsDiv">
                 <div className="month-day">
                   <p className="month">{month}</p>
                   <p className="day">{day}</p>
+
                 </div>
                 <div>
-                  <h4 className='event-title'>{ eventItem.title }</h4>
+                  <h3 className='event-title'>{ eventItem.title }</h3>
                   <p className='event-index-location'>{ eventItem.location }</p>
+                  <p className="event-item-location">by Keigwins</p>
                 </div>
               </div>
             <br/>

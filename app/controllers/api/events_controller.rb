@@ -53,5 +53,5 @@ end
 private
 def event_params
   params.require(:event)
-  .permit(:title, :description, :location, :date_time, :image_url, :ticket_price, :ticket_quantity, category_id: [])
+  .permit(:title, :description, :location, :date_time, :image_url, :ticket_price, :ticket_quantity, :organizer_id, category_id: [])
 end
