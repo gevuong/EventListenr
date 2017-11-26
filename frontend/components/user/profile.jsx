@@ -24,29 +24,30 @@ class UserProfile extends Component {
           <NavbarContainer />
         </header>
         <div className='user-profile-container'>
-            <h1>{currentUser.username}</h1>
-            <h3>Upcoming Events</h3>
-
-          <div className='ticketed-event-container'>
-            {ticketedEvents.map(event => (
-              <UpcomingEventItem eventItem={event} />
-              ))
-            }
-          </div>
-          <br/>
-
-          <h3>Saved Events</h3>
-          <div className="bookmark-event-container">
-            {bookmarkedEvents.map(event => (<EventIndexItem key={event.id} eventItem={event}/>
-              ))
-            }
-          </div>
+          <h1>{currentUser.username}</h1>
+          <h3>Upcoming Events</h3>
         </div>
+        
+        <ul className='ticketed-event-container'>
+          {ticketedEvents.map(event => (
+            <li>
+              <UpcomingEventItem eventItem={event} />
+            </li>
+            ))
+          }
+        </ul>
+          <br/>
       </div>
     );
   }
 }
-// {ticketedEvents.map(event => (
+
+// <h3>Saved Events</h3>
+// <div className="bookmark-event-container">
+//   {bookmarkedEvents.map(event => (<EventIndexItem key={event.id} eventItem={event}/>
+//     ))
+//   }
+// // {ticketedEvents.map(event => (
 //   <EventIndexItem key={event.id} eventItem={event}/>
 //   ))
 // }

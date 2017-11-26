@@ -3,12 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .user-profile-container {
-  padding-top: 100px;
+  padding-top: 85px;
   font-family: "Benton Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", "sans-serif";
   letter-spacing: 0.5px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
+  align-content: center;
+  // border-bottom: 4px solid #0093d7;
 
   h1 {
     font-size: 35px;
@@ -35,10 +34,45 @@
   }
 }
 
-// .ticketed-event-header {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//
-//
-// }
+.ticketed-event-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f8f8fa;
+  border-top: 1px solid lightgray;
+  padding: 38px 0px;
+
+  li {
+    min-width: 425px;
+  }
+}
+
+.upcoming-eventItem-container {
+  display: flex;
+  justify-content: white;
+  box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
+  background: color;
+  margin: 10px 0px;
+}
+
+.upcoming-eventItem-img {
+  object-fit: cover;
+  height: 120px;
+  width: 200px;
+}
+
+.upcoming-eventItem-info {
+  font-family: "Benton Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  letter-spacing: 0.5px;
+  padding-left: 15px;
+
+  p {
+    font-size: 12px;
+    color: #45494e;
+  }
+
+  h4 {
+    font-size: 15px;
+  }
+}
