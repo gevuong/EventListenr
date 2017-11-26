@@ -31,24 +31,24 @@ class UserProfile extends Component {
         <div className='user-profile-container'>
           <h1>{currentUser.username}</h1>
           <ul>
-            <li>
-              <Link to="/profile/ticketed">
+            <NavLink to="/profile/ticketed">
+              <li>
                 <h3>{ticketedEvents.length ? " " : ticketedEvents.length }</h3>
                 <h3>Upcoming Events</h3>
-              </Link>
-            </li>
+              </li>
+          </NavLink>
+          <NavLink to="/profile/bookmarked">
             <li>
-              <Link to="/profile/bookmarked">
-                <h3>{bookmarkedEvents.length ? " " : bookmarkedEvents.length }</h3>
-                <h3>Saved Events</h3>
-              </Link>
+              <h3>{bookmarkedEvents.length ? " " : bookmarkedEvents.length }</h3>
+              <h3>Saved Events</h3>
             </li>
+          </NavLink>
+          <NavLink to="/profile/hosted">
             <li>
-              <Link to="/profile/hosted">
-                <h3>{" "}</h3>
-                <h3>Hosted Events</h3>
-              </Link>
+              <h3>{" "}</h3>
+              <h3>Hosted Events</h3>
             </li>
+          </NavLink>
           </ul>
         </div>
 

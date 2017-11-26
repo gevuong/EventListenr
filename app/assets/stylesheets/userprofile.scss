@@ -20,6 +20,15 @@
     justify-content: center;
   }
 
+  a {
+    border-bottom: 4px solid #fff;
+  }
+
+  a.active {
+    border-bottom: 4px solid #0093d7;
+  }
+
+
   h3 {
     font-family: "Benton Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 13px;
@@ -40,10 +49,11 @@
 
     li {
       padding: 0px 30px;
-      border-bottom: 4px solid #0093d7;
     }
   }
 }
+
+
 
 .ticketed-event-container {
   display: flex;
