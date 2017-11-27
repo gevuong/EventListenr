@@ -4,15 +4,17 @@ import { Link } from 'react-router-dom';
 
 // Components
 import BookmarkContainer from '../bookmark/bookmark_container';
+
 class EventIndexItem extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
   }
 
   render() {
-    const { eventItem } = this.props;
-    // console.log("props: ", this.props);
+    const { eventItem, eventItem: { organizer } } = this.props;
     let date = new Date(eventItem.date_time).toDateString();
+    let weekday = date.slice(0, 3);
+    console.log("date: ", weekday);
     let month = date.slice(3, 7);
     let day = date.slice(8, 10);
     let dateParsed = date.slice(0, date.length - 5);
@@ -34,24 +36,23 @@ class EventIndexItem extends Component {
           <div className="event-container">
             <div></div>
               <img src={ eventItem.image_url }></img>
-              <span className="event-price-span">{ ticketPrice }</span>
+{/*<span className="event-price-span">{ ticketPrice }</span>*/}
               <div className="eventIndex-detailsDiv">
                 <div className="month-day">
                   <p className="month">{month}</p>
                   <p className="day">{day}</p>
-
+                  <p className="month weekday">{weekday}</p>
                 </div>
-                <div>
+                <div className="event-info-index">
                   <h3 className='event-title'>{ eventItem.title }</h3>
                   <p className='event-index-location'>{ eventItem.location }</p>
-                  <p className="event-item-location">by Keigwins</p>
+                  <p className="event-index-location">{ ticketPrice === "FREE" ? "FREE" : `Starts at ${ticketPrice} • by ${organizer.username}` }</p>
                 </div>
               </div>
-            <br/>
-            <div className="eventBookmarkDiv">
+            {/*<div className="eventBookmarkDiv">*/}
               {/*<BookmarkContainer event={ eventItem }/>*/}
 
-            </div>
+            {/*</div>*/}
           </div>
         </Link>
       </div>

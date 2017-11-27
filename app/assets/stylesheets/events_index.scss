@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //
 .event-index-wrapper {
-  background: #f8f8fa;
+  // background: #f8f8fa;
+  background: #fff;
 }
 .event-list-header {
   display: flex;
@@ -28,18 +29,16 @@
   position: relative;
   color: black;
   margin: 17px;
+  background: #fff;
   width: 330px;
   height: 300px;
-  box-shadow: 0 1px 5px 1px rgba(0,0,0,0.15);
+  // box-shadow: 0 1px 5px 1px rgba(0,0,0,0.15);
   font-family: "Benton Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 }
 
-// .event-container-hover {
-//   position: absolute;
-//   width: 330px;
-//   height: 300px;
-//   z-index: 10;
-// }
+.event-container:hover {
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,0.15);
+}
 
 .event-container img {
   height: 158px;
@@ -61,8 +60,8 @@
 }
 
 .eventIndex-detailsDiv {
-  padding: 20px;
-  letter-spacing: 0.3px;
+  padding: 24px;
+  letter-spacing: 0.4px;
   display: flex;
 
   .month-day {
@@ -91,9 +90,16 @@
       color: #666a73;
       font-size: 1.25rem;
       line-height: 1.4;
-      font-weight: 400;
+      font-weight: 300;
       text-rendering: optimizeLegibility;
       text-align: center;
+    }
+
+    p.weekday {
+      color: #666a73;
+      font-size: 10px;
+      letter-spacing: 1px;
+      font-weight: 200;
     }
   }
 }
@@ -105,25 +111,31 @@
   text-transform: uppercase;
 }
 
+.event-info-index {
+  display: flex;
+  flex-direction: column;
+}
+
 .event-title {
-  font-size: 1.25rem;
-  line-height: 19px;
+  font-size: 1.05rem;
+  line-height: 1.4;
   color: #363a43;
   margin: 0;
-  height: 25px;
-  font-weight: 300;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-weight: 400;
+  overflow: visible;
 }
 
 .event-index-location {
+  font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
   font-size: 13px;
+  font-weight: 300;
   color: #666A73;
-  height: 20px;
-  line-height: 15px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  line-height: 1.4;
+  overflow: visible;
+  margin-top: 0px;
+  // text-overflow: ellipsis;
+  // white-space: nowrap;
+  // border-bottom: 3px solid #f6682f;
 }
 
 .eventBookmarkDiv {

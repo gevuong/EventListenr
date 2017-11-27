@@ -5,35 +5,37 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 User.destroy_all
-guest = User.create(username: 'guest', password: 'password')
-lotus = User.create(username: 'Lotus', password: 'password')
-roger = User.create(username: 'Roger', password: 'password')
-george = User.create(username: 'George', password: 'password')
-noah = User.create(username: 'Noah', password: 'password')
-keith = User.create(username: 'Keith', password: 'password')
-anastassia = User.create(username: 'Anastassia', password: 'password')
-ravi = User.create(username: 'Ravi', password: 'password')
-syrie = User.create(username: 'Syrie', password: 'password')
-aaron = User.create(username: 'Aaron', password: 'password')
-alex = User.create(username: 'Alex', password: 'password')
-leo = User.create(username: 'Leo', password: 'password')
-jared = User.create(username: 'Jared', password: 'password')
-evelyn = User.create(username: 'Evelyn', password: 'password')
-isak = User.create(username: 'Isak', password: 'password')
-greg = User.create(username: 'Greg', password: 'password')
-young = User.create(username: 'Young', password: 'password')
-mary = User.create(username: 'Mary', password: 'password')
-isak = User.create(username: 'Isak', password: 'password')
-oliver = User.create(username: 'Oliver', password: 'password')
+guest = User.create(username: 'Andrew Booth', password: 'password')
+lotus = User.create(username: 'John Chaney', password: 'password')
+roger = User.create(username: 'John Matthews', password: 'password')
+george = User.create(username: 'George Vuong', password: 'password')
+noah = User.create(username: 'Noah Kang', password: 'password')
+keith = User.create(username: 'Keith Wong', password: 'password')
+anastassia = User.create(username: 'Anastassia Bobokolonova', password: 'password')
+ravi = User.create(username: 'Virginia Chen', password: 'password')
+syrie = User.create(username: 'Syrie Blanco', password: 'password')
+aaron = User.create(username: 'Aaron Mondshine', password: 'password')
+alex = User.create(username: 'Alex Milbert', password: 'password')
+leo = User.create(username: 'Leo Liao', password: 'password')
+jared = User.create(username: 'Jared Tan', password: 'password')
+evelyn = User.create(username: 'Evelyn Lee', password: 'password')
+isak = User.create(username: 'Isak Mladenoff', password: 'password')
+greg = User.create(username: 'Gregory Park', password: 'password')
+young = User.create(username: 'Young Eun Park', password: 'password')
+mary = User.create(username: 'Mary Howell', password: 'password')
+isak = User.create(username: 'Joshua Chen', password: 'password')
+oliver = User.create(username: 'Justin Austria', password: 'password')
+nick = User.create(username: 'Nicholas Whitson', password: 'password')
+kevin = User.create(username: 'Kevin Yang', password: 'password')
 
 Event.destroy_all
 e1 = Event.create(
 organizer_id: noah.id,
 title: 'Photography Walk',
 location: 'Fort Mason, San Francisco, CA',
-# date_time: DateTime.new(2017, 11, 22, 7, 0, 0),
-date_time: Date.new(2017,11,22,19,30),
+date_time: DateTime.new(2017,11,22,19,30),
 description: 'Learn how to capture great images for your next vacation. We will teach you how to capture magical moments on your next vacation. Learn about inexpensive and essential equipment and tools, how to work with complex cultural issues in the field, lighting/exposure tips and time-of-day solutions, and composition and balance in image design.',
 image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1500957120/subtle-animated-gif-18_pqgcuc.gif',
 ticket_price: 30,
@@ -107,7 +109,7 @@ e7 = Event.create(
 )
 
 e8 = Event.create(
-  organizer_id: keith.id,
+  organizer_id: george.id,
   title: 'Off the Grid',
   location: 'Fort Mason, San Francisco',
   date_time: DateTime.new(2018, 4, 22, 7, 0),
@@ -140,7 +142,7 @@ e10 = Event.create(
   )
 
 e11 = Event.create(
-    organizer_id: keith.id,
+    organizer_id: lotus.id,
     title: 'Jo Koy',
     location: 'Cobbs Comedy Club',
     date_time: DateTime.new(2018,2,3,20,0),
@@ -197,7 +199,7 @@ e15 = Event.create(
 
 
 e16 = Event.create(
-  organizer_id: aaron.id,
+  organizer_id: roger.id,
   title: 'Movie Night',
   location: 'San Francisco, CA',
   date_time: DateTime.new(2017,11,25,19,0),
@@ -208,7 +210,7 @@ e16 = Event.create(
 )
 
 e17 = Event.create(
-organizer_id: noah.id,
+organizer_id: oliver.id,
 title: 'Tahiti Fete',
 location: 'San Jose, CA',
 date_time: DateTime.new(2018, 7, 4, 10, 0),
@@ -230,7 +232,7 @@ ticket_quantity: 25
 )
 
 e19 = Event.create(
-organizer_id: ravi.id,
+organizer_id: nick.id,
 title: 'LAToken Penthouse Party',
 location: 'San Francisco, CA',
 date_time: DateTime.new(2017, 7, 31, 10, 0),
@@ -242,12 +244,11 @@ ticket_quantity: 25
 )
 
 e20 = Event.create(
-organizer_id: jared.id,
-title: 'SF Cuddles - Daytime Cuddle Party! August 26th 2017',
+organizer_id: kevin.id,
+title: 'SF Cuddles - Daytime Cuddle Party!',
 location: 'San Francisco, CA',
 date_time: DateTime.new(2017, 7, 31, 10, 0),
-description: 'DESCRIPTION
-What is a Cuddle Party?
+description: 'What is a Cuddle Party?
 Cuddle Party is a 3-4 hours workshop experience where participants engage in communication exercises, explore touch in a non-sexual space, experience personal exploration and intimacy, and have fun with like minded people.
 
 Why is Cuddling important?
@@ -259,18 +260,6 @@ ticket_quantity: 25
 )
 
 e21 = Event.create(
-organizer_id: syrie.id,
-title: 'LAToken Penthouse Party',
-location: 'San Francisco, CA',
-date_time: DateTime.new(2017, 7, 31, 10, 0),
-description: 'Meet blockchain entrepreneurs and investors, network and discover. Learn about tokenization and the opportunities it unlocks. Introductions, wine, food, blockchain and everything crypto. Hosted by LAToken founder Valentin Preobrazhensky. co-hosted by Gil Penchina. Event starts 19:30. Please contact hosts for RSVP and info or eli@latoken.com.
-www.latoken.com',
-image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1501267278/la_penthouseparty_crkx95.png',
-ticket_price: 0,
-ticket_quantity: 25
-)
-
-e22 = Event.create(
 organizer_id: isak.id,
 title: '6th Annual Circus Festival',
 location: 'San Francisco, CA',
@@ -282,7 +271,7 @@ ticket_price: 0,
 ticket_quantity: 25
 )
 
-e23 = Event.create(
+e22 = Event.create(
 organizer_id: guest.id,
 title: 'Hofbrauhaus Munich Saturdays',
 location: 'Social Hall SF, San Francisco, CA',
@@ -298,8 +287,8 @@ ticket_price: 0,
 ticket_quantity: 25
 )
 
-e24 = Event.create(
-organizer_id: isak.id,
+e23 = Event.create(
+organizer_id: 410,
 title: 'SF Cheese Fest',
 location: 'San Francisco, CA',
 date_time: DateTime.new(2017, 7, 31, 10, 0),
@@ -308,7 +297,6 @@ image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1501268403/cheesef
 ticket_price: 0,
 ticket_quantity: 25
 )
-
 
 
 Ticket.destroy_all
