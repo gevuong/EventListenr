@@ -39,9 +39,12 @@ class EventShow extends Component {
   //3. when setState is called
 
   render() {
-    const { event, currentUser } = this.props;
-
+    const { event, event: { organizer }, currentUser } = this.props;
+    console.log("eventorganizer: ", organizer);
     let date = new Date(event.date_time).toDateString();
+    let weekday = date.slice(0, 3);
+    let month = date.slice(3, 7);
+    let day = date.slice(8, 10);
     let time = new Date(event.date_time).toLocaleTimeString('en-US', { hour: "numeric", minute: "2-digit", pattern: "{hour}:{minute}" });
     let dateTime = date + ', ' + time;
 
@@ -71,17 +74,18 @@ class EventShow extends Component {
               <img className="show-page-image" src={ event.image_url } />
             </div>
 
-            <div className="show-page-event-details">
-              <h3 className='eventTitleShow'>{ event.title }</h3>
-              <div className="event-authorDiv">
-                by { currentUser.username }
+            <div className="show-event-details-wrapper">
+              <div className="show-event-details">
+                <p className="month month-show">{month}</p>
+                <p className="day day-show">{day}</p>
+                <h3>{ event.title }</h3>
+                  <p className="organizer-show">
+                    { organizer ? `by ${ organizer.username }` : " "}
+                  </p>
               </div>
               <div className="ticket-priceDiv">
-                { ticketPrice }
+                <p>{ ticketPrice }</p>
               </div>
-              <br />
-              <br />
-              <br />
             </div>
           </div>
 

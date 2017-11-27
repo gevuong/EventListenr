@@ -14,7 +14,6 @@ class EventIndexItem extends Component {
     const { eventItem, eventItem: { organizer } } = this.props;
     let date = new Date(eventItem.date_time).toDateString();
     let weekday = date.slice(0, 3);
-    console.log("date: ", weekday);
     let month = date.slice(3, 7);
     let day = date.slice(8, 10);
     let dateParsed = date.slice(0, date.length - 5);
