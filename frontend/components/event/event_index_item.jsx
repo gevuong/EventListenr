@@ -46,7 +46,7 @@ class EventIndexItem extends Component {
                 <div className="event-info-index">
                   <h3 className='event-title'>{ eventItem.title }</h3>
                   <p className='event-index-location'>{ eventItem.location }</p>
-                  <p className="event-index-location">{ ticketPrice === "FREE" ? "FREE" : `Starts at ${ticketPrice} • by ${organizer.username}` }</p>
+                  <p className="event-index-location">{ ticketPrice === "FREE" ? `FREE • by ${organizer.username}` : `Starts at ${ticketPrice} • by ${organizer.username}` }</p>
                 </div>
               </div>
             {/*<div className="eventBookmarkDiv">*/}

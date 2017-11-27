@@ -29,6 +29,8 @@ isak = User.create(username: 'Joshua Chen', password: 'password')
 oliver = User.create(username: 'Justin Austria', password: 'password')
 nick = User.create(username: 'Nicholas Whitson', password: 'password')
 kevin = User.create(username: 'Kevin Yang', password: 'password')
+keigwins = User.create(username: 'Keigwins', password: 'password')
+ptt = User.create(username: 'Pacific Track Time', password: 'password')
 
 Event.destroy_all
 e1 = Event.create(
@@ -60,7 +62,7 @@ location: 'California Academy of Sciences, San Francisco, CA',
 date_time: DateTime.new(2017,10,3,20,0,0),
 description: 'A new adventure unfolds every Thursday night from 6-10pm. Enjoy music, creatures, and cocktails as you set out with friends on a journey to the stars and the depths of the sea. A variety of food options are available at NightLife from 6-9:30 pm, including the Academy Café, The Terrace (located in the West Garden), and convenient food cart in the front lobby.',
 image_url: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495485317/mezcal-nightlife-celebration-of-cinco-de-mayo-mex-i-am-sf-4_ziu0nu.jpg',
-ticket_price: 250,
+ticket_price: 25,
 ticket_quantity: 300
 )
 
@@ -222,8 +224,8 @@ ticket_quantity: 1000
 
 e18 = Event.create(
 organizer_id: greg.id,
-title: 'Saturday Morning Outdoor Vinyasa Flow @ Crissy Field',
-location: 'San Francisco, CA',
+title: 'Saturday Morning Outdoor Vinyasa Flow',
+location: 'Crissy Field, San Francisco, CA',
 date_time: DateTime.new(2017, 7, 29, 10, 0),
 description: 'These classes are lighthearted, athletic and fun all levels vinyasa flow classes. Join us and one of our skillful yoga teachers for this class on Saturday mornings @ Crissy Field.',
 image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1501266991/sat_morning_vinyasa_sxwchd.jpg',
@@ -235,7 +237,7 @@ e19 = Event.create(
 organizer_id: nick.id,
 title: 'LAToken Penthouse Party',
 location: 'San Francisco, CA',
-date_time: DateTime.new(2017, 7, 31, 10, 0),
+date_time: DateTime.new(2018, 3, 3, 10, 0),
 description: 'Meet blockchain entrepreneurs and investors, network and discover. Learn about tokenization and the opportunities it unlocks. Introductions, wine, food, blockchain and everything crypto. Hosted by LAToken founder Valentin Preobrazhensky. co-hosted by Gil Penchina. Event starts 19:30. Please contact hosts for RSVP and info or eli@latoken.com.
 www.latoken.com',
 image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1501267278/la_penthouseparty_crkx95.png',
@@ -247,7 +249,7 @@ e20 = Event.create(
 organizer_id: kevin.id,
 title: 'SF Cuddles - Daytime Cuddle Party!',
 location: 'San Francisco, CA',
-date_time: DateTime.new(2017, 7, 31, 10, 0),
+date_time: DateTime.new(2018, 5, 1, 10, 0),
 description: 'What is a Cuddle Party?
 Cuddle Party is a 3-4 hours workshop experience where participants engage in communication exercises, explore touch in a non-sexual space, experience personal exploration and intimacy, and have fun with like minded people.
 
@@ -260,22 +262,44 @@ ticket_quantity: 25
 )
 
 e21 = Event.create(
-organizer_id: isak.id,
+organizer_id: ptt.id,
 title: '6th Annual Circus Festival',
 location: 'San Francisco, CA',
-date_time: DateTime.new(2017, 7, 31, 10, 0),
+date_time: DateTime.new(2017, 7, 31, 8, 0),
 description: 'The Bayview Opera House (BVOH) in collaboration with NOW Hunters Point are proud to present Bayview Hunters Point’s 6th annual Summer Circus Festival. Doors to this free family-friendly event will open at 12pm. Event goers will be able to enjoy a myriad of activities from hobnobbing with stilt walkers and eating treats from local vendors: Old Skool Cafe and Yvonnes Southern Sweets. Children will have a blast riding the giant Fun Slide, riding a curcus train, playing circus games and more.
 All rides and activities are free, bring cash for food.',
 image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1501268103/circusfest_gfps8y.jpg',
-ticket_price: 0,
+ticket_price: 180,
 ticket_quantity: 25
+)
+
+e23 = Event.create(
+  organizer_id: george.id,
+  title: 'SF Cheese Fest',
+  location: 'San Francisco, CA',
+  date_time: DateTime.new(2017, 5, 10, 10, 0),
+  description: 'Calling all CHEESE lovers! We are "Melting Together" for the Third Annual SF Cheese Fest, which will celebrate the gratifying warmth of bringing folks together to share the cheesy richness of artisan cheeses and the people who create them. Mingle with 24 Guild-member cheesemakers from across the state, sampling dozens of new and classic California cheeses.',
+  image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1501268403/cheesefest_xrkiei.jpg',
+  ticket_price: 0,
+  ticket_quantity: 25
+)
+
+e18 = Event.create(
+organizer_id: keigwins.id,
+title: 'Thunderhill East Opening Weekend!',
+location: 'Willows, CA',
+date_time: DateTime.new(2017, 3, 25, 8, 0),
+description: 'These classes are lighthearted, athletic and fun all levels vinyasa flow classes. Join us and one of our skillful yoga teachers for this class on Saturday mornings @ Crissy Field.',
+image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1501266991/sat_morning_vinyasa_sxwchd.jpg',
+ticket_price: 200,
+ticket_quantity: 40
 )
 
 e22 = Event.create(
 organizer_id: guest.id,
 title: 'Hofbrauhaus Munich Saturdays',
 location: 'Social Hall SF, San Francisco, CA',
-date_time: DateTime.new(2017, 7, 31, 10, 0),
+date_time: DateTime.new(2018, 3, 15, 10, 0),
 description: 'We are celebrating our 124 years in San Francisco by kicking off our very first Hofbrauhaus Party!
 Bottomless Beer? YES!
 German Attire? YES! We encourage you to wear Liderhosen and Dirndls
@@ -283,17 +307,6 @@ Beer Hall Games? YES! Beer chugging, Stein Holding and even Sausage Eating Conte
 Sausages? OF COURSE! We will be offering all of our hits (Schnitzels, Pretzels and Sausages) and also a prefix menu for larger parties.
 PROST!!',
 image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1501268539/hofbrauhaus_gxpkgv.jpg',
-ticket_price: 0,
-ticket_quantity: 25
-)
-
-e23 = Event.create(
-organizer_id: 410,
-title: 'SF Cheese Fest',
-location: 'San Francisco, CA',
-date_time: DateTime.new(2017, 7, 31, 10, 0),
-description: 'Calling all CHEESE lovers! We are "Melting Together" for the Third Annual SF Cheese Fest, which will celebrate the gratifying warmth of bringing folks together to share the cheesy richness of artisan cheeses and the people who create them. Mingle with 24 Guild-member cheesemakers from across the state, sampling dozens of new and classic California cheeses.',
-image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1501268403/cheesefest_xrkiei.jpg',
 ticket_price: 0,
 ticket_quantity: 25
 )
@@ -323,7 +336,6 @@ Ticket.create(
   user_id: keith.id,
   quantity: 1
 )
-
 
 
 Bookmark.destroy_all
