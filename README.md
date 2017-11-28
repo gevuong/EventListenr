@@ -18,13 +18,13 @@ The backend architecture uses Rails 5.0.4's MVC web framework to fetch and store
 
 
 ### Home Page
-![EventListenr Home page](docs/images/homepage_event_index.png)
+![EventListenr Home page]
 
 ### User Login/Signup format
-![EventListenr](docs/images/session_form.png)
+![EventListenr]
 
 ### Event Show Page
-![EventListenr](docs/images/event_show_page.png)
+![EventListenr]
 
 ### Create Events
 User can create events. User created events immediately show on the home page. Images can be uploaded via drag and drop feature using React Dropzone.
@@ -37,7 +37,7 @@ User can "register" to events by "purchasing" tickets to events.
 Events with purchased tickets appear on the User Dashboard.
 
 ### User Dashboard
-![EventListenr User Dashboard](docs/images/User_profile.png)
+![EventListenr User Dashboard]
 
 ## Additional Resources
 * [View Wireframes](https://github.com/gevuong/EventListenr/tree/master/docs/wireframes)
