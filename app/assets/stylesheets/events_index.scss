@@ -34,6 +34,16 @@
   height: 300px;
   // box-shadow: 0 1px 5px 1px rgba(0,0,0,0.15);
   font-family: "Benton Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+
+  span {
+    position: absolute;
+    top: 137px;
+    right: 15px;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #eff2f5;
+    padding: 10px;
+  }
 }
 
 .event-container:hover {

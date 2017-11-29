@@ -47,9 +47,6 @@ class EventShow extends Component {
     let day = date.slice(8, 10);
 
     let dateTime = new Date(event.date_time).toLocaleTimeString('en-US', {weekday: "short", month: "long", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit", pattern: "{hour}:{minute}" });
-    // let dateTime = date + ', ' + time;
-
-    console.log("time: ", dateTime);
 
     let ticketPrice;
     if (event.ticket_price === 0) {

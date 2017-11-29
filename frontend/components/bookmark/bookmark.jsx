@@ -26,7 +26,7 @@ class Bookmark extends Component {
   }
 
   handleClick() {
-    console.log('handleClick: ', this.props.currentUser);
+    // console.log('handleClick: ', this.props);
     if (this.props.currentUser.bookmarks.includes(this.props.event.id)) {
       this.props.deleteBookmark(this.props.event.id);
     } else {
@@ -36,7 +36,7 @@ class Bookmark extends Component {
   }
 
   render() {
-    // console.log('bookmark: ', this.props.currentUser);
+    console.log('bookmark_component: ', this.props);
     return(
       <div className="bookmark-icon" onClick={ this.handleClick }>{ this.bookmarkIcon() }
       </div>

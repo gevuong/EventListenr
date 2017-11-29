@@ -19,9 +19,9 @@ class UserProfile extends Component {
   }
 
   render() {
-    console.log('userprofile: ', this.props.ticketedEvents);
-
+    console.log('userprofile_props: ', this.props);
     const { currentUser, ticketedEvents, bookmarkedEvents } = this.props;
+    console.log("currentUser: ", currentUser);
 
     return(
       <div>
