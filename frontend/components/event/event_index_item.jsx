@@ -33,21 +33,19 @@ class EventIndexItem extends Component {
       <div>
         <Link to={`/events/${eventItem.id}`}>
           <div className="event-container">
-            <div></div>
-              <img src={ eventItem.image_url }></img>
-{/*<span className="event-price-span">{ ticketPrice }</span>*/}
-              <div className="eventIndex-detailsDiv">
-                <div className="month-day">
-                  <p className="month">{month}</p>
-                  <p className="day">{day}</p>
-                  <p className="month weekday">{weekday}</p>
-                </div>
-                <div className="event-info-index">
-                  <h3 className='event-title'>{ eventItem.title }</h3>
-                  <p className='event-index-location'>{ eventItem.location }</p>
-                  <p className="event-index-location">{ ticketPrice === "FREE" ? `FREE • by ${organizer.username}` : `Starts at ${ticketPrice} • by ${organizer.username}` }</p>
-                </div>
+            <img src={ eventItem.image_url }></img>
+            <div className="eventIndex-detailsDiv">
+              <div className="month-day">
+                <p className="month">{month}</p>
+                <p className="day">{day}</p>
+                <p className="month weekday">{weekday}</p>
               </div>
+              <div className="event-info-index">
+                <h3 className='event-title'>{ eventItem.title }</h3>
+                <p className='event-index-location'>{ eventItem.location }</p>
+                <p className="event-index-location">{ ticketPrice === "FREE" ? `FREE • by ${organizer.username}` : `Starts at ${ticketPrice} • by ${organizer.username}` }</p>
+              </div>
+            </div>
             {/*<div className="eventBookmarkDiv">*/}
               {/*<BookmarkContainer event={ eventItem }/>*/}
 
