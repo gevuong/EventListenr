@@ -52,17 +52,11 @@ class UserProfile extends Component {
           </ul>
         </div>
 
-        <ul className='ticketed-event-container'>
-          {ticketedEvents.map(event => (
-            <li>
-              <UpcomingEventItem eventItem={event} key={event.id}/>
-            </li>
-            ))
-          }
-        </ul>
-
         <Route exact path={'/profile'}
-          render={ () => <Redirect to={'/profile/ticketed'} event={ticketedEvents} /> }
+          render={ () => <Redirect to={'/profile/ticketed'} /> }
+        />
+        <Route path={'/profile/ticketed'}
+          render={ () => <UpcomingEventItem ticketedEvents={ticketedEvents} /> }
         />
         <Route path={'/profile/bookmarked'}
           render={ () => <BookmarkedEventItem event={bookmarkedEvents} /> }
@@ -84,4 +78,14 @@ class UserProfile extends Component {
 //   <EventIndexItem key={event.id} eventItem={event}/>
 //   ))
 // }
+
+// <ul className='ticketed-event-container'>
+//   {ticketedEvents.map(event => (
+//     <li>
+//       <UpcomingEventItem eventItem={event} key={event.id}/>
+//     </li>
+//     ))
+//   }
+// </ul>
+
 export default UserProfile;

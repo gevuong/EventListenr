@@ -8,23 +8,34 @@ class UpcomingEventItem extends Component {
   render() {
     console.log('upcoming-event-item: ', this.props);
 
-    const { eventItem } = this.props;
-
-    let date = new Date(eventItem.date_time).toDateString();
-    let time = new Date(eventItem.date_time).toLocaleTimeString('en-US', { hour: "numeric", minute: "2-digit", pattern: "{hour}:{minute}" });
-    let dateTime = date + ' - ' + time;
+    const { ticketedEvents } = this.props;
+    let date;
+    let time;
+    let dateTime;
+    ticketedEvents.forEach(event => {
+      date = new Date(event.date_time).toDateString();
+      time = new Date(event.date_time).toLocaleTimeString('en-US', { hour: "numeric", minute: "2-digit", pattern: "{hour}:{minute}" });
+      dateTime = date + ' - ' + time;
+    })
 
     return(
-      <div className="upcoming-eventItem-container">
-        <div>
-          <img className="upcoming-eventItem-img" src={ eventItem.image_url } />
-        </div>
-        <div className="upcoming-eventItem-info">
-          <p>{ dateTime.toUpperCase() }</p>
-          <h4>{ eventItem.title }</h4>
-          <p>{ eventItem.location }</p>
-        </div>
-      </div>
+      <ul className="ticketed-event-container">
+        { ticketedEvents.map(event => (
+          <li>
+            <div className="upcoming-eventItem-container">
+              <div>
+                <img className="upcoming-eventItem-img" src={ event.image_url } />
+                </div>
+                <div className="upcoming-eventItem-info">
+                  <p>{ dateTime.toUpperCase() }</p>
+                  <h4>{ event.title }</h4>
+                  <p>{ event.location }</p>
+                </div>
+              </div>
+          </li>
+          ))
+        }
+      </ul>
     )
   }
 }

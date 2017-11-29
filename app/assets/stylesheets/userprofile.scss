@@ -14,6 +14,7 @@
     font-weight: 500;
     color: #282C35;
     margin-top: 10px;
+    padding-bottom: 20px;
     text-transform: capitalize;
     display: flex;
     align-items: center;
@@ -22,16 +23,16 @@
 
   a {
     border-bottom: 4px solid #fff;
+    padding: 0px 50px;
   }
 
   a.active {
     border-bottom: 4px solid #0093d7;
   }
 
-
   h3 {
     font-family: "Benton Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 8px;
     text-transform: uppercase;
     color: #45494e;
@@ -39,6 +40,7 @@
     align-items: center;
     justify-content: center;
     font-weight: 400;
+    -webkit-margin-after: 0.8em;
   }
 
   ul {
@@ -46,14 +48,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    li {
-      padding: 0px 30px;
-    }
   }
 }
-
-
 
 .ticketed-event-container {
   display: flex;
@@ -65,16 +61,17 @@
   padding: 30px 0px;
 
   li {
-    min-width: 425px;
+    max-width: 625px;
+    min-width: 525px;
   }
 }
 
 .upcoming-eventItem-container {
   display: flex;
-  justify-content: white;
   box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
   background: white;
   margin: 5px 0px;
+  min-width: 400px;
 }
 
 .upcoming-eventItem-img {
@@ -98,5 +95,16 @@
     font-size: 15px;
     -webkit-margin-before: 0;
     -webkit-margin-after: 2.5em;
+  }
+}
+
+/* =================================
+  Media Queries
+==================================== */
+@media only screen and (min-width: 800px) {
+  .ticketed-event-container {
+    li {
+      width: 66.67%;
+    }
   }
 }

@@ -15,6 +15,7 @@ class Navbar extends Component {
 
   render() {
     const isLoggedIn = this.props.currentUser;
+    console.log(this.props);
     return (
       <div className="main-nav">
         <div className="left-nav">

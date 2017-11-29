@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-guest = User.create(username: 'Andrew Booth', password: 'password')
+guest = User.create(username: 'guest', password: 'password')
 lotus = User.create(username: 'John Chaney', password: 'password')
 roger = User.create(username: 'John Matthews', password: 'password')
 george = User.create(username: 'George Vuong', password: 'password')

@@ -16,7 +16,7 @@ const Home = () => (
     </header>
     <SlideShow />
       <div className='splash-text-container'>
-        <p className='splash-text'>Find your next track day experience</p>
+        <p className='splash-text'>Find your next experience</p>
       </div>
     <EventIndexContainer />
 
