@@ -5,7 +5,7 @@ import { Link, NavLink, Route, Redirect } from 'react-router-dom';
 // Components
 import EventIndexItem from '../event/event_index_item';
 import NavbarContainer from '../navbar/navbar_container';
-import UpcomingEventItem from './upcoming_event_item';
+import UpcomingEvents from './upcoming_events';
 import BookmarkedEvents from './bookmarked_events';
 import HostedEventItem from './hosted_event_item';
 
@@ -56,7 +56,7 @@ class UserProfile extends Component {
           render={ () => <Redirect to={'/profile/ticketed'} /> }
         />
         <Route path={'/profile/ticketed'}
-          render={ () => <UpcomingEventItem ticketedEvents={ticketedEvents} /> }
+          render={ () => <UpcomingEvents ticketedEvents={ticketedEvents} /> }
         />
         <Route path={'/profile/bookmarked'}
           render={ () => <BookmarkedEvents bookmarkedEvents={bookmarkedEvents} /> }
