@@ -13,7 +13,7 @@ roger = User.create(username: 'John Matthews', password: 'password')
 george = User.create(username: 'George Vuong', password: 'password')
 noah = User.create(username: 'Noah Kang', password: 'password')
 keith = User.create(username: 'Keith Wong', password: 'password')
-anastassia = User.create(username: 'Anastassia Bobokolonova', password: 'password')
+anastassia = User.create(username: 'Anastassia Bobokalonova', password: 'password')
 ravi = User.create(username: 'Virginia Chen', password: 'password')
 syrie = User.create(username: 'Syrie Blanco', password: 'password')
 aaron = User.create(username: 'Aaron Mondshine', password: 'password')
@@ -37,7 +37,7 @@ e1 = Event.create(
 organizer_id: noah.id,
 title: 'Photography Walk',
 location: 'Fort Mason, San Francisco, CA',
-date_time: DateTime.new(2017,11,22,19,30),
+date_time: DateTime.new(2017,11,22,10,30),
 description: 'Learn how to capture great images for your next vacation. We will teach you how to capture magical moments on your next vacation. Learn about inexpensive and essential equipment and tools, how to work with complex cultural issues in the field, lighting/exposure tips and time-of-day solutions, and composition and balance in image design.',
 image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1500957120/subtle-animated-gif-18_pqgcuc.gif',
 ticket_price: 30,
@@ -48,7 +48,7 @@ e2 = Event.create(
 organizer_id: keith.id,
 title: 'Paint Nite',
 location: 'San Francisco, CA',
-date_time: DateTime.new(2018,8,14,14,0,0),
+date_time: DateTime.new(2018,8,14,14,0),
 description: 'Paint the town! Join us for a night of painting, wine/beer, and fun! Bring your friends!',
 image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1500999493/painting_q99nzx.jpg',
 ticket_price: 20,
@@ -59,7 +59,7 @@ e3 = Event.create(
 organizer_id: ravi.id,
 title: 'Cal Academy of Sciences NightLife',
 location: 'California Academy of Sciences, San Francisco, CA',
-date_time: DateTime.new(2017,10,3,20,0,0),
+date_time: DateTime.new(2017,10,3,20,0),
 description: 'A new adventure unfolds every Thursday night from 6-10pm. Enjoy music, creatures, and cocktails as you set out with friends on a journey to the stars and the depths of the sea. A variety of food options are available at NightLife from 6-9:30 pm, including the Academy Café, The Terrace (located in the West Garden), and convenient food cart in the front lobby.',
 image_url: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495485317/mezcal-nightlife-celebration-of-cinco-de-mayo-mex-i-am-sf-4_ziu0nu.jpg',
 ticket_price: 25,
@@ -70,10 +70,10 @@ e4 = Event.create(
 organizer_id: anastassia.id,
 title: 'Ferrari Trackday',
 location: 'Willows, CA',
-date_time: DateTime.new(2018,3,25,8,0),
-description: 'Outside the Oracle, this is the biggest Warriors game watch party in San Francisco! We have everything you need to cheer on the Dubs as they battle through the 2018 playoffs. Watch the game in good company, with the loyal members of dubnation living it up outdoors with tons of seating, TVs, beer specials and food trucks.',
+date_time: DateTime.new(2018, 3, 25, 8, 0),
+description: 'Want to drive a Ferrari? Whatever Ferrari Driving Experience you choose, there is no other Supercar as evocative as a Ferrari thrill and no car as exhilarating to drive. Under the guidance of an experienced instructor, drivers discover just what these Italian beauties can do on a range of circuits designed to exploit their legendary performance and handling.',
 image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/c_scale,w_1080/v1509756836/car-race-ferrari-racing-car-pirelli-50704_xvesli.png',
-ticket_price: 45,
+ticket_price: 250,
 ticket_quantity: 30
 )
 
@@ -81,7 +81,7 @@ e5 = Event.create(
   organizer_id: aaron.id,
   title: 'Surf City',
   location: 'Pacifica, CA',
-  date_time: DateTime.new(2018,5,25,19,0,0),
+  date_time: DateTime.new(2018,5,25,19,0),
   description: 'Surf Theory Lesson and a 2 Hour Water Lesson. There will be a break in the day for lunch (not provided) but there is a lovely local surf cafe on site, where you can enjoy a post yoga lunch and fuel up before an afternoon of surfing.',
   image_url: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495425777/photo-1415931633537-351070d20b81_oo08ke.jpg',
   ticket_price: 10,
@@ -92,7 +92,7 @@ e6 = Event.create(
   organizer_id: alex.id,
   title: 'Bay Area Night Market',
   location: 'San Francisco, CA',
-  date_time: DateTime.new(2017, 7, 7, 20, 0, 0),
+  date_time: DateTime.new(2017, 7, 7, 20, 0),
   description: 'The Bay Area Night Market is an open air market hosting local food vendors and small businesses. The market celebrates the vibrant and diverse communities of the Bay Area and surrounding areas through cultural food, art and merchandise. Enjoy a night of eating, shopping, singing and playing.',
   image_url: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495428586/ae64c7d0d23a56611eb0d4dae43c3357_z6ffsv.png',
   ticket_price: 10,
@@ -103,7 +103,7 @@ e7 = Event.create(
   organizer_id: mary.id,
   title: 'SF Giants  vs. LA Dodgers',
   location: 'AT&T Park, San Francisco, CA',
-  date_time: DateTime.new(2018, 1, 16, 7, 0, 0),
+  date_time: DateTime.new(2018, 1, 16, 7, 0),
   description: 'Come see our very own San Francisco Giants take on the Los Angeles Dodgers! While AT&T Park is known for its breathtaking views of the Bay and classic design, its top notch dining options also make it one of the best ballparks in the country. Hungry fans will can chow down on everything from sushi and Chinese food to cheese plates and salads made from ingredients grown on the property. And dont forget Gilroy Garlic Fries! The Park also has a plethora of local beers, wine and killer cocktails.',
   image_url: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495484983/ATT-Park-night_a9wxlp.jpg',
   ticket_price: 35,

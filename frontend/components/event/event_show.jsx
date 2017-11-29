@@ -40,13 +40,16 @@ class EventShow extends Component {
 
   render() {
     const { event, event: { organizer }, currentUser } = this.props;
-    console.log("eventorganizer: ", organizer);
+
     let date = new Date(event.date_time).toDateString();
     let weekday = date.slice(0, 3);
     let month = date.slice(3, 7);
     let day = date.slice(8, 10);
-    let time = new Date(event.date_time).toLocaleTimeString('en-US', { hour: "numeric", minute: "2-digit", pattern: "{hour}:{minute}" });
-    let dateTime = date + ', ' + time;
+
+    let dateTime = new Date(event.date_time).toLocaleTimeString('en-US', {weekday: "short", month: "long", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit", pattern: "{hour}:{minute}" });
+    // let dateTime = date + ', ' + time;
+
+    console.log("time: ", dateTime);
 
     let ticketPrice;
     if (event.ticket_price === 0) {
@@ -67,6 +70,7 @@ class EventShow extends Component {
             modalIsOpen={ this.state.modalIsOpen }
             closeModal={ this.closeModal }
             event={ event }
+            dateTime={ dateTime }
           />
           <br />
           <div className="event-show-container">

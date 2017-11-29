@@ -6,12 +6,14 @@ import BookmarkedEventItem from './bookmarked_event_item';
 
 const BookmarkedEvents = ({ bookmarkedEvents }) => {
   console.log("bookmarkedEvents: ", bookmarkedEvents);
+
+  let bookmarkedEventItem = bookmarkedEvents.map(event => (
+    <BookmarkedEventItem eventItem={event} key={event.id} />
+  ));
+
   return (
-    <div>
-      { bookmarkedEvents.map(event => (
-          <BookmarkedEventItem eventItem={event} key={event.id} />
-        ))
-      }
+    <div className="event-index-container" id="bookmarkedEvents-container">
+      { bookmarkedEventItem }
     </div>
   );
 };

@@ -32,14 +32,17 @@ class TicketForm extends React.Component {
   }
 
   // componentWillMount() {
-  //   this.props.requestTicket(this.props.match.params.eventId);
-  //   console.log(this.props);
+  //   this.props.requestEvent(this.props.match.params.eventId);
+  //   console.log("componentWillMount: ", this.props);
   // }
 
   render() {
     console.log('tickets: ', this.props);
     const { quantity } = this.state;
-    const { event } = this.props;
+    const { event, dateTime } = this.props;
+
+    let date;
+    dateTime ? date = dateTime.split(",")[1] : date = " ";
 
     return (
       <div className="ticket-box">
@@ -53,7 +56,7 @@ class TicketForm extends React.Component {
               <h4 className="ticket-modal-header">Register</h4>
             </div>
             <div className="sale-ends-header">
-              <p>Sales end on May 17</p>
+              <p>Sales end on {date}</p>
             </div>
             <div className="ticket-title-container">
               <div className="left-ticket-title-price">

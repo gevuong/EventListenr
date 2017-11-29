@@ -7,7 +7,7 @@ const mapStateToProps = ({ event, session }) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  createTicket: ticket => dispatch(createTicket(ticket))
+  createTicket: ticket => dispatch(createTicket(ticket)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TicketForm);

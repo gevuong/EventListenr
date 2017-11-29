@@ -32,30 +32,28 @@ class BookmarkedEventItem extends Component {
     organizer === undefined ? username = "" : username = organizer.username;
 
     return (
-      <div>
+      <div className="event-container">
         <Link to={`/events/${eventItem.id}`}>
-          <div className="event-container">
-            <img src={ eventItem.image_url }></img>
-            <div className="eventIndex-detailsDiv">
-              <div className="month-day">
-                <p className="month">{month}</p>
-                <p className="day">{day}</p>
-                <p className="month weekday">{weekday}</p>
-              </div>
-              <div className="event-info-index">
-                <h3 className='event-title'>{ eventItem.title }</h3>
-                <p className='event-index-location'>{ eventItem.location }</p>
-                <p className="event-index-location">
-                  { ticketPrice === "FREE" ? `FREE • by ${username}` : `Starts at ${ticketPrice} • by ${username}`
-                  }
-                </p>
-              </div>
+          <img src={ eventItem.image_url }></img>
+          <div className="eventIndex-detailsDiv">
+            <div className="month-day">
+              <p className="month">{month}</p>
+              <p className="day">{day}</p>
+              <p className="month weekday">{weekday}</p>
             </div>
-            {/*<div className="eventBookmarkDiv">*/}
-            {/*<BookmarkContainer event={ eventItem }/>*/}
-
-            {/*</div>*/}
+            <div className="event-info-index">
+              <h3 className='event-title'>{ eventItem.title }</h3>
+              <p className='event-index-location'>{ eventItem.location }</p>
+              <p className="event-index-location">
+                { ticketPrice === "FREE" ? `FREE • by ${username}` : `Starts at ${ticketPrice} • by ${username}`
+                }
+              </p>
+            </div>
           </div>
+          {/*<div className="eventBookmarkDiv">*/}
+          {/*<BookmarkContainer event={ eventItem }/>*/}
+
+          {/*</div>*/}
         </Link>
       </div>
     );

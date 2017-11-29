@@ -48,6 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 1px solid #d2d6df;
   }
 }
 
@@ -57,8 +58,8 @@
   justify-content: center;
   align-items: center;
   background: #f8f8fa;
-  border-top: 1px solid lightgray;
-  padding: 30px 0px;
+  padding-top: 20px;
+  padding-bottom: 35px;
 
   li {
     max-width: 625px;
@@ -96,6 +97,12 @@
     -webkit-margin-before: 0;
     -webkit-margin-after: 2.5em;
   }
+}
+
+#bookmarkedEvents-container {
+  background: #f8f8fa;
+  padding-top: 15px;
+  margin-bottom: 25px;
 }
 
 /* =================================
