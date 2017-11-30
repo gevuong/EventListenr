@@ -12,6 +12,8 @@ class EventIndexItem extends Component {
 
   render() {
     const { eventItem, eventItem: { organizer } } = this.props;
+
+    let username;
     let date = new Date(eventItem.date_time).toDateString();
     let weekday = date.slice(0, 3);
     let month = date.slice(3, 7);
@@ -28,6 +30,8 @@ class EventIndexItem extends Component {
     } else {
       ticketPrice = '$' + eventItem.ticket_price.toString();
     }
+
+    organizer === undefined ? username = "" : username = organizer.username;
 
     return (
       <div className="event-container">
@@ -47,21 +51,13 @@ class EventIndexItem extends Component {
             <div className="event-info-index">
               <h3 className='event-title'>{ eventItem.title }</h3>
               <p className='event-index-location'>{ eventItem.location }</p>
-              <p className="event-index-location">{ ticketPrice === "FREE" ? `FREE • by ${organizer.username}` : `Starts at ${ticketPrice} • by ${organizer.username}` }</p>
+              <p className="event-index-location">{ ticketPrice === "FREE" ? `FREE • by ${username}` : `Starts at ${ticketPrice} • by ${username}` }</p>
             </div>
           </div>
         </Link>
-
-        {/*<div className="eventBookmarkDiv">*/}
-        {/*</div>*/}
       </div>
     );
   }
 }
 
 export default EventIndexItem;
-//
-// <i className="fa fa-heart-o" aria-hidden="true"></i>
-
-// <i className="fa fa-bookmark-o unselected" aria-hidden="true"></i>
-// <p className='datetime-p'>{ dateTime }</p>

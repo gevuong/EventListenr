@@ -35,8 +35,6 @@
   // box-shadow: 0 1px 5px 1px rgba(0,0,0,0.15);
   font-family: "Benton Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 
-  // opacity: 0;
-
   span {
     position: absolute;
     top: 138px;
@@ -109,10 +107,6 @@
     padding-right: 16px;
     max-width: 48px;
 
-    p {
-
-    }
-
     p.month {
       color: #f6682f;
       font-size: 12px;
@@ -174,8 +168,4 @@
   text-overflow: ellipsis;
   // white-space: nowrap;
   // border-bottom: 3px solid #f6682f;
-}
-
-.eventBookmarkDiv {
-  border-top: 1px solid #EEF2E5;
 }

@@ -36,9 +36,9 @@ class Bookmark extends Component {
   }
 
   render() {
-    // console.log('bookmark_component: ', this.props);
     return(
-      <div className="bookmark-icon" onClick={ this.handleClick }>{ this.bookmarkIcon() }
+      <div className="bookmark-icon" onClick={ this.handleClick }>
+        { this.bookmarkIcon() }
       </div>
     );
   }

@@ -2,6 +2,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+// Components
+import BookmarkContainer from '../bookmark/bookmark_container';
+
 class BookmarkedEventItem extends Component {
   constructor(props) {
     super(props);
@@ -35,6 +38,11 @@ class BookmarkedEventItem extends Component {
       <div className="event-container">
         <Link to={`/events/${eventItem.id}`}>
           <img src={ eventItem.image_url }></img>
+        </Link>
+        <div className="bookmark-wrapper">
+        <span><BookmarkContainer event={ eventItem } /></span>
+        </div>
+        <Link to={`/events/${eventItem.id}`}>
           <div className="eventIndex-detailsDiv">
             <div className="month-day">
               <p className="month">{month}</p>
@@ -50,10 +58,6 @@ class BookmarkedEventItem extends Component {
               </p>
             </div>
           </div>
-          {/*<div className="eventBookmarkDiv">*/}
-          {/*<BookmarkContainer event={ eventItem }/>*/}
-
-          {/*</div>*/}
         </Link>
       </div>
     );
