@@ -33,7 +33,11 @@ class EventIndexItem extends Component {
       <div className="event-container">
         <Link to={`/events/${eventItem.id}`}>
           <img src={ eventItem.image_url }></img>
-          <span><i className="fa fa-bookmark-o unselected" aria-hidden="true"></i></span>
+        </Link>
+        <div className="bookmark-wrapper">
+        <span><BookmarkContainer event={ eventItem } /></span>
+        </div>
+        <Link to={`/events/${eventItem.id}`}>
           <div className="eventIndex-detailsDiv">
             <div className="month-day">
               <p className="month">{month}</p>
@@ -46,12 +50,10 @@ class EventIndexItem extends Component {
               <p className="event-index-location">{ ticketPrice === "FREE" ? `FREE • by ${organizer.username}` : `Starts at ${ticketPrice} • by ${organizer.username}` }</p>
             </div>
           </div>
-
-          {/*<div className="eventBookmarkDiv">*/}
-            {/*<BookmarkContainer event={ eventItem }/>*/}
-
-          {/*</div>*/}
         </Link>
+
+        {/*<div className="eventBookmarkDiv">*/}
+        {/*</div>*/}
       </div>
     );
   }
@@ -59,5 +61,7 @@ class EventIndexItem extends Component {
 
 export default EventIndexItem;
 //
+// <i className="fa fa-heart-o" aria-hidden="true"></i>
+
 // <i className="fa fa-bookmark-o unselected" aria-hidden="true"></i>
 // <p className='datetime-p'>{ dateTime }</p>

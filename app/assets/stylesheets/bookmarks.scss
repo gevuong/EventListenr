@@ -13,15 +13,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 20px;
+  color: #0093d7;
+  font-size: 18px;
 }
 
-.fa-bookmark, .fa-bookmark-o {
-  font-size: 24px;
+.fa-heart-o {
+  font-size: 18px;
   color: #666A73;
 }
 
-
-.fa-bookmark, .fa-bookmark-o:hover {
+.fa-heart-o:hover {
+  font-size: 18px;
   color: #0093d7;
 }
+
+// .bookmark-wrapper {
+//   display: block;
+//   transition-delay: 80ms;
+//   opacity: 1;
+//   transition: opacity .24s cubic-bezier(0,0,.35,1);
+// }

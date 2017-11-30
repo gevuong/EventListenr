@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# NB: heroku run rails db:seed
+
 User.destroy_all
 guest = User.create(username: 'guest', password: 'password')
 lotus = User.create(username: 'John Chaney', password: 'password')

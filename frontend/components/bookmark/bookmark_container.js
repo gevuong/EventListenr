@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { createBookmark, deleteBookmark } from '../../actions/bookmark_actions';
-import Bookmark from '../bookmark/bookmark';
+import Bookmark from './bookmark';
 import { requestAllEvents } from '../../actions/event_actions';
 
 const mapStateToProps = ({ event, session }) => ({

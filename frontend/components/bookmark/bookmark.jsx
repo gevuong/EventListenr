@@ -16,11 +16,11 @@ class Bookmark extends Component {
   bookmarkIcon() {
     if ( this.props.currentUser.bookmarks.includes(this.props.event.id)) {
       return (
-        <i className="fa fa-bookmark selected" aria-hidden="true"></i>
+        <i className="fa fa-heart selected" aria-hidden="true"></i>
       );
     } else {
       return (
-        <i className="fa fa-bookmark-o unselected" aria-hidden="true"></i>
+        <i className="fa fa-heart-o unselected" aria-hidden="true"></i>
       );
     }
   }
@@ -36,7 +36,7 @@ class Bookmark extends Component {
   }
 
   render() {
-    console.log('bookmark_component: ', this.props);
+    // console.log('bookmark_component: ', this.props);
     return(
       <div className="bookmark-icon" onClick={ this.handleClick }>{ this.bookmarkIcon() }
       </div>
