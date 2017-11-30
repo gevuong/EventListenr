@@ -9,7 +9,6 @@ import Root from './components/root';
 import * as EventAPIUtil from './util/event_api_util';
 import { requestAllEvents, requestEvent } from './actions/event_actions';
 
-
 let store;
 document.addEventListener('DOMContentLoaded', () => {
   if (window.currentUser) {
@@ -27,8 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.requestAllEvents = requestAllEvents;
   // window.requestEvent = requestEvent;
 
-  //
-  //
   // To test api util functions in console.
   // window.login = APIUtil.login;
   // window.signup = APIUtil.signup;
@@ -36,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
-
 });
 
 

@@ -15,12 +15,13 @@ class Api::EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
+    @event = Event.includes(:organizer).find(params[:id])
     render :show
   end
 
   def index
-    @events = Event.all
+    # .includes() prefetches event organizers data using :organizer instance method written as a belongs_to association in Event model. Reduced querying DB from 25 to 2.
+    @events = Event.includes(:organizer).all
     render :index
   end
 
