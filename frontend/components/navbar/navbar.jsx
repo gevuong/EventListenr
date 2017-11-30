@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, NavLink, withRouter } from 'react-router-dom';
 
 class Navbar extends Component {
   constructor(props) {
@@ -9,13 +9,14 @@ class Navbar extends Component {
 
   handleClick(e) {
     e.preventDefault();
+    console.log("logout: ", this.props);
     this.props.logout().then(() =>
     this.props.history.push("/")); // produces a console warning in dev mode when pushing same URL as URL you are on. Warning is disabled in prod mode.
   }
 
   render() {
     const isLoggedIn = this.props.currentUser;
-    console.log(this.props);
+
     return (
       <div className="main-nav">
         <div className="left-nav">
@@ -31,8 +32,9 @@ class Navbar extends Component {
                 <i className="fa fa-angle-down" aria-hidden="true"></i>
               </div>
               <div className="dropdown-content">
-                <Link to="/profile">DASHBOARD</Link>
-                <button className='logout-button-container' onClick={this.handleClick}>LOG OUT
+                <NavLink className="navlink-dropdown" to="/profile">Tickets</NavLink>
+                <NavLink className="navlink-dropdown navlink-saved" to="/profile/bookmarked">Saved</NavLink>
+                <button className='logout-button-container' onClick={this.handleClick}>Log out
                 </button>
               </div>
             </div>

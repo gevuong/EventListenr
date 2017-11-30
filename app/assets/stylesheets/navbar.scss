@@ -43,6 +43,14 @@
   background-color: #EFF2F5;
 }
 
+.navlink-dropdown {
+  font-size: 14px;
+}
+
+.navlink-saved {
+  border-bottom: 1px solid #EFF2F5;
+}
+
 i.fa-user-circle {
   font-size: 20px;
   color: #F6682F;
@@ -82,7 +90,7 @@ i.fa-angle-down {
   z-index: 2;
 }
 // Links inside dropdown
-.dropdown-content a, button {
+.dropdown-content a, button.logout-button-container {
   padding: 0px 16px;
   text-decoration: none;
   display: block;

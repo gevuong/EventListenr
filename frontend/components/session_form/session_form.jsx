@@ -1,6 +1,6 @@
 // Libs
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, NavLink, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
 
 // Components
@@ -77,15 +77,24 @@ class SessionForm extends Component {
   changeFormLink() {
     if (this.props.formType === 'login') {
       return (
-        <p>Don't have an account?
-          <Link className="signup-login-link" to='/signup'>Sign Up</Link>
-        </p>
+        <div>
+          <p className="change-form-question">New to Eventlistenr?</p>
+          <p>
+            <NavLink className="signup-login-link" to='/signup'>
+            Create account
+            </NavLink>
+          </p>
+        </div>
       );
     } else {
       return (
-        <p>Already have an account?
-          <Link className="signup-login-link" to='/login'>Login</Link>
-        </p>
+        <div>
+        <p className="change-form-question">Already have an account?</p>
+          <p>
+            <NavLink className="signup-login-link" to='/login'>Sign in
+            </NavLink>
+          </p>
+        </div>
       );
     }
   }
@@ -93,8 +102,8 @@ class SessionForm extends Component {
   renderErrors() {
     return (
       <ul className="errors">
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+        {this.props.errors.map((error, idx) => (
+          <li key={`error-${idx}`}>
             { error }
           </li>
         ))}
@@ -130,7 +139,7 @@ class SessionForm extends Component {
     const { formType } = this.props;
     console.log('formtype: ', formType);
 
-    let button_text = this.props.formType === 'login' ? "LOGIN" : "SIGN UP";
+    let button_text = this.props.formType === 'login' ? "Sign in" : "Create Account";
     return (
       <div>
         <NavbarContainer />
@@ -143,37 +152,54 @@ class SessionForm extends Component {
 
           contentLabel="Example Modal"
         >
-        <br/>
+
           <div className="login-form-container">
 
             <form onSubmit={this.handleSubmit} className="login-form-box">
               <img className="logo" src="http://res.cloudinary.com/dtluc0y85/image/upload/v1500693476/Logomakr_right_color_feqswx.png"/>
-              <br/>
-              <p className='modal-header-text'>Let's get started</p>
-              <br/>
-              {/* Please {this.props.formType} or {this.navLink()}*/}
-              {this.renderErrors()}
-              <div className="login-form">
-                <br/>
-                  <input type="text"
-                    value={this.state.username}
-                    onChange={this.update('username')}
-                    className="login-input"
-                    placeholder="Username"
-                  />
-                <br/>
-                  <input type="password"
-                    value={this.state.password}
-                    onChange={this.update('password')}
-                    className="login-input"
-                    placeholder="Password"
-                  />
-                <br/>
-              </div>
-                <input className="session-form-submit-button" type="submit" value={button_text} />
-                <button className="guest-login-button" onClick={this.guestLogin}>GUEST</button>
-
-                <p>{ this.changeFormLink() }</p>
+              <ul>
+                <li>
+                  <p className='modal-header-text'>
+                    Let's get started
+                  </p>
+                </li>
+                <li>
+                {this.renderErrors()}
+                </li>
+                <li className="username-password-li">
+                  <div>
+                    <input type="text"
+                      value={this.state.username}
+                      onChange={this.update('username')}
+                      className="username-password-input"
+                      placeholder="username"
+                    />
+                  </div>
+                </li>
+                <li className="username-password-li">
+                  <div>
+                    <input type="password"
+                      value={this.state.password}
+                      onChange={this.update('password')}
+                      className="username-password-input"
+                      placeholder="Create a password"
+                    />
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <input className="guest-login-button" type="submit" value={button_text} />
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <button className="guest-login-button" onClick={this.guestLogin}>GUEST</button>
+                  </div>
+                </li>
+                <li>
+                  <p className="change-form-link">{ this.changeFormLink() }</p>
+                </li>
+              </ul>
             </form>
           </div>
       </Modal>

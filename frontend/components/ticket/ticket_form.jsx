@@ -37,7 +37,6 @@ class TicketForm extends React.Component {
   // }
 
   render() {
-    console.log('tickets: ', this.props);
     const { quantity } = this.state;
     const { event, dateTime } = this.props;
 

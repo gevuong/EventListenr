@@ -39,7 +39,7 @@ class EventIndexItem extends Component {
           <img src={ eventItem.image_url }></img>
         </Link>
         <div className="bookmark-wrapper">
-        <span><BookmarkContainer event={ eventItem } /></span>
+        <span><BookmarkContainer event={ eventItem } key={eventItem.id} /></span>
         </div>
         <Link to={`/events/${eventItem.id}`}>
           <div className="eventIndex-detailsDiv">

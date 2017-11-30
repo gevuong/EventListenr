@@ -29,7 +29,7 @@
   justify-content: center;
   position: fixed;
   background-color: white;
-  border-radius: 3px;
+  border-radius: 7px;
   box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.3);
   // background-color: rgba(0,0,0, 0.2); rgb(0,0,0)
   overflow-x: hidden;
@@ -71,48 +71,6 @@
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-
-.session-form-submit-button {
-  border-radius: 5px;
-  display: block;
-  margin: 0 auto;
-  padding: 5px;
-  background-color: #F6682F;
-  color: white;
-  width: 160px;
-  display: flex;
-  justify-content: center;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue";
-  font-weight: 100;
-  box-shadow: 0 4px 6px -2px rgba(22,22,22,0.45);
-  letter-spacing: 1px;
-}
-
-.session-form-submit-button:hover {
-  background-color: #fd348b;
-  background-image: radial-gradient(farthest-corner at 80% 100%,#f86044 0,#fd348b 100%);
-}
-
-.guest-login-button {
-  border-radius: 5px;
-  margin: 10px auto;
-  padding: 5px;
-  background-color: #F6682F;
-  color: white;
-  width: 160px;
-  display: flex;
-  justify-content: center;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue";
-  font-weight: 100;
-  box-shadow: 0 4px 6px -2px rgba(22,22,22,0.45);
-  letter-spacing: 1px;
-}
-
-.guest-login-button:hover {
-  background-color: #fd348b;
-  background-image: radial-gradient(farthest-corner at 80% 100%,#f86044 0,#fd348b 100%);
-}
-
 .signup-session-terms {
   display: flex;
   flex-direction: column;
@@ -122,20 +80,96 @@
   font-size: 12px;
 }
 
-.login-form-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue";
-  font-weight: 200;
+.modal-header-text {
+  font-size: 20px;
+  font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+  color: #747474;
+  letter-spacing: 0.5px;
+}
+
+.login-form-container {
+  height: 100%;
+
+  .login-form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    margin: 27px 32px;
+    font-family: gotham, helvetica, arial, sans-serif;
+
+    ul {
+      width: 100%;
+    }
+
+    li {
+      text-align: center;
+      margin: 10px 0px;
+    }
+
+    .username-password-li {
+      text-align: left;
+    }
+
+    .username-password-input {
+      width: 100%;
+      border-radius: 7px;
+      line-height: 1.8;
+      border: 1px solid #cacaca;
+      // font-family: gotham, helvetica, arial, sans-serif;
+      letter-spacing: 1px;
+      color: #3b3b3b;
+      box-sizing: border-box;
+      font-weight: 400;
+      padding: 0.3em 0.75em;
+    }
+
+    .username-password-input:focus {
+      border-color: #7aa7cf;
+      outline: none;
+      box-shadow: 0 0 0 1px #7aa7cf, 0 0 4px 0 #3d96e3;
+    }
+
+    .guest-login-button {
+      border-radius: 7px;
+      background-color: #F6682F;
+      color: white;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      // font-family: gotham, helvetica, arial, sans-serif;
+      font-weight: 300;
+      box-shadow: 0 4px 6px -2px rgba(22,22,22,0.45);
+      letter-spacing: 1px;
+      line-height: 1.8;
+      box-sizing: border-box;
+      padding: 0.3em 0.75em;
+    }
+
+    .guest-login-button:hover {
+      background-color: #fd348b;
+      background-image: radial-gradient(farthest-corner at 80% 100%,#f86044 0,#fd348b 100%);
+    }
+
+    .change-form-link {
+      font-family: Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+
+      .change-form-question {
+        font-size: 14px;
+        font-weight: 400;
+        color: #747474;
+        letter-spacing: 0.5px;
+        padding: 5px 0px;
+      }
+    }
+  }
 }
 
 .signup-login-link {
-  text-decoration: underline;
-  color: blue;
+  color: #0093d7;
 }
 
-.modal-header-text {
-  font-size: 20px;
+.signup-login-link:hover {
+  color: #013653;
 }

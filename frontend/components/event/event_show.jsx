@@ -68,6 +68,7 @@ class EventShow extends Component {
             closeModal={ this.closeModal }
             event={ event }
             dateTime={ dateTime }
+            key={ event.id }
           />
           <br />
           <div className="event-show-container">
@@ -91,7 +92,7 @@ class EventShow extends Component {
           </div>
 
           <div className="bookmark-register-container">
-            <BookmarkContainer event={ event } />
+            <BookmarkContainer event={ event } key={ event.id }/>
             <h3 className="register-button" onClick={ this.openModal }>REGISTER</h3>
           </div>
           <div className="event-show-moreDetails">

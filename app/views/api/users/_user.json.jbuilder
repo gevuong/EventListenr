@@ -1,4 +1,4 @@
-json.extract! user, :id, :username
+json.extract! user, :id, :username, :organized_events
 
 json.tickets do
    user.tickets.each do |ticket|

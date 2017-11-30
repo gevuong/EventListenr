@@ -39,7 +39,7 @@ class EventForm extends Component {
       image_url: url
     });
   }
-//
+
   render() {
     const { title, description, location, date_time, image_url, ticket_price, ticket_quantity } = this.state;
 
@@ -63,7 +63,7 @@ class EventForm extends Component {
                 <input
                   className="event-input"
                   type="text"
-                  value={title}
+                  value={ title }
                   onChange={this.update('title')}
                   placeholder='Give a short distinct name'
                 />
