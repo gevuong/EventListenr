@@ -100,14 +100,15 @@ class SessionForm extends Component {
   }
 
   renderErrors() {
+    console.log("errors: ", this.props.errors);
     return (
-      <ul className="errors">
+      <div className="errors-container">
         {this.props.errors.map((error, idx) => (
-          <li key={`error-${idx}`}>
+          <li className="errors" key={`error-${idx}`}>
             { error }
           </li>
         ))}
-      </ul>
+      </div>
     );
   }
 
@@ -158,20 +159,18 @@ class SessionForm extends Component {
             <form onSubmit={this.handleSubmit} className="login-form-box">
               <img className="logo" src="http://res.cloudinary.com/dtluc0y85/image/upload/v1500693476/Logomakr_right_color_feqswx.png"/>
               <ul>
-                <li>
+                <li className="header-text-li">
                   <p className='modal-header-text'>
                     Let's get started
                   </p>
                 </li>
-                <li>
                 {this.renderErrors()}
-                </li>
                 <li className="username-password-li">
                   <div>
                     <input type="text"
                       value={this.state.username}
                       onChange={this.update('username')}
-                      className="username-password-input"
+                      className="username-password-input" id="username-input"
                       placeholder="username"
                     />
                   </div>
@@ -182,7 +181,7 @@ class SessionForm extends Component {
                       value={this.state.password}
                       onChange={this.update('password')}
                       className="username-password-input"
-                      placeholder="Create a password"
+                      placeholder="password"
                     />
                   </div>
                 </li>
@@ -193,7 +192,7 @@ class SessionForm extends Component {
                 </li>
                 <li>
                   <div>
-                    <button className="guest-login-button" onClick={this.guestLogin}>GUEST</button>
+                    <button className="guest-login-button" onClick={this.guestLogin}>Demo login</button>
                   </div>
                 </li>
                 <li>
