@@ -16,18 +16,9 @@ class EventIndex extends Component {
   //   console.log("2", nextProps);
   // }
 
-// when you need to explicitly tell it to (i.e. ajax request) based on change of props
   render() {
     console.log("event_index: ", this.props);
-
     const { events } = this.props;
-
-    // may be causing slow load time. Try moving it in return ()
-    let eventList = events.map(eventItem => (
-      <EventIndexItem key={ eventItem.id }
-        eventItem={ eventItem }
-      />
-    ));
 
     return (
       <div className="event-index-wrapper">
@@ -35,7 +26,10 @@ class EventIndex extends Component {
           Events for you in San Francisco, CA, United States
         </h3>
         <div className="event-index-container">
-          { eventList }
+          { events.map(eventItem => (
+              <EventIndexItem eventItem={ eventItem } key={ eventItem.id }/>
+            ))
+          }
         </div>
       </div>
     );

@@ -21,14 +21,20 @@ class TicketForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let ticket = Object.assign({}, this.state);
-    ticket.event_id = this.props.event.id;
+    // const { currentUser } = this.props;
+    // if (currentUser.username === undefined) {
+    //
+    // }
 
+    let ticket = Object.assign({}, this.state);
+    console.log("ticket: ", ticket);
+    ticket.event_id = this.props.event.id;
+    console.log("checkout: ", this.props);
     this.props.createTicket(ticket)
     .then(() => {
       this.props.closeModal();
-      }
-    );
+      })
+    .catch(this.props.history.push("/signup"));
   }
 
   // componentWillMount() {
@@ -61,7 +67,7 @@ class TicketForm extends React.Component {
               <div className="left-ticket-title-price">
                 <h2 className="ticket-title">{event.title}</h2>
                 <div>
-                  <p>${event.ticket_price}</p>
+                  <p>{ event.ticket_price === 0 ? "FREE" : `$${event.ticket_price}` }</p>
                 </div>
               </div>
 
@@ -82,7 +88,7 @@ class TicketForm extends React.Component {
               <div className="quantity-cost-container">
                 <p>QTY: { quantity }</p>
 
-                <p>TOTAL: ${ parseInt(event.ticket_price) * quantity }</p>
+                <p>{ event.ticket_price === 0 ? "FREE" : `TOTAL: $${ parseInt(event.ticket_price) * quantity }` }</p>
               </div>
               <button className="tickets-button" onClick={this.handleSubmit}>CHECKOUT</button>
 

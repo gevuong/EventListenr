@@ -19,8 +19,7 @@ class ModalForm extends Component {
 
   closeModal() {
     this.setState({modalIsOpen: false});
-    // console.log(this.props.history);
-    this.props.history.push("/");
+    this.props.history.push("/"); // push "/" onto history stack, and will redirect the user to the URL "/"
 
   }
 

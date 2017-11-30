@@ -9,9 +9,9 @@ class Bookmark extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  componentDidMount() {
-    this.props.requestAllEvents();
-  }
+  // componentDidMount() {
+  //   this.props.requestAllEvents();
+  // }
 
   bookmarkIcon() {
     if ( this.props.currentUser.bookmarks.includes(this.props.event.id)) {

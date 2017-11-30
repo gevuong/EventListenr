@@ -10,8 +10,8 @@ class Navbar extends Component {
   handleClick(e) {
     e.preventDefault();
     console.log("logout: ", this.props);
-    this.props.logout().then(() =>
-    this.props.history.push("/")); // produces a console warning in dev mode when pushing same URL as URL you are on. Warning is disabled in prod mode.
+    this.props.logout()
+    .then(() => this.props.history.push("/")); // produces a console warning in dev mode when pushing same URL as URL you are on. Warning is disabled in prod mode.
   }
 
   render() {

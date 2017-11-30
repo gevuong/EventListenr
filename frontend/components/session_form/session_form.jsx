@@ -28,8 +28,7 @@ class SessionForm extends Component {
 
   closeModal() {
     this.setState({modalIsOpen: false});
-    this.props.history.push("/");
-
+    this.props.history.push("/"); // push "path" variable onto history stack, and will redirect the user to the URL stored in path
   }
 
 // always runs when component is mounted.

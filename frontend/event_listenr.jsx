@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // // it can be confusing when debugging, sometimes giving you access to state when you shouldn't
   window.getState = store.getState;
   window.dispatch = store.dispatch; // just for testing!
-  window.requestAllEvents = requestAllEvents;
-  window.requestEvent = requestEvent;
+  // window.requestAllEvents = requestAllEvents;
+  // window.requestEvent = requestEvent;
 
   //
   //
