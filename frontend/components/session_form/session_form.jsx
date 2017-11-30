@@ -91,7 +91,7 @@ class SessionForm extends Component {
   }
 
   renderErrors() {
-    return(
+    return (
       <ul className="errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
@@ -127,7 +127,9 @@ class SessionForm extends Component {
   }
 
   render() {
-    console.log(this.props.formType);
+    const { formType } = this.props;
+    console.log('formtype: ', formType);
+
     let button_text = this.props.formType === 'login' ? "LOGIN" : "SIGN UP";
     return (
       <div>

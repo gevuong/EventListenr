@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Modal from 'react-modal';
 import { Link, withRouter } from 'react-router-dom';
 
-class ModalForm extends React.Component {
+class ModalForm extends Component {
   constructor(props) {
     super(props);
 

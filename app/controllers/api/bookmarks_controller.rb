@@ -2,7 +2,7 @@ class Api::BookmarksController < ApplicationController
 
   def create
     @bookmark = Bookmark.new(bookmark_params)
-    @bookmark.user_id = current_user.id
+    @bookmark.user_id = current_user.id # 500 internal server error comes from here because current_user is nil if no one is signed in.
 
     if @bookmark.save
       # find corresponding event and decrease bookmark amount

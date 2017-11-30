@@ -21,5 +21,3 @@ export const logout = () => (
     url: `/api/session`
   })
 );
-
-// incorporate

@@ -159,12 +159,12 @@ e11 = Event.create(
 
 e12 = Event.create(
     organizer_id: anastassia.id,
-    title: 'Yoga in the City',
+    title: 'Yoga to the People',
     location: 'San Francisco, CA',
     date_time: DateTime.new(2018,10,25,19,0),
     description: 'Stretch. Breathe. Elevate Your Senses. Join us for a deeply nourishing, all levels, floor-based, yin/restorative yoga class with hands-on adjustments and tea afterwards.',
     image_url: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495425717/photo-1485727749690-d091e8284ef3_tqz4r2.jpg',
-    ticket_price: 10,
+    ticket_price: 0,
     ticket_quantity: 30
   )
 

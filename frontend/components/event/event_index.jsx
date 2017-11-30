@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import EventIndexItem from './event_index_item';
 
-class EventIndex extends React.Component {
+class EventIndex extends Component {
   constructor(props){
     super(props);
   }
@@ -19,6 +19,8 @@ class EventIndex extends React.Component {
 // when you need to explicitly tell it to (i.e. ajax request) based on change of props
   render() {
     console.log("event_index: ", this.props);
+    // currentUser.username ? {
+
     const { events } = this.props;
 
     let eventList = events.map(eventItem => (
@@ -31,7 +33,7 @@ class EventIndex extends React.Component {
       <div className="event-index-wrapper">
         <h3 className="event-list-header">
           Events for you in San Francisco, CA, United States
-        </ h3>
+        </h3>
         <div className="event-index-container">
           { eventList }
         </div>

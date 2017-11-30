@@ -14,28 +14,37 @@ class Bookmark extends Component {
   }
 
   bookmarkIcon() {
+    console.log('bookmarkIcon: ', this.props);
     if ( this.props.currentUser.bookmarks.includes(this.props.event.id)) {
       return (
         <i className="fa fa-heart selected" aria-hidden="true"></i>
       );
     } else {
       return (
-        <i className="fa fa-heart-o unselected" aria-hidden="true"></i>
+        <Link to="/signup">
+          <i className="fa fa-heart-o unselected" aria-hidden="true"></i>
+        </Link>
       );
     }
   }
 
   handleClick() {
-    // console.log('handleClick: ', this.props);
-    if (this.props.currentUser.bookmarks.includes(this.props.event.id)) {
+    console.log('handleClick: ', this.props);
+    if (this.props.currentUser.id === undefined) {
+      return
+    } else if (this.props.currentUser.bookmarks.includes(this.props.event.id)) {
       this.props.deleteBookmark(this.props.event.id);
     } else {
+      console.log('posting');
       const event = { event_id: this.props.event.id };
       this.props.createBookmark(event);
     }
   }
 
   render() {
+    console.log("bookmark_render: ", this.props);
+    const { currentUser } = this.props;
+
     return(
       <div className="bookmark-icon" onClick={ this.handleClick }>
         { this.bookmarkIcon() }
