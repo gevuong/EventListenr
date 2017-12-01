@@ -156,7 +156,7 @@ class SessionForm extends Component {
           <div className="login-form-container">
 
             <form onSubmit={this.handleSubmit} className="login-form-box">
-              <img className="logo" src="http://res.cloudinary.com/dtluc0y85/image/upload/v1500693476/Logomakr_right_color_feqswx.png"/>
+              <img className="logo" src="https://res.cloudinary.com/dtluc0y85/image/upload/v1500693476/Logomakr_right_color_feqswx.png"/>
               <ul>
                 <li className="header-text-li">
                   <p className='modal-header-text'>

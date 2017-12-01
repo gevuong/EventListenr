@@ -41,7 +41,7 @@ title: 'Photography Walk',
 location: 'Fort Mason, San Francisco, CA',
 date_time: DateTime.new(2017,11,22,10,30),
 description: 'Learn how to capture great images for your next vacation. We will teach you how to capture magical moments on your next vacation. Learn about inexpensive and essential equipment and tools, how to work with complex cultural issues in the field, lighting/exposure tips and time-of-day solutions, and composition and balance in image design.',
-image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1500957120/subtle-animated-gif-18_pqgcuc.gif',
+image_url: 'https://res.cloudinary.com/dtluc0y85/image/upload/v1500957120/subtle-animated-gif-18_pqgcuc.gif',
 ticket_price: 30,
 ticket_quantity: 5
 )
