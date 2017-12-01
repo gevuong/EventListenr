@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class Bookmark extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class Bookmark extends Component {
       );
     } else {
       return (
-        <Link to="/signup">
+        <Link to="/login">
           <i className="fa fa-heart-o unselected" aria-hidden="true"></i>
         </Link>
       );
@@ -46,4 +46,4 @@ class Bookmark extends Component {
   }
 }
 
-export default Bookmark;
+export default withRouter(Bookmark);

@@ -32,22 +32,43 @@ class UserProfile extends Component {
           <ul>
             <NavLink to="/profile/ticketed">
               <li>
-                <h3>{ticketedEvents.length ? " " : ticketedEvents.length }</h3>
+                <h3>
+                  {
+                    ticketedEvents.length === 0 ?
+                    (<div className="hidden">0</div>)
+                    :
+                    ticketedEvents.length
+                  }
+                </h3>
                 <h3>Upcoming Events</h3>
               </li>
-          </NavLink>
-          <NavLink to="/profile/bookmarked">
-            <li>
-              <h3>{bookmarkedEvents.length ? " " : bookmarkedEvents.length }</h3>
-              <h3>Saved Events</h3>
-            </li>
-          </NavLink>
-          <NavLink to="/profile/hosted">
-            <li>
-              <h3>{" "}</h3>
-              <h3>Organized Events</h3>
-            </li>
-          </NavLink>
+            </NavLink>
+            <NavLink to="/profile/bookmarked">
+              <li>
+                <h3>
+                  {
+                    bookmarkedEvents.length === 0 ?
+                    (<div className="hidden">0</div>)
+                    :
+                    bookmarkedEvents.length
+                  }
+                </h3>
+                <h3>Saved Events</h3>
+              </li>
+            </NavLink>
+            <NavLink to="/profile/organized">
+              <li>
+                <h3>
+                  {
+                    organized_events.length === 0 ?
+                    (<div className="hidden">0</div>)
+                    :
+                    organized_events.length
+                  }
+                </h3>
+                <h3>Organized Events</h3>
+              </li>
+            </NavLink>
           </ul>
         </div>
 
@@ -60,7 +81,7 @@ class UserProfile extends Component {
         <Route path={'/profile/bookmarked'}
           render={ () => <BookmarkedEvents bookmarkedEvents={bookmarkedEvents} /> }
         />
-        <Route path={'/profile/hosted'}
+        <Route path={'/profile/organized'}
           render={ () => <OrganizedEvents
           organizedEvents={organized_events} /> }
         />

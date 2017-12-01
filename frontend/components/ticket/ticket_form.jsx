@@ -34,7 +34,7 @@ class TicketForm extends React.Component {
     .then(() => {
       this.props.closeModal();
       })
-    .catch(this.props.history.push("/signup"));
+    .catch(this.props.history.push("/login"));
   }
 
   // componentWillMount() {

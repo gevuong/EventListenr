@@ -43,13 +43,65 @@
   background-color: #EFF2F5;
 }
 
+// Container <div> - needed to position dropdown content
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+// Dropdown Content (Hidden by default)
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+// Links inside dropdown
+.dropdown-content a, button.logout-button-container {
+  padding: 0px 25px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+}
+// change color of dropdown links on hover
+.dropdown-content a:hover {
+  background-color: #EFF2F5;
+}
+// show dropdown menu on hover
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+// change background color of dropdown button when dropdown content is shown
+.dropdown:hover .dropbtn {
+  background-color: #EFF2F5;
+}
+
+.navlink-ticketed, .navlink-saved, .navlink-organized {
+  // display: flex;
+  // justify-content: space-between;
+}
+
 .navlink-dropdown {
   font-size: 14px;
   min-width: 170px;
 }
 
-.navlink-saved {
+.navlink-organized {
   border-bottom: 1px solid #EFF2F5;
+}
+
+// className added to highlight entire background of button
+.logout-button-container {
+  background-color: #fff;
+  min-width: 170px;
+  font-size: 14px;
+}
+.logout-button-container:hover {
+  background-color: #EFF2F5;
+  min-width: 170px;
 }
 
 i.fa-user-circle {
@@ -72,49 +124,4 @@ i.fa-angle-down {
 }
 .create-event-link:hover {
   color: #013653;
-}
-
-// Container <div> - needed to position dropdown content
-.dropdown {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-// Dropdown Content (Hidden by default)
-.dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: #fff;
-  min-width: 170px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 2;
-}
-// Links inside dropdown
-.dropdown-content a, button.logout-button-container {
-  padding: 0px 16px;
-  text-decoration: none;
-  display: block;
-}
-// change color of dropdown links on hover
-.dropdown-content a:hover {
-  background-color: #EFF2F5;
-}
-// show dropdown menu on hover
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-// change background color of dropdown button when dropdown content is shown
-.dropdown:hover .dropbtn {
-  background-color: #EFF2F5;
-}
-// className added to highlight entire background of button
-.logout-button-container {
-  background-color: #fff;
-  min-width: 170px;
-  font-size: 14px;
-}
-.logout-button-container:hover {
-  background-color: #EFF2F5;
-  min-width: 170px;
 }

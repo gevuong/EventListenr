@@ -15,6 +15,8 @@ class Navbar extends Component {
   }
 
   render() {
+    console.log("navbar: ", this.props);
+    const { currentUser: { organized_events }, bookmarkedEvents, ticketedEvents } = this.props;
     const isLoggedIn = this.props.currentUser;
 
     return (
@@ -32,9 +34,35 @@ class Navbar extends Component {
                 <i className="fa fa-angle-down" aria-hidden="true"></i>
               </div>
               <div className="dropdown-content">
-                <NavLink className="navlink-dropdown" to="/profile">Tickets</NavLink>
-                <NavLink className="navlink-dropdown navlink-saved" to="/profile/bookmarked">Saved</NavLink>
-                <button className='logout-button-container' onClick={this.handleClick}>Log out
+                <NavLink className="navlink-dropdown navlink-ticketed" to="/profile">
+                  <div>Tickets</div>
+                  {
+                    ticketedEvents.length === 0 ?
+                    (<div className="hidden">0</div>)
+                    :
+                    (<div>{ticketedEvents.length}</div>)
+                  }
+                </NavLink>
+                <NavLink className="navlink-dropdown navlink-saved" to="/profile/bookmarked">
+                  <div>Saved</div>
+                  {
+                    bookmarkedEvents.length === 0 ?
+                    (<div className="hidden">0</div>)
+                    :
+                    (<div>{bookmarkedEvents.length}</div>)
+                  }
+                </NavLink>
+                <NavLink className="navlink-dropdown navlink-organized" to="/profile/organized">
+                  <div>Organized</div>
+                  {
+                    organized_events.length === 0 ?
+                    (<div className="hidden">0</div>)
+                    :
+                    (<div>{organized_events.length}</div>)
+                  }
+                </NavLink>
+                <button className='logout-button-container' onClick={this.handleClick}>
+                  Log out
                 </button>
               </div>
             </div>
