@@ -52,7 +52,7 @@ title: 'Paint Nite',
 location: 'San Francisco, CA',
 date_time: DateTime.new(2018,8,14,14,0),
 description: 'Paint the town! Join us for a night of painting, wine/beer, and fun! Bring your friends!',
-image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1500999493/painting_q99nzx.jpg',
+image_url: 'https://res.cloudinary.com/dtluc0y85/image/upload/v1500999493/painting_q99nzx.jpg',
 ticket_price: 20,
 ticket_quantity: 15
 )
@@ -74,7 +74,7 @@ title: 'Ferrari Trackday',
 location: 'Willows, CA',
 date_time: DateTime.new(2018, 3, 25, 8, 0),
 description: 'Want to drive a Ferrari? Whatever Ferrari Driving Experience you choose, there is no other Supercar as evocative as a Ferrari thrill and no car as exhilarating to drive. Under the guidance of an experienced instructor, drivers discover just what these Italian beauties can do on a range of circuits designed to exploit their legendary performance and handling.',
-image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/c_scale,w_1080/v1509756836/car-race-ferrari-racing-car-pirelli-50704_xvesli.png',
+image_url: 'https://res.cloudinary.com/dtluc0y85/image/upload/c_scale,w_1080/v1509756836/car-race-ferrari-racing-car-pirelli-50704_xvesli.png',
 ticket_price: 250,
 ticket_quantity: 30
 )
@@ -230,7 +230,7 @@ title: 'Saturday Morning Outdoor Vinyasa Flow',
 location: 'Crissy Field, San Francisco, CA',
 date_time: DateTime.new(2017, 7, 29, 10, 0),
 description: 'These classes are lighthearted, athletic and fun all levels vinyasa flow classes. Join us and one of our skillful yoga teachers for this class on Saturday mornings @ Crissy Field.',
-image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1501266991/sat_morning_vinyasa_sxwchd.jpg',
+image_url: 'https://res.cloudinary.com/dtluc0y85/image/upload/v1501266991/sat_morning_vinyasa_sxwchd.jpg',
 ticket_price: 0,
 ticket_quantity: 25
 )
@@ -242,7 +242,7 @@ location: 'San Francisco, CA',
 date_time: DateTime.new(2018, 3, 3, 10, 0),
 description: 'Meet blockchain entrepreneurs and investors, network and discover. Learn about tokenization and the opportunities it unlocks. Introductions, wine, food, blockchain and everything crypto. Hosted by LAToken founder Valentin Preobrazhensky. co-hosted by Gil Penchina. Event starts 19:30. Please contact hosts for RSVP and info or eli@latoken.com.
 www.latoken.com',
-image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1501267278/la_penthouseparty_crkx95.png',
+image_url: 'https://res.cloudinary.com/dtluc0y85/image/upload/v1501267278/la_penthouseparty_crkx95.png',
 ticket_price: 0,
 ticket_quantity: 25
 )
@@ -258,7 +258,7 @@ Cuddle Party is a 3-4 hours workshop experience where participants engage in com
 Why is Cuddling important?
 Nurturing and consensual loving touch is good for maintaining a healthy life, a strong nervous system and a balanced emotional state. One’s ability to connect with and develop greater trust in others is emphasized during the group exchanges during Cuddle Parties. Self-care is a cornerstone of the Cuddle Party experience.',
 
-image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1501267697/cuddleparty_vtuqz4.jpg',
+image_url: 'https://res.cloudinary.com/dtluc0y85/image/upload/v1501267697/cuddleparty_vtuqz4.jpg',
 ticket_price: 0,
 ticket_quantity: 25
 )
@@ -270,7 +270,7 @@ location: 'San Francisco, CA',
 date_time: DateTime.new(2017, 7, 31, 8, 0),
 description: 'The Bayview Opera House (BVOH) in collaboration with NOW Hunters Point are proud to present Bayview Hunters Point’s 6th annual Summer Circus Festival. Doors to this free family-friendly event will open at 12pm. Event goers will be able to enjoy a myriad of activities from hobnobbing with stilt walkers and eating treats from local vendors: Old Skool Cafe and Yvonnes Southern Sweets. Children will have a blast riding the giant Fun Slide, riding a curcus train, playing circus games and more.
 All rides and activities are free, bring cash for food.',
-image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1501268103/circusfest_gfps8y.jpg',
+image_url: 'https://res.cloudinary.com/dtluc0y85/image/upload/v1501268103/circusfest_gfps8y.jpg',
 ticket_price: 180,
 ticket_quantity: 25
 )
@@ -281,7 +281,7 @@ e23 = Event.create(
   location: 'San Francisco, CA',
   date_time: DateTime.new(2017, 5, 10, 10, 0),
   description: 'Calling all CHEESE lovers! We are "Melting Together" for the Third Annual SF Cheese Fest, which will celebrate the gratifying warmth of bringing folks together to share the cheesy richness of artisan cheeses and the people who create them. Mingle with 24 Guild-member cheesemakers from across the state, sampling dozens of new and classic California cheeses.',
-  image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1501268403/cheesefest_xrkiei.jpg',
+  image_url: 'https://res.cloudinary.com/dtluc0y85/image/upload/v1501268403/cheesefest_xrkiei.jpg',
   ticket_price: 0,
   ticket_quantity: 25
 )
@@ -292,7 +292,7 @@ title: 'Thunderhill East Opening Weekend!',
 location: 'Willows, CA',
 date_time: DateTime.new(2017, 3, 25, 8, 0),
 description: 'These classes are lighthearted, athletic and fun all levels vinyasa flow classes. Join us and one of our skillful yoga teachers for this class on Saturday mornings @ Crissy Field.',
-image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1501266991/sat_morning_vinyasa_sxwchd.jpg',
+image_url: 'https://res.cloudinary.com/dtluc0y85/image/upload/v1501266991/sat_morning_vinyasa_sxwchd.jpg',
 ticket_price: 200,
 ticket_quantity: 40
 )
@@ -308,7 +308,7 @@ German Attire? YES! We encourage you to wear Liderhosen and Dirndls
 Beer Hall Games? YES! Beer chugging, Stein Holding and even Sausage Eating Contest
 Sausages? OF COURSE! We will be offering all of our hits (Schnitzels, Pretzels and Sausages) and also a prefix menu for larger parties.
 PROST!!',
-image_url: 'http://res.cloudinary.com/dtluc0y85/image/upload/v1501268539/hofbrauhaus_gxpkgv.jpg',
+image_url: 'https://res.cloudinary.com/dtluc0y85/image/upload/v1501268539/hofbrauhaus_gxpkgv.jpg',
 ticket_price: 0,
 ticket_quantity: 25
 )
