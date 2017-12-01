@@ -7,6 +7,7 @@ import Bookmark from './bookmark';
 
 const mapStateToProps = ({ event, session }) => ({
   currentUser: session.currentUser || {bookmarks: []},
+  event: event,
 });
 
 const mapDispatchToProps = (dispatch) => ({

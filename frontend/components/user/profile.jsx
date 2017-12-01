@@ -3,11 +3,10 @@ import React, { Component } from 'react';
 import { Link, NavLink, Route, Redirect } from 'react-router-dom';
 
 // Components
-import EventIndexItem from '../event/event_index_item';
 import NavbarContainer from '../navbar/navbar_container';
 import UpcomingEvents from './upcoming_events';
 import BookmarkedEvents from './bookmarked_events';
-import HostedEventItem from './hosted_event_item';
+import OrganizedEvents from './organized_events';
 
 class UserProfile extends Component {
   constructor(props) {
@@ -20,7 +19,7 @@ class UserProfile extends Component {
 
   render() {
     console.log('userprofile_props: ', this.props);
-    const { currentUser, ticketedEvents, bookmarkedEvents } = this.props;
+    const { currentUser, currentUser: { organized_events }, ticketedEvents, bookmarkedEvents } = this.props;
     console.log("currentUser: ", currentUser);
 
     return(
@@ -46,7 +45,7 @@ class UserProfile extends Component {
           <NavLink to="/profile/hosted">
             <li>
               <h3>{" "}</h3>
-              <h3>Hosted Events</h3>
+              <h3>Organized Events</h3>
             </li>
           </NavLink>
           </ul>
@@ -62,30 +61,12 @@ class UserProfile extends Component {
           render={ () => <BookmarkedEvents bookmarkedEvents={bookmarkedEvents} /> }
         />
         <Route path={'/profile/hosted'}
-          render={ () => <HostedEventItem /> }
+          render={ () => <OrganizedEvents
+          organizedEvents={organized_events} /> }
         />
       </div>
     );
   }
 }
-
-// <h3>Saved Events</h3>
-// <div className="bookmark-event-container">
-//   {bookmarkedEvents.map(event => (<EventIndexItem key={event.id} eventItem={event}/>
-//     ))
-//   }
-// // {ticketedEvents.map(event => (
-//   <EventIndexItem key={event.id} eventItem={event}/>
-//   ))
-// }
-
-// <ul className='ticketed-event-container'>
-//   {ticketedEvents.map(event => (
-//     <li>
-//       <UpcomingEventItem eventItem={event} key={event.id}/>
-//     </li>
-//     ))
-//   }
-// </ul>
 
 export default UserProfile;

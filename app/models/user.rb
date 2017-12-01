@@ -3,11 +3,12 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
 
+  # user created events
   has_many :organized_events,
   primary_key: :id,
   foreign_key: :organizer_id,
-  class_name: :Event # user created events
-  
+  class_name: :Event
+
   has_many :tickets
   has_many :bookmarks
 

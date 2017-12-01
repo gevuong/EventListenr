@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Bookmark extends Component {
   constructor(props) {
@@ -9,11 +9,9 @@ class Bookmark extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.props.requestAllEvents();
-  // }
-
+  // Fix issue where bookmarkIcon noticeably re-renders
   bookmarkIcon() {
+    console.log('bookmarkIcon: ', this.props);
     if ( this.props.currentUser.bookmarks.includes(this.props.event.id)) {
       return (
         <i className="fa fa-heart selected" aria-hidden="true"></i>

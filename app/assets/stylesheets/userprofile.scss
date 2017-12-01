@@ -52,7 +52,7 @@
   }
 }
 
-.ticketed-event-container {
+.ticketed-event-container, .organized-event-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,6 +103,7 @@
   background: #f8f8fa;
   padding-top: 15px;
   padding-bottom: 25px;
+  margin-bottom: 0px;
 }
 
 /* =================================
