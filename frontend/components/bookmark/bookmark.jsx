@@ -11,7 +11,7 @@ class Bookmark extends Component {
 
   // Fix issue where bookmarkIcon noticeably re-renders
   bookmarkIcon() {
-    console.log('bookmarkIcon: ', this.props);
+    // console.log('bookmarkIcon: ', this.props);
     if ( this.props.currentUser.bookmarks.includes(this.props.event.id)) {
       return (
         <i className="fa fa-heart selected" aria-hidden="true"></i>
@@ -26,7 +26,7 @@ class Bookmark extends Component {
   }
 
   handleClick() {
-    console.log('handleClick: ', this.props);
+    // console.log('handleClick: ', this.props);
     if (this.props.currentUser.id === undefined) {
       return
     } else if (this.props.currentUser.bookmarks.includes(this.props.event.id)) {

@@ -5,7 +5,7 @@ import UpcomingEventItem from './upcoming_event_item';
 // import OrganizedEventItem from './organized_event_item';
 
 const OrganizedEvents = ({ organizedEvents }) => {
-  console.log("organizedEvents: ", organizedEvents);
+  // console.log("organizedEvents: ", organizedEvents);
   let organizedEvent = organizedEvents.map(event => (
     <UpcomingEventItem eventItem={ event } key={ event.id } />
   ))

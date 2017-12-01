@@ -39,7 +39,7 @@ class EventShow extends Component {
   //3. when setState is called
 
   render() {
-    console.log('event show: ', this.props);
+    // console.log('event show: ', this.props);
     const { event, event: { organizer }, currentUser } = this.props;
 
     let date = new Date(event.date_time).toDateString();

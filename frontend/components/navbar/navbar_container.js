@@ -4,12 +4,15 @@ import Navbar from './navbar';
 
 const mapStateToProps = ({ event, session }) => ({
   currentUser: session.currentUser,
-  bookmarkedEvents: session.currentUser.bookmarks.map((id) => {
-    return event.events[id] || {description: ""};
-  }),
-  ticketedEvents: Object.keys(session.currentUser.tickets).map((id) => {
-    return event.events[id] || {description: ""};
-  })
+  bookmarkedEvents: [],
+  ticketedEvents: [],
+  // currentUser: { organized_events: [] }
+  // bookmarkedEvents: session.currentUser.bookmarks.map((id) => {
+  //   return event.events[id] || {description: ""};
+  // }),
+  // ticketedEvents: Object.keys(session.currentUser.tickets).map((id) => {
+  //   return event.events[id] || {description: ""};
+  // }),
 });
 
 const mapDispatchToProps = dispatch => ({

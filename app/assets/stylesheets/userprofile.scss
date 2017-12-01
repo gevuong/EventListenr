@@ -106,9 +106,32 @@
   margin-bottom: 0px;
 }
 
-.hidden {
-  opacity: 0;
+.no-saved-events-container {
+
 }
+
+#no-saved-events-img {
+  opacity: 0.3;
+  margin: 65px auto 0 auto;
+  // margin-left: auto;
+  // margin-right: auto;
+  height: 265px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.text-container {
+  padding: 20px 150px 0 150px;
+}
+
+.no-saved-events-text {
+  font-family: "Benton Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", "sans-serif";
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #666A73;
+  margin: 15px 200px 30px 200px;
+}
+
 /* =================================
   Media Queries
 ==================================== */

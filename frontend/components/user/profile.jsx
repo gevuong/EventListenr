@@ -18,9 +18,9 @@ class UserProfile extends Component {
   }
 
   render() {
-    console.log('userprofile_props: ', this.props);
+    // console.log('userprofile_props: ', this.props);
     const { currentUser, currentUser: { organized_events }, ticketedEvents, bookmarkedEvents } = this.props;
-    console.log("currentUser: ", currentUser);
+    // console.log("currentUser: ", currentUser);
 
     return(
       <div>
@@ -32,40 +32,19 @@ class UserProfile extends Component {
           <ul>
             <NavLink to="/profile/ticketed">
               <li>
-                <h3>
-                  {
-                    ticketedEvents.length === 0 ?
-                    (<div className="hidden">0</div>)
-                    :
-                    ticketedEvents.length
-                  }
-                </h3>
+                <h3>{ticketedEvents.length}</h3>
                 <h3>Upcoming Events</h3>
               </li>
             </NavLink>
             <NavLink to="/profile/bookmarked">
               <li>
-                <h3>
-                  {
-                    bookmarkedEvents.length === 0 ?
-                    (<div className="hidden">0</div>)
-                    :
-                    bookmarkedEvents.length
-                  }
-                </h3>
+                <h3>{bookmarkedEvents.length}</h3>
                 <h3>Saved Events</h3>
               </li>
             </NavLink>
             <NavLink to="/profile/organized">
               <li>
-                <h3>
-                  {
-                    organized_events.length === 0 ?
-                    (<div className="hidden">0</div>)
-                    :
-                    organized_events.length
-                  }
-                </h3>
+                <h3>{organized_events.length}</h3>
                 <h3>Organized Events</h3>
               </li>
             </NavLink>

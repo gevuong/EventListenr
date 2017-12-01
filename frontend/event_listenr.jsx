@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // // we don't put the store directly on the window because
   // // it can be confusing when debugging, sometimes giving you access to state when you shouldn't
-  window.getState = store.getState;
-  window.dispatch = store.dispatch; // just for testing!
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch; // just for testing!
   // window.requestAllEvents = requestAllEvents;
   // window.requestEvent = requestEvent;
 

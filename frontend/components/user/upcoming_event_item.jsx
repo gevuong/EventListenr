@@ -7,7 +7,7 @@ class UpcomingEventItem extends Component {
   }
 
   render() {
-    console.log('upcoming-event-item: ', this.props);
+    // console.log('upcoming-event-item: ', this.props);
     const { eventItem } = this.props;
 
     let date = new Date(eventItem.date_time).toLocaleTimeString('en-US', { weekday: "short", day: "numeric", year: "numeric", month: "long"});

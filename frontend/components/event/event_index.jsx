@@ -17,7 +17,7 @@ class EventIndex extends Component {
   // }
 
   render() {
-    console.log("event_index: ", this.props);
+    // console.log("event_index: ", this.props);
     const { events } = this.props;
 
     return (
