@@ -4,6 +4,7 @@ import { receiveErrors, clearSessionErrors } from './session_actions';
 export const RECEIVE_ALL_EVENTS = "RECEIVE_ALL_EVENTS";
 export const RECEIVE_EVENT = "RECEIVE_EVENT";
 export const REMOVE_EVENT = "REMOVE_EVENT";
+export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
 // sync actions
 export const receiveAllEvents = events => ({
@@ -19,6 +20,11 @@ export const receiveEvent = event => ({
 export const removeEvent = event => ({
   type: REMOVE_EVENT,
   event
+});
+
+export const receiveErrors = errors => ({
+  type: RECEIVE_ERRORS,
+  errors
 });
 
 // async thunk actions, used in container
