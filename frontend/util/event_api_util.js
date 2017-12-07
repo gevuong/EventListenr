@@ -39,8 +39,8 @@ export const deleteEvent = id => (
 
 // window.fetchAllEvents = fetchAllEvents;
 // window.fetchEvent = fetchEvent;
-window.createEvent = createEvent;
-window.updateEvent = updateEvent;
-window.deleteEvent = deleteEvent;
+// window.createEvent = createEvent;
+// window.updateEvent = updateEvent;
+// window.deleteEvent = deleteEvent;
 
 // createEvent( {event: {title: "title", description: "description", date_time: new Date(), image_url: "link", ticket_price: 10, ticket_quantity: 15, organizer_id: 4, category_id: [5] } });

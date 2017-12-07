@@ -1,10 +1,12 @@
 import * as EventAPIUtil from '../util/event_api_util';
-import { receiveErrors, clearSessionErrors } from './session_actions';
+// import { receiveErrors, clearSessionErrors } from './session_actions';
 
+// export action types
 export const RECEIVE_ALL_EVENTS = "RECEIVE_ALL_EVENTS";
 export const RECEIVE_EVENT = "RECEIVE_EVENT";
 export const REMOVE_EVENT = "REMOVE_EVENT";
-export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const RECEIVE_EVENT_ERRORS = "RECEIVE_EVENT_ERRORS";
+export const CLEAR_EVENT_ERRORS = 'CLEAR_EVENT_ERRORS';
 
 // sync actions
 export const receiveAllEvents = events => ({
@@ -22,49 +24,53 @@ export const removeEvent = event => ({
   event
 });
 
-export const receiveErrors = errors => ({
-  type: RECEIVE_ERRORS,
+export const receiveEventErrors = errors => ({
+  type: RECEIVE_EVENT_ERRORS,
   errors
-});
+})
+
+export const clearEventErrors = () => ({
+  type: CLEAR_EVENT_ERRORS
+})
 
 // async thunk actions, used in container
 export const requestAllEvents = () => dispatch => {
   return EventAPIUtil.fetchAllEvents().then(
     events => (
       dispatch(receiveAllEvents(events)),
-      dispatch(clearSessionErrors())
+      dispatch(clearEventErrors())
     ),
-    errors => dispatch(receiveErrors(errors))
+    errors => dispatch(receiveEventErrors(errors))
   );
 };
 
 export const requestEvent = id => dispatch => (
   EventAPIUtil.fetchEvent(id).then(event => (
     dispatch(receiveEvent(event)),
-    dispatch(clearSessionErrors())
+    dispatch(clearEventErrors())
   )),
-    errors => dispatch(receiveErrors(errors))
+    errors => dispatch(receiveEventErrors(errors))
 );
 
 export const createEvent = event => dispatch => (
   EventAPIUtil.createEvent(event).then(event => (               dispatch(receiveEvent(event)),
-  dispatch(clearSessionErrors())
+  dispatch(clearEventErrors())
   )),
-  errors => dispatch(receiveErrors(errors))
+  errors => dispatch(receiveEventErrors(errors.responseJSON))
 );
 
 export const deleteEvent = event => dispatch => (
   EventAPIUtil.deleteEvent(event.id).then(event => (
     dispatch(removeEvent(event)),
-    dispatch(clearSessionErrors())
+    dispatch(clearEventErrors())
   )),
-    errors => dispatch(receiveErrors(errors))
+    errors => dispatch(receiveEventErrors(errors.responseJSON))
 );
 
 export const editEvent = event => dispatch => (
   EventAPIUtil.updateEvent(event.id).then(event => (
     dispatch(receiveEvent(event)),
-    dispatch(clearSessionErrors())
+    dispatch(clearEventErrors())
   )),
-    errors => dispatch(receiveErrors(errors))
+    errors => dispatch(receiveEventErrors(errors))
 );

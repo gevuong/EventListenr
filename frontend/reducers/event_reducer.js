@@ -1,5 +1,5 @@
 import merge from 'lodash/merge';
-import { RECEIVE_ALL_EVENTS, RECEIVE_EVENT, REMOVE_EVENT, RECEIVE_ERRORS } from '../actions/event_actions';
+import { RECEIVE_ALL_EVENTS, RECEIVE_EVENT, REMOVE_EVENT, RECEIVE_EVENT_ERRORS, CLEAR_EVENT_ERRORS } from '../actions/event_actions';
 
 const nullEvent = Object.freeze({
   events: {},
@@ -23,6 +23,11 @@ const eventReducer = (state = nullEvent, action) => {
       currentState = merge({}, state);
       delete currentState[action.event.id];
       return currentState;
+    case RECEIVE_EVENT_ERRORS:
+      const errors = action.errors;
+      return Object.assign({}, state, { errors });
+    case CLEAR_EVENT_ERRORS:
+      return Object.assign({}, state, { errors: [] });
     default:
       return state;
   }

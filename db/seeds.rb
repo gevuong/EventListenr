@@ -47,39 +47,6 @@ ticket_quantity: 5
 )
 
 e2 = Event.create(
-organizer_id: keith.id,
-title: 'Paint Nite',
-location: 'San Francisco, CA',
-date_time: DateTime.new(2018,8,14,14,0),
-description: 'Paint the town! Join us for a night of painting, wine/beer, and fun! Bring your friends!',
-image_url: 'https://res.cloudinary.com/dtluc0y85/image/upload/v1500999493/painting_q99nzx.jpg',
-ticket_price: 20,
-ticket_quantity: 15
-)
-
-e3 = Event.create(
-organizer_id: ravi.id,
-title: 'Cal Academy of Sciences NightLife',
-location: 'California Academy of Sciences, San Francisco, CA',
-date_time: DateTime.new(2017,10,3,20,0),
-description: 'A new adventure unfolds every Thursday night from 6-10pm. Enjoy music, creatures, and cocktails as you set out with friends on a journey to the stars and the depths of the sea. A variety of food options are available at NightLife from 6-9:30 pm, including the Academy Café, The Terrace (located in the West Garden), and convenient food cart in the front lobby.',
-image_url: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495485317/mezcal-nightlife-celebration-of-cinco-de-mayo-mex-i-am-sf-4_ziu0nu.jpg',
-ticket_price: 25,
-ticket_quantity: 300
-)
-
-e4 = Event.create(
-organizer_id: anastassia.id,
-title: 'Ferrari Trackday',
-location: 'Willows, CA',
-date_time: DateTime.new(2018, 3, 25, 8, 0),
-description: 'Want to drive a Ferrari? Whatever Ferrari Driving Experience you choose, there is no other Supercar as evocative as a Ferrari thrill and no car as exhilarating to drive. Under the guidance of an experienced instructor, drivers discover just what these Italian beauties can do on a range of circuits designed to exploit their legendary performance and handling.',
-image_url: 'https://res.cloudinary.com/dtluc0y85/image/upload/c_scale,w_1080/v1509756836/car-race-ferrari-racing-car-pirelli-50704_xvesli.png',
-ticket_price: 250,
-ticket_quantity: 30
-)
-
-e5 = Event.create(
   organizer_id: aaron.id,
   title: 'Surf City',
   location: 'Pacifica, CA',
@@ -90,7 +57,74 @@ e5 = Event.create(
   ticket_quantity: 10
 )
 
+
+e3 = Event.create(
+organizer_id: anastassia.id,
+title: 'Ferrari Trackday',
+location: 'Willows, CA',
+date_time: DateTime.new(2018, 3, 25, 8, 0),
+description: 'Want to drive a Ferrari? Whatever Ferrari Driving Experience you choose, there is no other Supercar as evocative as a Ferrari thrill and no car as exhilarating to drive. Under the guidance of an experienced instructor, drivers discover just what these Italian beauties can do on a range of circuits designed to exploit their legendary performance and handling.',
+image_url: 'https://res.cloudinary.com/dtluc0y85/image/upload/c_scale,w_1080/v1509756836/car-race-ferrari-racing-car-pirelli-50704_xvesli.png',
+ticket_price: 250,
+ticket_quantity: 30
+)
+
+e4 = Event.create(
+organizer_id: isak.id,
+title: 'Bay Area Peace Lantern Ceremony',
+location: 'Aquatic Park, Berkeley, CA',
+date_time: DateTime.new(2017, 9, 5, 18, 30),
+description: 'Join us for the 16th annual Peace Lantern Ceremony at the north end of Berkeley Aquatic Park.',
+image_url: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495427793/d5f32508_ac0map.jpg',
+ticket_price: 0,
+ticket_quantity: 0
+)
+
+e5 = Event.create(
+  organizer_id: evelyn.id,
+  title: 'Nor Cal Corgi Con',
+  location: 'Ocean Beach, San Francisco, CA',
+  date_time: DateTime.new(2018, 6, 5, 10, 30),
+  description: 'We look FURward to seeing everypawdy at Nor Cal Corgi Con. Corgi costume contest, races, and merchandise!',
+  image_url: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495427941/Pembroke-Welsh-Corgi-Puppy-Lying-Down_z8dgzw.jpg',
+  ticket_price: 0,
+  ticket_quantity: 0
+)
+
 e6 = Event.create(
+  organizer_id: isak.id,
+  title: 'SF Jazz Block Party',
+  location: 'San Francisco, CA',
+  date_time: DateTime.new(2017, 8, 5, 10, 30),
+  description: 'FREE Block Party in Hayes Valley to kick off the San Francisco Jazz Festival. Featuring live music, food and drinks!',
+  image_url: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495428292/block-party_eodfax.jpg',
+  ticket_price: 0,
+  ticket_quantity: 0
+)
+
+e7 = Event.create(
+organizer_id: keith.id,
+title: 'Paint Nite',
+location: 'San Francisco, CA',
+date_time: DateTime.new(2018,8,14,14,0),
+description: 'Paint the town! Join us for a night of painting, wine/beer, and fun! Bring your friends!',
+image_url: 'https://res.cloudinary.com/dtluc0y85/image/upload/v1500999493/painting_q99nzx.jpg',
+ticket_price: 20,
+ticket_quantity: 15
+)
+
+e8 = Event.create(
+organizer_id: ravi.id,
+title: 'Cal Academy of Sciences NightLife',
+location: 'California Academy of Sciences, San Francisco, CA',
+date_time: DateTime.new(2017,10,3,20,0),
+description: 'A new adventure unfolds every Thursday night from 6-10pm. Enjoy music, creatures, and cocktails as you set out with friends on a journey to the stars and the depths of the sea. A variety of food options are available at NightLife from 6-9:30 pm, including the Academy Café, The Terrace (located in the West Garden), and convenient food cart in the front lobby.',
+image_url: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495485317/mezcal-nightlife-celebration-of-cinco-de-mayo-mex-i-am-sf-4_ziu0nu.jpg',
+ticket_price: 25,
+ticket_quantity: 300
+)
+
+e9 = Event.create(
   organizer_id: alex.id,
   title: 'Bay Area Night Market',
   location: 'San Francisco, CA',
@@ -101,7 +135,7 @@ e6 = Event.create(
   ticket_quantity: 100
 )
 
-e7 = Event.create(
+e10 = Event.create(
   organizer_id: mary.id,
   title: 'SF Giants  vs. LA Dodgers',
   location: 'AT&T Park, San Francisco, CA',
@@ -112,7 +146,7 @@ e7 = Event.create(
   ticket_quantity: 100
 )
 
-e8 = Event.create(
+e11 = Event.create(
   organizer_id: george.id,
   title: 'Off the Grid',
   location: 'Fort Mason, San Francisco',
@@ -123,7 +157,7 @@ e8 = Event.create(
   ticket_quantity: 100
 )
 
-e9 = Event.create(
+e12 = Event.create(
   organizer_id: jared.id,
   title: 'Kids Obstacle Challenge',
   location: 'San Francisco, CA',
@@ -134,7 +168,7 @@ e9 = Event.create(
   ticket_quantity: 100
 )
 
-e10 = Event.create(
+e13 = Event.create(
     organizer_id: young.id,
     title: 'Kehlani',
     location: 'Greek Theatre, UC Berkeley',
@@ -145,7 +179,7 @@ e10 = Event.create(
     ticket_quantity: 1000
   )
 
-e11 = Event.create(
+e14 = Event.create(
     organizer_id: lotus.id,
     title: 'Jo Koy',
     location: 'Cobbs Comedy Club',
@@ -157,7 +191,7 @@ e11 = Event.create(
   )
 
 
-e12 = Event.create(
+e15 = Event.create(
     organizer_id: anastassia.id,
     title: 'Yoga to the People',
     location: 'San Francisco, CA',
@@ -168,38 +202,6 @@ e12 = Event.create(
     ticket_quantity: 30
   )
 
-e13 = Event.create(
-organizer_id: isak.id,
-title: 'Bay Area Peace Lantern Ceremony',
-location: 'Aquatic Park, Berkeley, CA',
-date_time: DateTime.new(2017, 9, 5, 18, 30),
-description: 'Join us for the 16th annual Peace Lantern Ceremony at the north end of Berkeley Aquatic Park.',
-image_url: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495427793/d5f32508_ac0map.jpg',
-ticket_price: 0,
-ticket_quantity: 0
-)
-
-e14 = Event.create(
-  organizer_id: evelyn.id,
-  title: 'Nor Cal Corgi Con',
-  location: 'Ocean Beach, San Francisco, CA',
-  date_time: DateTime.new(2018, 6, 5, 10, 30),
-  description: 'We look FURward to seeing everypawdy at Nor Cal Corgi Con. Corgi costume contest, races, and merchandise!',
-  image_url: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495427941/Pembroke-Welsh-Corgi-Puppy-Lying-Down_z8dgzw.jpg',
-  ticket_price: 0,
-  ticket_quantity: 0
-)
-
-e15 = Event.create(
-  organizer_id: guest.id,
-  title: 'SF Jazz Block Party',
-  location: 'San Francisco, CA',
-  date_time: DateTime.new(2017, 8, 5, 10, 30),
-  description: 'FREE Block Party in Hayes Valley to kick off the San Francisco Jazz Festival. Featuring live music, food and drinks!',
-  image_url: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495428292/block-party_eodfax.jpg',
-  ticket_price: 0,
-  ticket_quantity: 0
-)
 
 
 e16 = Event.create(

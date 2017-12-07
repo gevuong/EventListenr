@@ -41,7 +41,7 @@ class SessionForm extends Component {
       this.props.clearErrors();
     }
   }
-  // supposed to run everytime your prop changes, but it's not.not called when component is initially mounts.
+  // supposed to run everytime your prop changes, but it's not.not called when component initially mounts.
   // componentWillReceiveProps(nextProps) {
   //
   //     console.log(nextProps);
@@ -64,14 +64,6 @@ class SessionForm extends Component {
     const user = this.state;
     this.props.processForm({ user }).then(() => this.props.history.push("/"));
   }
-
-  // navLink() {
-  //   if (this.props.formType === 'login') {
-  //     return <Link to="/signup">sign up instead</Link>;
-  //   } else {
-  //     return <Link to="/login">login instead</Link>;
-  //   }
-  // }
 
   changeFormLink() {
     if (this.props.formType === 'login') {
@@ -116,14 +108,14 @@ class SessionForm extends Component {
     let name = "guest";
     let password = "password";
 
-    for (let i = 0; i < name.length; i++) {
-      setTimeout(() => this.setState({
-        username: name.slice(0, i + 1)}), (i * 80));
-    }
-    for (let j = 0; j < password.length; j++) {
-      setTimeout(() => this.setState({
-        password: password.slice(0, j + 1)}), ((j + 5) * 80));
-    }
+    // for (let i = 0; i < name.length; i++) {
+    //   setTimeout(() => this.setState({
+    //     username: name.slice(0, i + 1)}), (i * 80));
+    // }
+    // for (let j = 0; j < password.length; j++) {
+    //   setTimeout(() => this.setState({
+    //     password: password.slice(0, j + 1)}), ((j + 5) * 80));
+    // }
 
     const user = {
       username: 'guest',
@@ -195,7 +187,7 @@ class SessionForm extends Component {
                   </div>
                 </li>
                 <li>
-                  <p className="change-form-link">{ this.changeFormLink() }</p>
+                  <div className="change-form-link">{ this.changeFormLink() }</div>
                 </li>
               </ul>
             </form>

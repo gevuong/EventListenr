@@ -40,9 +40,23 @@ class EventForm extends Component {
     });
   }
 
+  renderEventErrors() {
+    return (
+      <div className="event-errors-container">
+        {this.props.errors.map((error, idx) => (
+          <li>
+            { errors }
+          </li>
+          ))
+        }
+      </div>
+    );
+  }
+
   render() {
     const { title, description, location, date_time, image_url, ticket_price, ticket_quantity } = this.state;
 
+    console.log("this.props: ", this.props);
     return (
       <div>
         <header>
@@ -59,7 +73,11 @@ class EventForm extends Component {
                 <span className="number">1</span>
                 <span className="eventDetails">Event Details</span>
               </div>
-              <label className="event-field-label">EVENT TITLE<span className="asterisk"> *</span></label>
+
+              <label className="event-field-label">
+                EVENT TITLE
+                <span className="asterisk"> *</span>
+              </label>
                 <input
                   className="event-input"
                   type="text"
@@ -69,37 +87,49 @@ class EventForm extends Component {
                 />
 
             <br />
-              <label className="event-field-label">LOCATION<span className="asterisk"> *</span></label>
-                  <input
-                    className="event-input"
-                    type="text"
-                    value={location}
-                    onChange={this.update('location')}
-                    placeholder='Specify where it is held'
-                  />
+              <label className="event-field-label">
+                LOCATION
+                <span className="asterisk"> *</span>
+              </label>
+              <input
+                className="event-input"
+                type="text"
+                value={location}
+                onChange={this.update('location')}
+                placeholder='Specify where it is held'
+              />
               <br/>
 
-              <label className="event-field-label">Date and Time<span className="asterisk"> *</span></label>
-                <input
-                  className="event-input"
-                  type="datetime-local"
-                  value={date_time}
-                  onChange={this.update('date_time')}
-                />
+              <label className="event-field-label">
+                Date and Time
+                <span className="asterisk"> *</span>
+              </label>
+              <input
+                className="event-input"
+                type="datetime-local"
+                value={date_time}
+                onChange={this.update('date_time')}
+              />
               <br/>
 
-              <label className="event-field-label">Event Image</label>
+              <label className="event-field-label">
+                Event Image
+                <span className="asterisk"> *</span>
+              </label>
               <DropForm className="image-upload-form" updateUrl={this.updatePicUrl} />
               <br />
 
-              <label className="event-field-label">EVENT DESCRIPTION<span className="asterisk"> *</span></label>
+              <label className="event-field-label">
+                EVENT DESCRIPTION
+                <span className="asterisk"> *</span>
+              </label>
 
-                <textarea
-                  className="event-input-description"
-                  type="text"
-                  value={description}
-                  onChange={this.update('description')}
-                />
+              <textarea
+                className="event-input-description"
+                type="text"
+                value={description}
+                onChange={this.update('description')}
+              />
               <br/>
 
               <div className="eventDetailsDiv">
@@ -108,8 +138,10 @@ class EventForm extends Component {
               </div>
               <div className="ticketDetailsDiv">
                 <div className="ticketTitleDiv">
-                  <span className='quantity'>Quantity Available </span><span className="asterisk">  *</span>
-                  <span className='price'>Price </span><span className="asterisk">  *</span>
+                  <span className='quantity'>Quantity Available</span>
+                  <span className="asterisk">  *</span>
+                  <span className='price'>Price </span>
+                  <span className="asterisk">  *</span>
                 </div>
                 <div className='ticketsDiv'>
                   <input
@@ -130,9 +162,11 @@ class EventForm extends Component {
               </div>
               <br />
             </form>
+
             <div className='eventLiveDiv'>
               <button className="make-event-live-button" onClick={this.handleSubmit}>MAKE YOUR EVENT LIVE</button>
             </div>
+
           </div>
 
         </div>
