@@ -43,7 +43,7 @@ class EventForm extends Component {
   }
 //
   handleSubmit(e) {
-    console.log("handleSubmit1");
+    // console.log("handleSubmit1");
     e.preventDefault();
     const event = Object.assign({}, this.state);
     // this.props.createEvent(event).then(() => this.props.history.push(`/events/${this.props.event.event.id}`))

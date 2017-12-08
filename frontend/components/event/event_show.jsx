@@ -17,7 +17,7 @@ class EventShow extends Component {
   }
 
   componentDidMount(){
-    console.log("eventshow");
+    // console.log("eventshow");
     window.scrollTo(0, 0);
     this.props.requestEvent(this.props.match.params.eventId);
   }
