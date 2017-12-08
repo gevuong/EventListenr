@@ -36,8 +36,8 @@ const SlideShow = () => {
     slidesToScroll: 1,
     slideToSlide: true,
     arrows: false,
-    // nextArrow: <NextArrow />,
-    // prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     fade: true,
   };
 

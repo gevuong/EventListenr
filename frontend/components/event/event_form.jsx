@@ -1,4 +1,8 @@
+// Libs
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
+
+// Components
 import DropForm from './drop_form';
 import NavbarContainer from '../navbar/navbar_container';
 import Footer from '../home/footer';
@@ -22,22 +26,28 @@ class EventForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.props.clearEventErrors();
-  // }
+  componentDidMount() {
+    window.scrollTo(0, 0);
+    this.props.clearEventErrors();
+    // this.props.requestEvent(this.props.eventId);
+  }
 
-  // componentWillReceiveProps(nextProps) {
-  //   console.log("EventReceiveProps: ", nextProps);
-  //   if (this.props.location.pathname !== nextProps.location.pathname) {
-  //     this.props.clearEventErrors();
-  //   }
-  // }
-
+  componentWillReceiveProps(nextProps) {
+    window.scrollTo(0, 0);
+    if (this.props.location.pathname !== nextProps.location.pathname) {
+      this.props.clearEventErrors();
+      // if (!nextProps.event && nextProps.event.id) {
+      //   this.props.requestEvent(nextProps.event.id);
+      // }
+    }
+  }
+//
   handleSubmit(e) {
-    console.log("handleSubmit");
+    console.log("handleSubmit1");
     e.preventDefault();
     const event = Object.assign({}, this.state);
-    this.props.createEvent(event).then(action => console.log(action))
+    // this.props.createEvent(event).then(() => this.props.history.push(`/events/${this.props.event.event.id}`))
+    this.props.createEvent(event).then(() => this.props.history.push("/"))
     .fail(() => setTimeout(() => window.scrollTo(0,0), 500)); // if fail, scrolls to top of page
   }
 
@@ -54,16 +64,24 @@ class EventForm extends Component {
   }
 
   renderEventErrors() {
-    return (
-      <div className="event-errors-container">
-        {this.props.eventErrors.map((error, idx) => (
-          <li className="event-error-li" key={idx}>
-            { error }
-          </li>
-          ))
-        }
+    if (this.props.eventErrors === undefined) {
+      // this.props.eventErrors = [];
+      return (
+        <div>
       </div>
     );
+    } else {
+      return (
+        <div className="event-errors-container">
+          {this.props.eventErrors.map((error, idx) => (
+            <li className="event-error-li" key={idx}>
+              { error }
+            </li>
+            ))
+          }
+        </div>
+      );
+    }
   }
 
   render() {
@@ -191,4 +209,4 @@ class EventForm extends Component {
   }
 }
 
-export default EventForm;
+export default withRouter(EventForm);

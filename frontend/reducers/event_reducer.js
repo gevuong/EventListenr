@@ -17,7 +17,7 @@ const eventReducer = (state = nullEvent, action) => {
       return merge({}, state, { events });
     case RECEIVE_EVENT:
       const event = action.event;
-      return merge({}, state, { events: { [event.id]: event } });
+      return merge({}, state, { event });
     case REMOVE_EVENT:
     // first dup current state, then find event and delete item.
       currentState = merge({}, state);

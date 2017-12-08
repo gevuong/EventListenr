@@ -27,7 +27,7 @@ isak = User.create(username: 'Isak Mladenoff', password: 'password')
 greg = User.create(username: 'Gregory Park', password: 'password')
 young = User.create(username: 'Young Eun Park', password: 'password')
 mary = User.create(username: 'Mary Howell', password: 'password')
-isak = User.create(username: 'Joshua Chen', password: 'password')
+josh = User.create(username: 'Joshua Chen', password: 'password')
 oliver = User.create(username: 'Justin Austria', password: 'password')
 nick = User.create(username: 'Nicholas Whitson', password: 'password')
 kevin = User.create(username: 'Kevin Yang', password: 'password')
@@ -36,7 +36,7 @@ ptt = User.create(username: 'Pacific Track Time', password: 'password')
 
 Event.destroy_all
 e1 = Event.create(
-organizer_id: noah.id,
+organizer_id: mary.id,
 title: 'Photography Walk',
 location: 'Fort Mason, San Francisco, CA',
 date_time: DateTime.new(2017,11,22,10,30),
@@ -92,7 +92,7 @@ e5 = Event.create(
 )
 
 e6 = Event.create(
-  organizer_id: isak.id,
+  organizer_id: josh.id,
   title: 'SF Jazz Block Party',
   location: 'San Francisco, CA',
   date_time: DateTime.new(2017, 8, 5, 10, 30),

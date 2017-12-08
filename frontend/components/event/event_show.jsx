@@ -16,7 +16,9 @@ class EventShow extends Component {
     this.openModal = this.openModal.bind(this);
   }
 
-  componentWillMount(){
+  componentDidMount(){
+    console.log("eventshow");
+    window.scrollTo(0, 0);
     this.props.requestEvent(this.props.match.params.eventId);
   }
 

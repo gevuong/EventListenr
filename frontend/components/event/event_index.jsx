@@ -8,6 +8,7 @@ class EventIndex extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.requestAllEvents();
     // test this.props.requestAllEvents().then(events => (console.log(events)))
   }
