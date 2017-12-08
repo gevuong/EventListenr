@@ -22,6 +22,17 @@ class EventForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  // componentDidMount() {
+  //   this.props.clearEventErrors();
+  // }
+
+  componentWillReceiveProps(nextProps) {
+    console.log("EventReceiveProps: ", nextProps);
+    if (this.props.location.pathname !== nextProps.location.pathname) {
+      this.props.clearEventErrors();
+    }
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const event = Object.assign({}, this.state);
@@ -43,9 +54,9 @@ class EventForm extends Component {
   renderEventErrors() {
     return (
       <div className="event-errors-container">
-        {this.props.errors.map((error, idx) => (
-          <li>
-            { errors }
+        {this.props.eventErrors.map((error, idx) => (
+          <li className="event-error-li" key={idx}>
+            { error }
           </li>
           ))
         }
@@ -56,7 +67,7 @@ class EventForm extends Component {
   render() {
     const { title, description, location, date_time, image_url, ticket_price, ticket_quantity } = this.state;
 
-    console.log("this.props: ", this.props);
+    console.log("eventform_props: ", this.props);
     return (
       <div>
         <header>
@@ -73,7 +84,7 @@ class EventForm extends Component {
                 <span className="number">1</span>
                 <span className="eventDetails">Event Details</span>
               </div>
-
+              { this.renderEventErrors() }
               <label className="event-field-label">
                 EVENT TITLE
                 <span className="asterisk"> *</span>
@@ -176,20 +187,3 @@ class EventForm extends Component {
 }
 
 export default EventForm;
-//
-// <label className="event-field-label">Price</label>
-//   <input
-//     className="event-input"
-//     type="number"
-//     value={ticket_price}
-//     onChange={this.update('ticket_price')}
-//   />
-// <br/>
-// <label className="event-field-label">Quantity available</label>
-//   <input
-//     className="event-input"
-//     type="number"
-//     value={ticket_quantity}
-//     onChange={this.update('ticket_quantity')}
-//   />
-// </div>

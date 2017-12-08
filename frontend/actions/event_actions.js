@@ -40,7 +40,9 @@ export const requestAllEvents = () => dispatch => {
       dispatch(receiveAllEvents(events)),
       dispatch(clearEventErrors())
     ),
-    errors => dispatch(receiveEventErrors(errors))
+    error => (
+      dispatch(receiveEventErrors(error.responseJSON))
+    )
   );
 };
 
@@ -48,29 +50,41 @@ export const requestEvent = id => dispatch => (
   EventAPIUtil.fetchEvent(id).then(event => (
     dispatch(receiveEvent(event)),
     dispatch(clearEventErrors())
-  )),
-    errors => dispatch(receiveEventErrors(errors))
+    ),
+    error => (
+      dispatch(receiveEventErrors(error.responseJSON))
+    )
+  )
 );
 
 export const createEvent = event => dispatch => (
-  EventAPIUtil.createEvent(event).then(event => (               dispatch(receiveEvent(event)),
-  dispatch(clearEventErrors())
-  )),
-  errors => dispatch(receiveEventErrors(errors.responseJSON))
+  EventAPIUtil.createEvent(event).then(event => (
+    dispatch(receiveEvent(event)),
+    dispatch(clearEventErrors())
+  ), error => (
+    dispatch(receiveEventErrors(error.responseJSON))
+    )
+  )
 );
 
 export const deleteEvent = event => dispatch => (
   EventAPIUtil.deleteEvent(event.id).then(event => (
     dispatch(removeEvent(event)),
     dispatch(clearEventErrors())
-  )),
-    errors => dispatch(receiveEventErrors(errors.responseJSON))
+  ),
+    error => (
+      dispatch(receiveEventErrors(error.responseJSON))
+    )
+  )
 );
 
 export const editEvent = event => dispatch => (
   EventAPIUtil.updateEvent(event.id).then(event => (
     dispatch(receiveEvent(event)),
     dispatch(clearEventErrors())
-  )),
-    errors => dispatch(receiveEventErrors(errors))
+  ),
+    error => (
+      dispatch(receiveEventErrors(error.responseJSON))
+    )
+  )
 );

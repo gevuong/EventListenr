@@ -37,11 +37,12 @@ class SessionForm extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log("sessionReceiveProps: ", nextProps);
     if (this.props.location.pathname !== nextProps.location.pathname) {
       this.props.clearErrors();
     }
   }
-  // supposed to run everytime your prop changes, but it's not.not called when component initially mounts.
+  // supposed to run everytime your prop changes, but it's not called when component initially mounts.
   // componentWillReceiveProps(nextProps) {
   //
   //     console.log(nextProps);
@@ -91,16 +92,28 @@ class SessionForm extends Component {
   }
 
   renderErrors() {
-    // console.log("errors: ", this.props.errors);
-    return (
-      <div className="errors-container">
-        {this.props.errors.map((error, idx) => (
-          <li className="errors" key={`error-${idx}`}>
-            { error }
-          </li>
-        ))}
-      </div>
-    );
+    if (this.props.errors === undefined) {
+      this.props.errors = [];
+      return (
+        <div className="errors-container">
+          {this.props.errors.map((error, idx) => (
+            <li className="errors" key={`error-${idx}`}>
+              { error }
+            </li>
+          ))}
+        </div>
+      );
+    } else {
+      return (
+        <div className="errors-container">
+          {this.props.errors.map((error, idx) => (
+            <li className="errors" key={`error-${idx}`}>
+              { error }
+            </li>
+          ))}
+        </div>
+      );
+    }
   }
 
   guestLogin(e) {
@@ -130,8 +143,10 @@ class SessionForm extends Component {
   render() {
     const { formType } = this.props;
     // console.log('formtype: ', formType);
+    console.log("session props: ", this.props);
 
     let button_text = this.props.formType === 'login' ? "Sign in" : "Create Account";
+    
     return (
       <div>
         <NavbarContainer />
@@ -187,7 +202,9 @@ class SessionForm extends Component {
                   </div>
                 </li>
                 <li>
-                  <div className="change-form-link">{ this.changeFormLink() }</div>
+                  <div className="change-form-link">
+                    { this.changeFormLink() }
+                  </div>
                 </li>
               </ul>
             </form>

@@ -39,7 +39,7 @@ export const deleteEvent = id => (
 
 // window.fetchAllEvents = fetchAllEvents;
 // window.fetchEvent = fetchEvent;
-// window.createEvent = createEvent;
+window.createEvent = createEvent;
 // window.updateEvent = updateEvent;
 // window.deleteEvent = deleteEvent;
 
