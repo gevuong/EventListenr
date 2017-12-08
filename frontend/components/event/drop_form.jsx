@@ -40,7 +40,7 @@ class DropForm extends React.Component {
 
   fileUpload(){
     return(
-      <div className="FileUpload">
+      <div className="file-upload">
         <Dropzone
           className="dropzone"
           multiple={false}
@@ -57,16 +57,17 @@ class DropForm extends React.Component {
   displayFile() {
     return(
       <div>
-        {this.state.uploadedFileCloudinaryUrl === '' ? null :
-        <div >
-          <img src={this.state.uploadedFileCloudinaryUrl} />
-        </div>}
+        {this.state.uploadedFileCloudinaryUrl === '' ?
+          null
+          :
+          <img id="event-form-img" src={this.state.uploadedFileCloudinaryUrl} />
+        }
       </div>
     );
   }
 
   render() {
-    const displayType = this.state.uploadedFileCloudinaryUrl ?  this.displayFile() : this.fileUpload();
+    const displayType = this.state.uploadedFileCloudinaryUrl ? this.displayFile() : this.fileUpload();
     return(
       <div>
         {displayType}

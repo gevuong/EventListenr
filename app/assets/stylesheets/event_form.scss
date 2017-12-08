@@ -61,6 +61,7 @@
 
   li {
     color: red;
+    list-style-type: none;
   }
 }
 
@@ -80,7 +81,7 @@
   box-shadow: 0 0 0 1px #7aa7cf, 0 0 4px 0 #3d96e3;
 }
 
-.FileUpload {
+.file-upload {
   border: 1px solid #D2D6DF;
   background-color: white;
   border-radius: 5px;
@@ -96,6 +97,16 @@
   margin: 10px;
   border: 2px dashed #D2D6DF;
   border-radius: 3px;
+  cursor: pointer;
+}
+
+.dropzone:hover {
+  border: 2px dashed #0278b8;
+}
+
+#event-form-img {
+  width: 408px;
+  height: 212px;
 }
 
 .fa-camera {
@@ -228,23 +239,7 @@
   background-color: #00451b;
 }
 
-// .ticketTypeButton {
-//   border: 2px solid #0278b8;
-//   color: #0278b8;
-//   padding: 5px 18px;
-//   margin-left: 10px;
-//   line-height: 30px;
-//   border-radius: 3px;
-//   width: 100px;
-  // background-color: transparent;
-//
-// }
-//
-// .ticketTypeButton:hover {
-//   background-color: #013653;
-//   color: white;
-//
-// }
+
 // .image-upload-form {
 //   border: 1px dotted #D2D6DF;
 // }

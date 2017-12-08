@@ -34,9 +34,11 @@ class EventForm extends Component {
   // }
 
   handleSubmit(e) {
+    console.log("handleSubmit");
     e.preventDefault();
     const event = Object.assign({}, this.state);
-    this.props.createEvent(event);
+    this.props.createEvent(event).then(action => console.log(action))
+    .fail(() => setTimeout(() => window.scrollTo(0,0), 500)); // if fail, scrolls to top of page
   }
 
   update(events) {
@@ -69,8 +71,7 @@ class EventForm extends Component {
 
     // convert Date object to string to create DateTime input restriction, HTML5 feature for input tag, type="datetime-local"
     let dateTime = JSON.stringify(new Date()).split(".")[0].slice(1,-3);
-    // console.log("eventform_props: ", this.props);
-    // console.log(dateTime);
+
     return (
       <div>
         <header>
