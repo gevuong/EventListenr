@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: events
+#
+#  id              :integer          not null, primary key
+#  title           :string           not null
+#  location        :string           not null
+#  description     :string           not null
+#  date_time       :datetime         not null
+#  image_url       :string           not null
+#  ticket_price    :integer          not null
+#  ticket_quantity :integer          not null
+#  organizer_id    :integer          not null
+#  category_id     :integer          default([]), is an Array
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 # This model initially had no columns defined. If you add columns to the

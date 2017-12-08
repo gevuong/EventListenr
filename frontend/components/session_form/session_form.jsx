@@ -37,7 +37,7 @@ class SessionForm extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log("sessionReceiveProps: ", nextProps);
+    // console.log("sessionReceiveProps: ", nextProps);
     if (this.props.location.pathname !== nextProps.location.pathname) {
       this.props.clearErrors();
     }
@@ -143,10 +143,10 @@ class SessionForm extends Component {
   render() {
     const { formType } = this.props;
     // console.log('formtype: ', formType);
-    console.log("session props: ", this.props);
+    // console.log("session props: ", this.props);
 
     let button_text = this.props.formType === 'login' ? "Sign in" : "Create Account";
-    
+
     return (
       <div>
         <NavbarContainer />

@@ -56,16 +56,28 @@
   letter-spacing: 1px;
 }
 
+.event-errors-container {
+  padding-top: 13px;
+
+  li {
+    color: red;
+  }
+}
+
 .event-input {
   border: 1px solid #D2D6DF;
-  // color: #BBBEC3;
   background-color: white;
   width: 77%;
   margin-top: 5px;
   padding: 9px 12px;
-  // background-color: white;
   line-height: 25px;
   border-radius: 3px;
+}
+
+.event-input:focus {
+  border-color: #7aa7cf;
+  outline: none;
+  box-shadow: 0 0 0 1px #7aa7cf, 0 0 4px 0 #3d96e3;
 }
 
 .FileUpload {
@@ -120,6 +132,12 @@
   padding: 9px;
 }
 
+.event-input-description:focus {
+  border-color: #7aa7cf;
+  outline: none;
+  box-shadow: 0 0 0 1px #7aa7cf, 0 0 4px 0 #3d96e3;
+}
+
 .ticketDetailsDiv {
   border: 1px solid #D2D6DF;
   border-radius: 3px;
@@ -154,9 +172,14 @@
   border-radius: 3px;
 }
 
+.event-input-quantity:focus {
+  border-color: #7aa7cf;
+  outline: none;
+  box-shadow: 0 0 0 1px #7aa7cf, 0 0 4px 0 #3d96e3;
+}
+
 .event-input-price {
   border: 1px solid #D2D6DF;
-  color: #BBBEC3;
   background-color: white;
   width: 140px;
   margin: 10px 0px;
@@ -164,6 +187,12 @@
   padding: 9px 12px;
   line-height: 25px;
   border-radius: 3px;
+}
+
+.event-input-price:focus {
+  border-color: #7aa7cf;
+  outline: none;
+  box-shadow: 0 0 0 1px #7aa7cf, 0 0 4px 0 #3d96e3;
 }
 
 .eventLiveDiv {

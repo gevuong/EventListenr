@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: tickets
+#
+#  id         :integer          not null, primary key
+#  event_id   :integer          not null
+#  user_id    :integer          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  quantity   :integer          not null
+#
+
 class Ticket < ApplicationRecord
   validates :event_id, :user_id, presence: true
 

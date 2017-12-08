@@ -1,5 +1,21 @@
+# == Schema Information
+#
+# Table name: events
+#
+#  id              :integer          not null, primary key
+#  title           :string           not null
+#  location        :string           not null
+#  description     :string           not null
+#  date_time       :datetime         not null
+#  image_url       :string           not null
+#  ticket_price    :integer          not null
+#  ticket_quantity :integer          not null
+#  organizer_id    :integer          not null
+#  category_id     :integer          default([]), is an Array
+#
+
 class Event < ApplicationRecord
-  validates :title, :description, :location, :date_time, :ticket_price, :organizer_id, :ticket_quantity, presence: true
+  validates :title, :location, :description, :date_time, :image_url, :ticket_price, :ticket_quantity, :organizer_id, presence: true
 
   belongs_to :organizer,
   primary_key: :id,

@@ -26,12 +26,12 @@ class EventForm extends Component {
   //   this.props.clearEventErrors();
   // }
 
-  componentWillReceiveProps(nextProps) {
-    console.log("EventReceiveProps: ", nextProps);
-    if (this.props.location.pathname !== nextProps.location.pathname) {
-      this.props.clearEventErrors();
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   console.log("EventReceiveProps: ", nextProps);
+  //   if (this.props.location.pathname !== nextProps.location.pathname) {
+  //     this.props.clearEventErrors();
+  //   }
+  // }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -67,7 +67,10 @@ class EventForm extends Component {
   render() {
     const { title, description, location, date_time, image_url, ticket_price, ticket_quantity } = this.state;
 
-    console.log("eventform_props: ", this.props);
+    // convert Date object to string to create DateTime input restriction, HTML5 feature for input tag, type="datetime-local"
+    let dateTime = JSON.stringify(new Date()).split(".")[0].slice(1,-3);
+    // console.log("eventform_props: ", this.props);
+    // console.log(dateTime);
     return (
       <div>
         <header>
@@ -105,7 +108,7 @@ class EventForm extends Component {
               <input
                 className="event-input"
                 type="text"
-                value={location}
+                value={ location }
                 onChange={this.update('location')}
                 placeholder='Specify where it is held'
               />
@@ -118,7 +121,8 @@ class EventForm extends Component {
               <input
                 className="event-input"
                 type="datetime-local"
-                value={date_time}
+                value={ date_time }
+                min={ dateTime }
                 onChange={this.update('date_time')}
               />
               <br/>
@@ -138,7 +142,7 @@ class EventForm extends Component {
               <textarea
                 className="event-input-description"
                 type="text"
-                value={description}
+                value={ description }
                 onChange={this.update('description')}
               />
               <br/>
@@ -151,7 +155,7 @@ class EventForm extends Component {
                 <div className="ticketTitleDiv">
                   <span className='quantity'>Quantity Available</span>
                   <span className="asterisk">  *</span>
-                  <span className='price'>Price </span>
+                  <span className='price'>Price</span>
                   <span className="asterisk">  *</span>
                 </div>
                 <div className='ticketsDiv'>
@@ -159,14 +163,14 @@ class EventForm extends Component {
                     className="event-input-quantity"
                     type="text"
                     placeholder="100"
-                    value={ticket_quantity}
+                    value={ ticket_quantity }
                     onChange={this.update('ticket_quantity')}
                     />
                   <input
                     className="event-input-price"
                     type="text"
                     placeholder="$0"
-                    value={ticket_price}
+                    value={ ticket_price }
                     onChange={this.update('ticket_price')}
                     ></input>
                 </div>
