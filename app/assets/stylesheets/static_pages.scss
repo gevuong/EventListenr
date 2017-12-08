@@ -25,6 +25,28 @@
   padding-left: 10px;
 }
 
+.carousel-slide-title {
+  color: white;
+  font-size: 25px;
+  align-content: center;
+  font-family: "Benton Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  opacity: 1;
+  z-index: 10000;
+}
+
+.slick-prev {
+  left: -25px;
+  // font-size: 42px;
+  // width: 0;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 42px;
+  line-height: 1;
+  opacity: 0.75;
+  color: #fff;
+}
+
 .splash-image {
   height: 700px;
   width: 100%;
