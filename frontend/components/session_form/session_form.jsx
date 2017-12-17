@@ -187,7 +187,7 @@ class SessionForm extends Component {
                       value={this.state.password}
                       onChange={this.update('password')}
                       className="username-password-input"
-                      placeholder="password"
+                      placeholder="password (min. 6 character)"
                     />
                   </div>
                 </li>
