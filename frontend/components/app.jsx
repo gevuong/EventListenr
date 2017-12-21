@@ -1,8 +1,9 @@
 import React from 'react';
-import NavbarContainer from './navbar/navbar_container';
 import { Route, Switch } from 'react-router-dom';
-import SessionFormContainer from './session_form/session_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
+
+import NavbarContainer from './navbar/navbar_container';
+import SessionFormContainer from './session_form/session_form_container';
 import EventFormContainer from './event/event_form_container';
 import EventShowContainer from './event/event_show_container';
 import UserProfileContainer from './user/profile_container';

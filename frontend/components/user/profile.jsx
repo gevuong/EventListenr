@@ -1,4 +1,4 @@
-// Libraries
+// Libs
 import React, { Component } from 'react';
 import { Link, NavLink, Route, Redirect } from 'react-router-dom';
 
