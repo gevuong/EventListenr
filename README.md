@@ -1,12 +1,13 @@
-# EventListenr
+# Eventlistenr
 
-[EventListenr Live](https://eventlistenr.herokuapp.com/)
+[Eventlistenr Live](https://eventlistenr.herokuapp.com/)
+[Eventlistenr Live 2](https://eventlistenr1.herokuapp.com/)
 
-EventListenr is a single-page web application inspired by Eventbrite, enabling users to create secure accounts, host, bookmark, and register for events. The app was built using Ruby on Rails, React/Redux, and PostgreSQL.
+Eventlistenr is a single-page web application platform inspired by Eventbrite, enabling users to create secure accounts, host, bookmark, and register for events.
 
 
 ## Technologies
-The backend architecture uses Rails 5.0.4's MVC web framework to fetch and store data to PostgreSQL database. The front end application uses React/Redux.
+Built using Ruby on Rails MVC framework for the back-end API layer with PostgreSQL, and React with Redux for the front-end UI layer.
 
 
 ## Features and Implementation
@@ -18,26 +19,28 @@ The backend architecture uses Rails 5.0.4's MVC web framework to fetch and store
 
 
 ### Home Page
-![EventListenr Home page]
+![Eventlistenr Home page](images/splash_page_rev1.png)
 
 ### User Login/Signup format
-![EventListenr]
+![Eventlistenr](images/session_form_rev1.png)
 
 ### Event Show Page
-![EventListenr]
+![Eventlistenr](images/event_show_rev1.png)
 
 ### Create Events
+![Eventlistenr](images/create_event_form.png)
 User can create events. User created events immediately show on the home page. Images can be uploaded via drag and drop feature using React Dropzone.
 
 ### Bookmarking Events
 User can bookmark/unbookmark events. Bookmarked events are shown on the User Dashboard.
 
 ### Registering/Ticketing Events
+![Eventlistenr](images/ticket_form_rev1.png)
 User can "register" to events by "purchasing" tickets to events.
 Events with purchased tickets appear on the User Dashboard.
 
 ### User Dashboard
-![EventListenr User Dashboard]
+![Eventlistenr User Dashboard](images/user_profile_rev1.png)
 
 ## Additional Resources
 * [View Wireframes](https://github.com/gevuong/EventListenr/tree/master/docs/wireframes)
