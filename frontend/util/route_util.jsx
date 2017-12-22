@@ -27,7 +27,6 @@ const mapStateToProps = state => (
 );
 
 export const AuthRoute = withRouter(connect(mapStateToProps, null)(Auth));
-
 export const ProtectedRoute = withRouter(connect(mapStateToProps, null)(Protected));
 
 // bootstrapping current user

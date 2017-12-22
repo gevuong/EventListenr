@@ -4,44 +4,53 @@
 
 [Eventlistenr Live 2](https://eventlistenr1.herokuapp.com/)
 
-Eventlistenr is a single-page web application platform inspired by Eventbrite, enabling users to create secure accounts, host, bookmark, and register for events.
+Eventlistenr is a single-page web application inspired by Eventbrite. The platform enables users to create secure accounts, host, bookmark, and register to events.
 
 
 ## Technologies
 Built using Ruby on Rails MVC framework for the back-end API layer with PostgreSQL, and React with Redux for the front-end UI layer.
 
 
-## Features and Implementation
-* Secure user accounts, using front-end and back-end user authentication using BCrypt
+## Notable Features and Implementation
+### User Login/Signup format
+* Secure user accounts with front-end user authentication using BCrypt
+![Session Form](docs/images/session_form_rev1.gif)
+
+* Implemented `AuthRoute` to ensure user cannot visit `/#/login` and `/#/signup` if user is already signed in, and a `ProtectedRoute` to redirect user to the `/#/login` page if user wants to perform an action (i.e. create, bookmark, or register to an event) that requires the user to login. Both routes are then mapped as props to allow other React components to access it.
+![Front End Auth](docs/images/front_end_auth.png)
+
+
+### Create Events
+![Event form](docs/images/create_event_form.png)
 * User has the ability to create events
-* User can bookmark/unbookmark events
-* User can purchase tickets to events
-* User Dashboard displays purchased tickets and bookmarked events.
+User can create events. User created events immediately show on the home page. Images can be uploaded via drag and drop feature using React Dropzone.
+* Technical Challenge: Dropzone
 
 
 ### Home Page
-![Eventlistenr Home page](docs/images/splash_page_rev1.png)
+![Home page](docs/images/splash_page_rev1.png)
 
-### User Login/Signup format
-![Eventlistenr](docs/images/session_form_rev1.png)
 
 ### Event Show Page
-![Eventlistenr](docs/images/event_show_rev1.png)
+![Show page](docs/images/event_show_rev1.png)
 
-### Create Events
-![Eventlistenr](docs/images/create_event_form.png)
-User can create events. User created events immediately show on the home page. Images can be uploaded via drag and drop feature using React Dropzone.
 
 ### Bookmarking Events
-User can bookmark/unbookmark events. Bookmarked events are shown on the User Dashboard.
+* User can bookmark/unbookmark events. Bookmarked events are shown on the User Dashboard.
+
 
 ### Registering/Ticketing Events
+User can register to events.
 ![Eventlistenr](docs/images/ticket_form_rev1.png)
-User can "register" to events by "purchasing" tickets to events.
-Events with purchased tickets appear on the User Dashboard.
+Registered events appear on the User Dashboard.
+* User can purchase tickets to events.
+
 
 ### User Dashboard
-![Eventlistenr User Dashboard](docs/images/user_profile_rev1.png)
+* Displays registered, bookmarked, and organized events.
+![User Dashboard](docs/images/user_profile_rev1.png)
+
+
 
 ## Additional Resources
 * [View Wireframes](https://github.com/gevuong/EventListenr/tree/master/docs/wireframes)
