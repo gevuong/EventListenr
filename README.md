@@ -16,12 +16,12 @@ Built using Ruby on Rails MVC framework for the back-end API layer with PostgreS
 * Secure user accounts with front-end user authentication using BCrypt
 ![Session Form](docs/images/session_form_rev1.gif)
 
-* Implemented `AuthRoute` to ensure user cannot visit `/#/login` and `/#/signup` if user is already signed in, and a `ProtectedRoute` to redirect user to the `/#/login` page if user wants to perform an action (i.e. create, bookmark, or register to an event) that requires the user to login. Both routes are then mapped as props to allow other React components to access it.
+* Implemented `AuthRoute` to ensure user cannot visit `/#/login` and `/#/signup` if user is already signed in, and a `ProtectedRoute` to redirect user to the `/#/login` page if user wants to perform an action (i.e. create, bookmark, or register to an event) that requires the user to login.
 ![Front End Auth](docs/images/front_end_auth.png)
 
 
 ### Create Events
-![Event form](docs/images/create_event_form.png)
+![Event form](docs/images/event_form_rev1.gif)
 * User has the ability to create events
 User can create events. User created events immediately show on the home page. Images can be uploaded via drag and drop feature using React Dropzone.
 * Technical Challenge: Dropzone
@@ -41,14 +41,14 @@ User can create events. User created events immediately show on the home page. I
 
 ### Registering/Ticketing Events
 User can register to events.
-![Eventlistenr](docs/images/ticket_form_rev1.png)
+![Eventlistenr](docs/images/ticket_form_rev1.gif)
 Registered events appear on the User Dashboard.
 * User can purchase tickets to events.
 
 
 ### User Dashboard
 * Displays registered, bookmarked, and organized events.
-![User Dashboard](docs/images/user_profile_rev1.png)
+![User Dashboard](docs/images/user_profile_rev1.gif)
 
 
 
