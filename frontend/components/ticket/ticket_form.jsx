@@ -21,15 +21,8 @@ class TicketForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // const { currentUser } = this.props;
-    // if (currentUser.username === undefined) {
-    //
-    // }
-
     let ticket = Object.assign({}, this.state);
-    // console.log("ticket: ", ticket);
     ticket.event_id = this.props.event.id;
-    // console.log("checkout: ", this.props);
     this.props.createTicket(ticket)
     .then(() => {
       this.props.closeModal();

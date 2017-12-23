@@ -16,40 +16,44 @@ Built using Ruby on Rails MVC framework for the back-end API layer with PostgreS
 * Secure user accounts with front-end user authentication using BCrypt
 ![Session Form](docs/images/session_form_rev1.gif)
 
-* Implemented `AuthRoute` to ensure user cannot visit `/#/login` and `/#/signup` if user is already signed in, and a `ProtectedRoute` to redirect user to the `/#/login` page if user wants to perform an action (i.e. create, bookmark, or register to an event) that requires the user to login.
+* Implement `AuthRoute` to ensure user cannot visit `/#/login` and `/#/signup` if user is already signed in, and a `ProtectedRoute` to redirect user to `/#/login` page if user wants to create, bookmark, or register to an event. Auth and Protected functions are presentational components, so a connect() method provided by React Redux is used to create a container component to connect these two components to Redux.
 ![Front End Auth](docs/images/front_end_auth.png)
+![Front End Auth](docs/images/auth_route.png)
 
 
 ### Create Events
+* User has the ability to create events. Images can be uploaded via drag and drop feature using React Dropzone.
 ![Event form](docs/images/event_form_rev1.gif)
-* User has the ability to create events
-User can create events. User created events immediately show on the home page. Images can be uploaded via drag and drop feature using React Dropzone.
-* Technical Challenge: Dropzone
+
+* Technical Challenge: Drag and Drop Implementation: I used a client-side HTTP request library called SuperAgent, to create a POST request to Cloudinary, attaching Cloudinary's upload preset and file required to handle the image upload using .field() method. Next, a conditional statement was used to check if the response received was an empty URL. If it wasn't, then the image was uploaded successfully and Cloudinary generated a custom URL.
+![Event form](docs/images/drop_form.png)
 
 
 ### Home Page
+* Contains a slider using React Slick to display splash page images. Immediately after EventIndex component is mounted, a fetch request is made for all events, and each event is passed as a prop to the event index item component to be rendered.
 ![Home page](docs/images/splash_page_rev1.png)
 
 
 ### Event Show Page
+* When the EventShow component is mounted, a requestEvent action is dispatched, sending an AJAX request to retrieve the event based on event id.  
 ![Show page](docs/images/event_show_rev1.png)
 
 
 ### Bookmarking Events
-* User can bookmark/unbookmark events. Bookmarked events are shown on the User Dashboard.
+* A handleClick event is defined, where as long as there exists a currentUser, a bookmark instance can be created or deleted. This is done by dispatching the createBookmark or deleteBookmark action, where the event is passed as an argument. If user is not logged in, the user is redirected to the login page via Link tag on the bookmark icon. Bookmarked events are shown on the User Dashboard.
+![Bookmark](docs/images/bookmarking.png)
 
 
-### Registering/Ticketing Events
-User can register to events.
+### Registering to Events
 ![Eventlistenr](docs/images/ticket_form_rev1.gif)
-Registered events appear on the User Dashboard.
-* User can purchase tickets to events.
+* When user checkouts after selecting number of tickets, default rendering is first prevented, a ticket object is created, containing the event_id and updated ticket quantity (due to the .handleChange() method). Next, ticket is passed as an argument to the createTicket action and is dispatched. A .then() promise is appended to close the modal if ticket registration is successful. Otherwise, if the user is not logged in, a .catch() promise is appended to redirect user to the login page. Registered events appear on the User Dashboard.
+![Eventlistenr](docs/images/ticket_form_code.png)
 
 
 ### User Dashboard
-* Displays registered, bookmarked, and organized events.
+* Using react router, four additional routes were created to allow user to navigate through registered, bookmarked, and organized event components. By default when user accesses profile component, the url is redirected to ticketed events component.
 ![User Dashboard](docs/images/user_profile_rev1.gif)
-
+![User Dashboard](docs/images/profile_routes.png)
 
 
 ## Additional Resources

@@ -1,25 +1,26 @@
-import React from 'react';
-import request from 'superagent';
-import Dropzone from 'react-dropzone';
+import React, { Component } from 'react';
+import request from 'superagent'; // https://github.com/visionmedia/superagent
+import Dropzone from 'react-dropzone'; // https://github.com/react-dropzone/react-dropzone
+
 const CLOUDINARY_UPLOAD_PRESET = 'aopdku36';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dtluc0y85/image/upload';
 
-
-class DropForm extends React.Component {
+class DropForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      uploadedFileCloudinaryUrl: ''
+      uploadedFileCloudinaryUrl: '',
     };
   }
 
   onImageDrop(files) {
     this.setState({
-      uploadedFile: files[0]
+      uploadedFileCloudinaryUrl: files[0],
     });
     this.handleImageUpload(files[0]);
   }
 
+  // for more info: https://css-tricks.com/image-upload-manipulation-react/
   handleImageUpload(file) {
     let upload = request.post(CLOUDINARY_UPLOAD_URL)
                         .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
@@ -32,7 +33,7 @@ class DropForm extends React.Component {
       if (response.body.secure_url !== '') {
         this.props.updateUrl(response.body.secure_url);
         this.setState({
-          uploadedFileCloudinaryUrl: response.body.secure_url
+          uploadedFileCloudinaryUrl: response.body.secure_url,
         });
       }
     });

@@ -13,10 +13,6 @@ class EventIndex extends Component {
     // test this.props.requestAllEvents().then(events => (console.log(events)))
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   console.log("2", nextProps);
-  // }
-
   render() {
     // console.log("event_index: ", this.props);
     const { events } = this.props;
