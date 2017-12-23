@@ -8,7 +8,9 @@ Eventlistenr is a single-page web application inspired by Eventbrite. The platfo
 
 
 ## Technologies
-Built using Ruby on Rails MVC framework for the back-end API layer with PostgreSQL, and React with Redux for the front-end UI layer.
+* Ruby on Rails MVC framework
+* PostgreSQL
+* React.js with Redux
 
 
 ## Notable Features and Implementation
@@ -16,7 +18,7 @@ Built using Ruby on Rails MVC framework for the back-end API layer with PostgreS
 * Secure user accounts with front-end user authentication using BCrypt
 ![Session Form](docs/images/session_form_rev1.gif)
 
-* Implement `AuthRoute` to ensure user cannot visit `/#/login` and `/#/signup` if user is already signed in, and a `ProtectedRoute` to redirect user to `/#/login` page if user wants to create, bookmark, or register to an event. Auth and Protected functions are presentational components, so a connect() method provided by React Redux is used to create a container component to connect these two components to Redux.
+* Implement `AuthRoute` to ensure user cannot visit `/#/login` and `/#/signup` if user is already signed in, and a `ProtectedRoute` to redirect user to `/#/login` page if user wants to create, bookmark, or register to an event. Auth and Protected functions are presentational components, so a connect() method provided by React Redux library is used to create a container component to connect these two components to Redux. This allows the use of Auth and ProtectedRoute to be implemented in other React components.
 ![Front End Auth](docs/images/front_end_auth.png)
 ![Front End Auth](docs/images/auth_route.png)
 
@@ -27,12 +29,12 @@ Built using Ruby on Rails MVC framework for the back-end API layer with PostgreS
 
 * Technical Challenge: Drag and Drop Implementation:
 I used a client-side HTTP request library called SuperAgent, to create a POST request to Cloudinary, attaching Cloudinary's upload preset and file required to handle the image upload using .field() method. Next, a conditional statement was used to check if the response received was an empty URL. If it wasn't, then the image was uploaded successfully and Cloudinary generated a custom URL.
-![Event form](docs/images/drop_form.png)
+![Event form code](docs/images/drop_form.png)
 
 * Technical Challenge: Implementing the eventsReducer
-- Object.freeze() is used to ensure that state is never accidentally mutated (i.e. adding to new properties to object) It renders an object immutable. 
+- Object.freeze() is used to ensure that state is never accidentally mutated (i.e. adding to new properties to object) It renders an object immutable.
 - lodash, a JavaScript utility library and npm package is used to provide the merge() helper function, which is a quick and effective way to "deep dup" an object. Object.assign() only performs a "shallow dup" of an object, which can cause issues with deeply nested objects.
-![Event form](docs/images/event_reducer.png)
+![Event reducer](docs/images/event_reducer.png)
 
 ### Home Page
 * Contains a slider using React Slick to display splash page images. Immediately after EventIndex component is mounted, a fetch request is made for all events, and each event is passed as a prop through the .map() method to render multiple components in EventIndexItem. It is important to add a key prop when passing individual events to its child component because keys enable React to identify which items have changed, added, or removed, which can substantially improve rendering performance when dealing with large numbers of events.
