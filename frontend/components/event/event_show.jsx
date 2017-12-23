@@ -1,5 +1,8 @@
+// Libs
 import React, { Component } from 'react';
 import { withRouter, Link, Route } from 'react-router-dom';
+
+// Components
 import TicketFormContainer from '../ticket/ticket_container';
 import BookmarkContainer from '../bookmark/bookmark_container';
 import NavbarContainer from '../navbar/navbar_container';
@@ -17,7 +20,6 @@ class EventShow extends Component {
   }
 
   componentDidMount(){
-    // console.log("eventshow");
     window.scrollTo(0, 0);
     this.props.requestEvent(this.props.match.params.eventId);
   }
@@ -29,11 +31,6 @@ class EventShow extends Component {
   closeModal() {
     this.setState({modalIsOpen: false});
   }
-  // componentWillReceiveProps() {
-  //   if (!event) {
-  //     event = {};
-  //   }
-  // }
 
   // a render occurs when
   //1. a component is instantiated

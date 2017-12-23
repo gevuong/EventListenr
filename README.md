@@ -25,18 +25,24 @@ Built using Ruby on Rails MVC framework for the back-end API layer with PostgreS
 * User has the ability to create events. Images can be uploaded via drag and drop feature using React Dropzone.
 ![Event form](docs/images/event_form_rev1.gif)
 
-* Technical Challenge: Drag and Drop Implementation: I used a client-side HTTP request library called SuperAgent, to create a POST request to Cloudinary, attaching Cloudinary's upload preset and file required to handle the image upload using .field() method. Next, a conditional statement was used to check if the response received was an empty URL. If it wasn't, then the image was uploaded successfully and Cloudinary generated a custom URL.
+* Technical Challenge: Drag and Drop Implementation:
+I used a client-side HTTP request library called SuperAgent, to create a POST request to Cloudinary, attaching Cloudinary's upload preset and file required to handle the image upload using .field() method. Next, a conditional statement was used to check if the response received was an empty URL. If it wasn't, then the image was uploaded successfully and Cloudinary generated a custom URL.
 ![Event form](docs/images/drop_form.png)
 
+* Technical Challenge: Implementing the eventsReducer
+- Object.freeze() is used to ensure that state is never accidentally mutated (i.e. adding to new properties to object) It renders an object immutable. 
+- lodash, a JavaScript utility library and npm package is used to provide the merge() helper function, which is a quick and effective way to "deep dup" an object. Object.assign() only performs a "shallow dup" of an object, which can cause issues with deeply nested objects.
+![Event form](docs/images/event_reducer.png)
 
 ### Home Page
-* Contains a slider using React Slick to display splash page images. Immediately after EventIndex component is mounted, a fetch request is made for all events, and each event is passed as a prop to the event index item component to be rendered.
+* Contains a slider using React Slick to display splash page images. Immediately after EventIndex component is mounted, a fetch request is made for all events, and each event is passed as a prop through the .map() method to render multiple components in EventIndexItem. It is important to add a key prop when passing individual events to its child component because keys enable React to identify which items have changed, added, or removed, which can substantially improve rendering performance when dealing with large numbers of events.
 ![Home page](docs/images/splash_page_rev1.png)
 
 
 ### Event Show Page
-* When the EventShow component is mounted, a requestEvent action is dispatched, sending an AJAX request to retrieve the event based on event id.  
 ![Show page](docs/images/event_show_rev1.png)
+* When the EventShow component is mounted, a requestEvent action is dispatched, sending an AJAX request with event_id is the params to retrieve the event from the backend. `ownProps` is then used to access the event id from the params property. The current user was mapped to props to render organizer of that event.
+![Show page](docs/images/event_show_container.png)
 
 
 ### Bookmarking Events
@@ -51,8 +57,8 @@ Built using Ruby on Rails MVC framework for the back-end API layer with PostgreS
 
 
 ### User Dashboard
-* Using react router, four additional routes were created to allow user to navigate through registered, bookmarked, and organized event components. By default when user accesses profile component, the url is redirected to ticketed events component.
 ![User Dashboard](docs/images/user_profile_rev1.gif)
+* Using react router, four additional routes were created to allow user to navigate through registered, bookmarked, and organized event components. By default when user accesses the profile component, the url is redirected to ticketed events component.
 ![User Dashboard](docs/images/profile_routes.png)
 
 

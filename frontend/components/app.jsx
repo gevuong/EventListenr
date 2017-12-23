@@ -1,7 +1,9 @@
+// Libs
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util.jsx';
 
+// Components
 import NavbarContainer from './navbar/navbar_container';
 import SessionFormContainer from './session_form/session_form_container';
 import EventFormContainer from './event/event_form_container';
