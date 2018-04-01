@@ -7,7 +7,7 @@ import logger from 'redux-logger';
 const middlewares = [thunk];
 
 if (process.env.NODE_ENV === 'development') {
-  const { logger } = rquire('redux-logger');
+  const { logger } = require('redux-logger');
   
   middlewares.push(logger);
 }

@@ -9,7 +9,9 @@
 @import 'tickets.scss';
 @import 'bookmarks.scss';
 
-// .login-input {
-//   border: none;
-//   border-bottom: 1px solid black;
-// }
+.error-loading {
+    text-align: center;
+    padding: 1em 2em;
+    font-family: "Montserrat", "Open Sans", "Helvetica Neue";
+    font-size: 18px;
+}

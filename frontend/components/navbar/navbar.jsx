@@ -37,11 +37,11 @@ class Navbar extends Component {
               <div className="dropdown-content">
                 <NavLink className="navlink-dropdown navlink-ticketed" to="/profile">
                   <div>Tickets</div>
-                  <div>{ticketedEvents.length}</div>
+                  {/*<div>{ticketedEvents.length}</div>*/}
                 </NavLink>
                 <NavLink className="navlink-dropdown navlink-saved" to="/profile/bookmarked">
                   <div>Saved</div>
-                  <div>{bookmarkedEvents.length}</div>
+                  {/*<div>{bookmarkedEvents.length}</div>*/}
                 </NavLink>
                 <NavLink className="navlink-dropdown navlink-organized" to="/profile/organized">
                   <div>Organized</div>

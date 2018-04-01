@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { createBookmark, deleteBookmark } from '../../actions/bookmark_actions';
 import Bookmark from './bookmark';
 
-// how does container have access to session and event again?
+// how does container have access to session and event again
 const mapStateToProps = ({ event, session }) => ({
   currentUser: session.currentUser || {bookmarks: []},
 });

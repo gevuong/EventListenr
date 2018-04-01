@@ -51,7 +51,7 @@ I used a client-side HTTP request library called SuperAgent, to create a POST re
 ### Event Show Page
 ![Show page](docs/images/event_show_rev1.png)
 
-* When the EventShow component is mounted, a requestEvent action is dispatched, sending an AJAX request with event_id is the params to retrieve the event from the backend. `ownProps` is then used to access the event id from the params property. The current user was mapped to props to render organizer of that event.
+* When the EventShow component is mounted, a requestEvent action is dispatched, sending an AJAX request with event_id as the params to retrieve the event from the backend. `ownProps` is then used to access the event id from the params property. The current user was mapped to props to render organizer of that event.
 
 ![Show page](docs/images/event_show_container.png)
 
