@@ -21,6 +21,7 @@ class TicketForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log("ticket_form handleSubmit props", this.props);
     let ticket = Object.assign({}, this.state);
     ticket.event_id = this.props.event.id;
     this.props.createTicket(ticket)

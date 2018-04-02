@@ -4,6 +4,7 @@ class Api::TicketsController < ApplicationController
     @ticket = Ticket.new(ticket_params)
     @ticket.user_id = current_user.id
     # ticket.event_id.find, subtract off quantity and save it
+    
     if @ticket.save
       # find corresponding event and decrease ticket amount
       @user = current_user

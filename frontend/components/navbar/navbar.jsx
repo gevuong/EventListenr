@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 
+import UpcomingEvents from '../user/upcoming_events';
+import BookmarkedEvents from '../user/bookmarked_events';
+import OrganizedEvents from '../user/organized_events';
+
 class Navbar extends Component {
   constructor(props) {
     super(props);
@@ -9,17 +13,16 @@ class Navbar extends Component {
 
   handleClick(e) {
     e.preventDefault();
-    // console.log("logout: ", this.props);
+    console.log("right before logout handleClick: ", this.props);
     this.props.logout()
-    .then(() => this.props.history.push("/")); // produces a console warning in dev mode when pushing same URL as URL you are on. Warning is disabled in prod mode.
+    .then(() => this.props.history.push("/")) // produces a console warning in dev mode when pushing same URL as URL you are on. Warning is disabled in prod mode.
   }
 
   render() {
-    // console.log("navbar: ", this.props);
-    // const { currentUser: { organized_events }, bookmarkedEvents, ticketedEvents } = this.props;
-    const { currentUser, bookmarkedEvents, ticketedEvents } = this.props;
-    const isLoggedIn = this.props.currentUser;
-    // console.log('loggedIn?: ', isLoggedIn);
+    console.log("navbar render props: ", this.props)
+    const { currentUser } = this.props;
+    const isLoggedIn = currentUser;
+    console.log('loggedIn? render navbar ', isLoggedIn);
     return (
       <div className="main-nav">
         <div className="left-nav">
@@ -31,21 +34,21 @@ class Navbar extends Component {
             <div className="dropdown" style={{float:"right"}}>
               <div className='navlink-container'>
                 <i className="fa fa-user-circle" aria-hidden="true"></i>
-                {this.props.currentUser.username}
+                {currentUser.username}
                 <i className="fa fa-angle-down" aria-hidden="true"></i>
               </div>
               <div className="dropdown-content">
                 <NavLink className="navlink-dropdown navlink-ticketed" to="/profile">
                   <div>Tickets</div>
-                  {/*<div>{ticketedEvents.length}</div>*/}
+
                 </NavLink>
                 <NavLink className="navlink-dropdown navlink-saved" to="/profile/bookmarked">
                   <div>Saved</div>
-                  {/*<div>{bookmarkedEvents.length}</div>*/}
+
                 </NavLink>
                 <NavLink className="navlink-dropdown navlink-organized" to="/profile/organized">
                   <div>Organized</div>
-                  {/*<div>{organized_events.length}</div>*/}
+
                 </NavLink>
                 <button className='logout-button-container' onClick={this.handleClick}>
                   Log out
@@ -58,8 +61,10 @@ class Navbar extends Component {
                 CREATE EVENT
               </div>
             </Link>
+
           </div>
-          ) :
+          )
+          :
           (
           <div className="right-nav">
             <Link to="/login">

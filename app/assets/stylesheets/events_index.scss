@@ -3,8 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //
 .event-index-wrapper {
-  // background: #f8f8fa;
-  background: #fff;
+  background: #f8f8fa;
 }
 .event-list-header {
   display: flex;
@@ -22,7 +21,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 55px;
+  padding-bottom: 55px;
 }
 
 .event-container {

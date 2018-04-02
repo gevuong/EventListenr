@@ -92,7 +92,9 @@ class SessionForm extends Component {
   }
 
   renderErrors() {
+      console.log("this.props.errors: ", this.props.errors)
     if (this.props.errors === undefined) {
+        console.log("enter errors undefined")
       this.props.errors = [];
       return (
         <div className="errors-container">
@@ -104,6 +106,7 @@ class SessionForm extends Component {
         </div>
       );
     } else {
+        console.log("enter errors defined")
       return (
         <div className="errors-container">
           {this.props.errors.map((error, idx) => (
@@ -142,8 +145,8 @@ class SessionForm extends Component {
 
   render() {
     const { formType } = this.props;
-    // console.log('formtype: ', formType);
-    // console.log("session props: ", this.props);
+    console.log('formtype: ', formType);
+    console.log("session props: ", this.props);
 
     let button_text = this.props.formType === 'login' ? "Sign in" : "Create Account";
 

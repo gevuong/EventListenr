@@ -17,7 +17,7 @@ const App = () => (
     <Switch>
       <Route exact path="/events/new" component={ EventFormContainer } />
       <Route path="/events/:eventId" component={ EventShowContainer } />
-      <ProtectedRoute path="/profile" component={ UserProfileContainer } />
+      <Route path="/profile" component={ UserProfileContainer } />
       <AuthRoute path="/login" component={ SessionFormContainer } />
       <AuthRoute path="/signup" component={ SessionFormContainer } />
       <Route path="/" component={ HomePage } />

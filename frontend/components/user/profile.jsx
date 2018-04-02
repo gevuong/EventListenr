@@ -14,21 +14,46 @@ class UserProfile extends Component {
   }
 
   componentDidMount() {
+    console.log("profile componentDidMount render props: ", this.props);
     this.props.requestAllEvents();
   }
 
   render() {
-    // console.log('userprofile_props: ', this.props);
-    const { currentUser, currentUser: { organized_events }, ticketedEvents, bookmarkedEvents } = this.props;
-    // console.log("currentUser: ", currentUser);
+    console.log('profile render props: ', this.props);
+    let bookmarkedEvents, ticketedEvents;
+    let { events, currentUser, organizedEvents, bookmarks, tickets } = this.props;
 
+    // prevents "Uncaught TypeError: Cannot convert undefined or null to object"
+    if (tickets === undefined) {
+        tickets = [];
+    }
+    console.log('profile render currentUser: ', currentUser);
+    console.log('profile render bookmarks: ', bookmarks);
+    console.log('profile render tickets: ', tickets);
+
+    if (currentUser) {
+        bookmarkedEvents = bookmarks.map((id) => {
+            return events[id] || [];
+        });
+        ticketedEvents = Object.keys(tickets).map((id) => {
+            return events[id] || [];
+        });
+    } else {
+        bookmarkedEvents = [];
+        ticketedEvents = [];
+    }
+
+    console.log("profile render organizedEvents1: ", organizedEvents);
+    console.log("profile render ticketedEvents: ", ticketedEvents);
+    console.log("profile render bookmarkedEvents: ", bookmarkedEvents);
     return(
       <div>
         <header>
           <NavbarContainer />
         </header>
+
         <div className='user-profile-container'>
-          <h1>{currentUser.username}</h1>
+          <h1>{currentUser ? currentUser.username : ""}</h1>
           <ul>
             <NavLink to="/profile/ticketed">
               <li>
@@ -44,7 +69,7 @@ class UserProfile extends Component {
             </NavLink>
             <NavLink to="/profile/organized">
               <li>
-                <h3>{organized_events.length}</h3>
+                <h3>{organizedEvents.length}</h3>
                 <h3>Organized Events</h3>
               </li>
             </NavLink>
@@ -62,7 +87,7 @@ class UserProfile extends Component {
         />
         <Route path={'/profile/organized'}
           render={ () => <OrganizedEvents
-          organizedEvents={organized_events} /> }
+          organizedEvents={organizedEvents} /> }
         />
       </div>
     );

@@ -114,13 +114,4 @@ class EventShow extends Component {
     }
 }
 
-// <Route path="/events/:eventId/tickets/new" component={ TicketForm } />
-
 export default EventShow;
-// console.log('match', this.props.match.params.eventId);
-// console.log('events', this.props.events);
-// console.log('event', event);
-// if (!event) {
-//   event = {};
-//   console.log("triggers?");
-// }

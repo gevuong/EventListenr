@@ -4,9 +4,9 @@ import Navbar from './navbar';
 
 const mapStateToProps = ({ event, session }) => ({
   currentUser: session.currentUser,
-  bookmarkedEvents: [],
-  ticketedEvents: [],
-  // currentUser: { organized_events: [] }
+  // bookmarkedEvents: [],
+  // ticketedEvents: [],
+  // currentUser: { organized_events: [] },
   // bookmarkedEvents: session.currentUser.bookmarks.map((id) => {
   //   return event.events[id] || {description: ""};
   // }),
