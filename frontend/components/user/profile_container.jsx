@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { requestAllEvents } from '../../actions/event_actions';
 
 const mapStateToProps = ({ event, session }) => ({
-    // console.log("profile_container, session: ", session)
   events: event.events,
   currentUser: session.currentUser,
   bookmarks: session.currentUser ? session.currentUser.bookmarks : [],

@@ -12,7 +12,7 @@ class EventShow extends Component {
     super(props);
 
     this.state = {
-      modalIsOpen: false
+      modalIsOpen: false,
     };
 
     this.closeModal = this.closeModal.bind(this);
@@ -40,7 +40,7 @@ class EventShow extends Component {
   render() {
     console.log('event_show render props: ', this.props);
     const { event, event: { organizer }, currentUser } = this.props;
-    let isLoggedIn = currentUser;
+    const isLoggedIn = currentUser;
     console.log("event_show isLoggedIn: ", isLoggedIn);
     console.log("event_show event: ", event);
 
@@ -75,6 +75,7 @@ class EventShow extends Component {
             key={ event.id }
           />
           <br />
+
           <div className="event-show-container">
             <div>
               <img className="show-page-image" src={ event.image_url } />
@@ -97,10 +98,13 @@ class EventShow extends Component {
 
           <div className="bookmark-register-container">
             <BookmarkContainer event={ event } key={ event.id }/>
-            <h3
-              className="register-button"
-              onClick={this.openModal}>REGISTER</h3>
+            { isLoggedIn ?
+              <h3 className="register-button" onClick={this.openModal}>REGISTER</h3>
+              :
+              <h3 className="register-button"><Link to="/login">REGISTER</Link></h3>
+            }
           </div>
+
           <div className="event-show-moreDetails">
             <div className="description-show-page">
               <h4 className="event-show-headers">DESCRIPTION</h4>
@@ -109,11 +113,12 @@ class EventShow extends Component {
 
             <div className="eventDateTimeLocation">
               <h4 className="event-show-headers">DATE AND TIME</h4>
-                <p className="date-location">{ dateTime }</p>
+              <p className="date-location">{ dateTime }</p>
               <h4 className="event-show-headers">LOCATION</h4>
-                <p className="date-location">{ event.location }</p>
+              <p className="date-location">{ event.location }</p>
             </div>
           </div>
+
         </div>
       </div>
       );

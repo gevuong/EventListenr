@@ -75,6 +75,16 @@
   min-width: 400px;
 }
 
+.upcoming-eventItem-container:hover {
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,0.15);
+
+  opacity: 1;
+  -webkit-transition-delay: 100ms;
+  transition-delay: 100ms;
+  -webkit-transition: opacity .45s cubic-bezier(0,0,.35,1);
+  transition: opacity .45s cubic-bezier(0,0,.35,1);
+}
+
 .upcoming-eventItem-img {
   object-fit: cover;
   height: 100px;

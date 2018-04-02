@@ -41,13 +41,13 @@ class EventForm extends Component {
       // }
     }
   }
-//
+
   handleSubmit(e) {
-    // console.log("handleSubmit1");
     e.preventDefault();
     const event = Object.assign({}, this.state);
     // this.props.createEvent(event).then(() => this.props.history.push(`/events/${this.props.event.event.id}`))
-    this.props.createEvent(event).then(() => this.props.history.push("/"))
+    this.props.createEvent(event)
+    .then(() => this.props.history.push("/profile/organized"))
     .fail(() => setTimeout(() => window.scrollTo(0,0), 500)); // if fail, scrolls to top of page
   }
 
@@ -65,11 +65,7 @@ class EventForm extends Component {
 
   renderEventErrors() {
     if (this.props.eventErrors === undefined) {
-      // this.props.eventErrors = [];
-      return (
-        <div>
-      </div>
-    );
+      return
     } else {
       return (
         <div className="event-errors-container">

@@ -22,11 +22,14 @@ class TicketForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     console.log("ticket_form handleSubmit props", this.props);
+
+    // create a ticket object before passing to createTicket()
     let ticket = Object.assign({}, this.state);
     ticket.event_id = this.props.event.id;
     this.props.createTicket(ticket)
     .then(() => {
       this.props.closeModal();
+      this.props.history.push("/profile");
       })
     .catch(this.props.history.push("/login"));
   }
