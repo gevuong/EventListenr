@@ -38,11 +38,11 @@ class EventShow extends Component {
   //3. when setState is called
 
   render() {
-    console.log('event_show render props: ', this.props);
+    // console.log('event_show render props: ', this.props);
     const { event, event: { organizer }, currentUser } = this.props;
     const isLoggedIn = currentUser;
-    console.log("event_show isLoggedIn: ", isLoggedIn);
-    console.log("event_show event: ", event);
+    // console.log("event_show isLoggedIn: ", isLoggedIn);
+    // console.log("event_show event: ", event);
 
     let date = new Date(event.date_time).toDateString();
     let weekday = date.slice(0, 3);

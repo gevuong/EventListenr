@@ -4,7 +4,7 @@ import EventIndexItem from '../event/event_index_item';
 import UpcomingEventItem from './upcoming_event_item';
 
 const OrganizedEvents = ({ organizedEvents }) => {
-  console.log("organizedEvents: ", organizedEvents);
+  // console.log("organizedEvents: ", organizedEvents);
 
   if (organizedEvents.length === 0) {
     return (

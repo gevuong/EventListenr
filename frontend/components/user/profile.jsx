@@ -14,12 +14,11 @@ class UserProfile extends Component {
   }
 
   componentDidMount() {
-    console.log("profile componentDidMount render props: ", this.props);
     this.props.requestAllEvents();
   }
 
   render() {
-    console.log('profile render props: ', this.props);
+    // console.log('profile render props: ', this.props);
     let bookmarkedEvents, ticketedEvents;
     let { events, currentUser, organizedEvents, bookmarks, tickets } = this.props;
 
@@ -27,9 +26,10 @@ class UserProfile extends Component {
     if (tickets === undefined) {
         tickets = [];
     }
-    console.log('profile render currentUser: ', currentUser);
-    console.log('profile render bookmarks: ', bookmarks);
-    console.log('profile render tickets: ', tickets);
+
+    // console.log('profile render currentUser: ', currentUser);
+    // console.log('profile render bookmarks: ', bookmarks);
+    // console.log('profile render tickets: ', tickets);
 
     if (currentUser) {
         bookmarkedEvents = bookmarks.map((id) => {
@@ -43,9 +43,10 @@ class UserProfile extends Component {
         ticketedEvents = [];
     }
 
-    console.log("profile render organizedEvents1: ", organizedEvents);
-    console.log("profile render ticketedEvents: ", ticketedEvents);
-    console.log("profile render bookmarkedEvents: ", bookmarkedEvents);
+    // console.log("profile render organizedEvents1: ", organizedEvents);
+    // console.log("profile render ticketedEvents: ", ticketedEvents);
+    // console.log("profile render bookmarkedEvents: ", bookmarkedEvents);
+
     return(
       <div>
         <header>

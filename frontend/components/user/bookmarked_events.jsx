@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import EventIndexItem from '../event/event_index_item';
 
 const BookmarkedEvents = ({ bookmarkedEvents }) => {
-  console.log("bookmarkedEvents: ", bookmarkedEvents);
+  // console.log("bookmarkedEvents: ", bookmarkedEvents);
 
   if (bookmarkedEvents.length === 0) {
     return (

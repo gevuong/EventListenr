@@ -27,14 +27,11 @@ class ModalForm extends Component {
     return (
       <div>
         <Modal className="modal"
-
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
-
           contentLabel="Example Modal"
         >
-
         </Modal>
       </div>
     );

@@ -12,7 +12,7 @@ const sessionReducer = ( state = nullUser, action ) => {
   switch(action.type){
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
-      console.log("session_reducer currentUser: ", currentUser);
+      // console.log("session_reducer currentUser: ", currentUser);
       return Object.assign({}, state, { currentUser });
     case RECEIVE_ERRORS:
       const errors = action.errors;

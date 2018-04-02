@@ -2,7 +2,7 @@ import React from 'react';
 import UpcomingEventItem from './upcoming_event_item';
 
 const UpcomingEvents = ({ ticketedEvents }) => {
-    console.log("ticketedEvents: ", ticketedEvents);
+    // console.log("ticketedEvents: ", ticketedEvents);
 
   if (ticketedEvents.length === 0) {
     return (

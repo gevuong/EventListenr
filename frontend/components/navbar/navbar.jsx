@@ -13,16 +13,17 @@ class Navbar extends Component {
 
   handleClick(e) {
     e.preventDefault();
-    console.log("right before logout handleClick: ", this.props);
+    // console.log("right before logout handleClick: ", this.props);
     this.props.logout()
     .then(() => this.props.history.push("/")) // produces a console warning in dev mode when pushing same URL as URL you are on. Warning is disabled in prod mode.
   }
 
   render() {
-    console.log("navbar render props: ", this.props)
+    // console.log("navbar render props: ", this.props)
     const { currentUser } = this.props;
     const isLoggedIn = currentUser;
-    console.log('loggedIn? render navbar ', isLoggedIn);
+    // console.log('loggedIn? render navbar ', isLoggedIn);
+
     return (
       <div className="main-nav">
         <div className="left-nav">
