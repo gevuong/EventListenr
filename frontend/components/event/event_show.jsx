@@ -38,8 +38,11 @@ class EventShow extends Component {
   //3. when setState is called
 
   render() {
-    // console.log('event show: ', this.props);
+    console.log('event_show render props: ', this.props);
     const { event, event: { organizer }, currentUser } = this.props;
+    let isLoggedIn = currentUser;
+    console.log("event_show isLoggedIn: ", isLoggedIn);
+    console.log("event_show event: ", event);
 
     let date = new Date(event.date_time).toDateString();
     let weekday = date.slice(0, 3);
@@ -62,6 +65,7 @@ class EventShow extends Component {
         <header>
           <NavbarContainer />
         </header>
+
         <div className="event-show-container-outer">
           <TicketFormContainer
             modalIsOpen={ this.state.modalIsOpen }
@@ -93,7 +97,9 @@ class EventShow extends Component {
 
           <div className="bookmark-register-container">
             <BookmarkContainer event={ event } key={ event.id }/>
-            <h3 className="register-button" onClick={ this.openModal }>REGISTER</h3>
+            <h3
+              className="register-button"
+              onClick={this.openModal}>REGISTER</h3>
           </div>
           <div className="event-show-moreDetails">
             <div className="description-show-page">

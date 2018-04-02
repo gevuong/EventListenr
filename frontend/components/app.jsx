@@ -15,9 +15,9 @@ import Footer from './home/footer';
 const App = () => (
   <div>
     <Switch>
-      <Route exact path="/events/new" component={ EventFormContainer } />
+      <ProtectedRoute exact path="/events/new" component={ EventFormContainer } />
       <Route path="/events/:eventId" component={ EventShowContainer } />
-      <Route path="/profile" component={ UserProfileContainer } />
+      <ProtectedRoute path="/profile" component={ UserProfileContainer } />
       <AuthRoute path="/login" component={ SessionFormContainer } />
       <AuthRoute path="/signup" component={ SessionFormContainer } />
       <Route path="/" component={ HomePage } />

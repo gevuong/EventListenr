@@ -10,16 +10,26 @@ class Bookmark extends Component {
   }
 
   bookmarkIcon() {
+    console.log("bookmark props: ", this.props);
+    const { currentUser } = this.props;
+    console.log("bookmark currentUser: ", currentUser);
+
     if ( this.props.currentUser.bookmarks.includes(this.props.event.id)) {
       return (
         <i className="fa fa-heart selected" aria-hidden="true"></i>
       );
     } else {
-      return (
-        <Link to="/login">
+      if (currentUser.id === undefined) {
+        return (
+          <Link to="/login">
+            <i className="fa fa-heart-o unselected" aria-hidden="true"></i>
+          </Link>
+        );
+      } else {
+        return (
           <i className="fa fa-heart-o unselected" aria-hidden="true"></i>
-        </Link>
-      );
+        );
+      }
     }
   }
 

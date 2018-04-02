@@ -33,10 +33,10 @@ class UserProfile extends Component {
 
     if (currentUser) {
         bookmarkedEvents = bookmarks.map((id) => {
-            return events[id] || [];
+            return events[id];
         });
         ticketedEvents = Object.keys(tickets).map((id) => {
-            return events[id] || [];
+            return events[id];
         });
     } else {
         bookmarkedEvents = [];
