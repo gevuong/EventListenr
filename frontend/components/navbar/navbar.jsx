@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 
-import UpcomingEvents from '../user/upcoming_events';
-import BookmarkedEvents from '../user/bookmarked_events';
-import OrganizedEvents from '../user/organized_events';
-
 class Navbar extends Component {
   constructor(props) {
     super(props);
