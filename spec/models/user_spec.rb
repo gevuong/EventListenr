@@ -4,7 +4,13 @@ RSpec.describe User, type: :model do
   # pending "add some examples to (or delete) #{__FILE__}"
   subject(:user) do
     FactoryBot.build(:user)
+
+    # alternative to FactoryBot
+    # User.create!(
+    # username: "gerald",
+    # password: "super_secret_password"
   end
+)
 
   it { should validate_presence_of(:username) }
   it { should validate_presence_of(:password_digest) }
