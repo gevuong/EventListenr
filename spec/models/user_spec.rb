@@ -10,7 +10,7 @@ RSpec.describe User, type: :model do
     # username: "gerald",
     # password: "super_secret_password"
   end
-)
+
 
   it { should validate_presence_of(:username) }
   it { should validate_presence_of(:password_digest) }
