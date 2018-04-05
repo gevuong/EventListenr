@@ -1,5 +1,8 @@
 {
   "name": "EventListenr",
+  "jest": {
+    "setupFiles": ["test-setup.js"]
+  },
   "version": "1.0.0",
   "description": "[Trello Link](https://trello.com/b/WcxLln60/eventlistenr)",
   "main": "index.js",
@@ -25,7 +28,7 @@
     "react-modal": "^2.2.2",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.2",
-    "react-slick": "^0.15.4",
+    "react-slick": "^0.23.1",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
@@ -34,6 +37,8 @@
     "webpack": "^3.3.0"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
     "jest": "^22.4.3"
   },
   "scripts": {
