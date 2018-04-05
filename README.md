@@ -1,5 +1,7 @@
 # Eventlistenr
 
+[![tested with rspec](https://img.shields.io/badge/tested%20with-rspec-brightgreen.svg)](https://github.com/rspec/rspec-rails)
+
 [Eventlistenr Live](https://eventlistenr.herokuapp.com/)
 
 [Eventlistenr Live 2](https://eventlistenr1.herokuapp.com/)
