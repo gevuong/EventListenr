@@ -32,7 +32,7 @@
     "jest": "^22.4.3"
   },
   "scripts": {
-    "test": "jests",
+    "test": "jest",
     "postinstall": "webpack",
     "heroku-postbuild": "webpack",
     "start": "webpack --w --progress"
