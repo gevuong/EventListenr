@@ -10,11 +10,9 @@ class Bookmark extends Component {
   }
 
   bookmarkIcon() {
-    // console.log("bookmark props: ", this.props);
     const { currentUser } = this.props;
-    // console.log("bookmark currentUser: ", currentUser);
 
-    if ( this.props.currentUser.bookmarks.includes(this.props.event.id)) {
+    if ( currentUser.bookmarks.includes(this.props.event.id)) {
       return (
         <i className="fa fa-heart selected" aria-hidden="true"></i>
       );
