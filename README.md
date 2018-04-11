@@ -15,7 +15,7 @@ Eventlistenr is a single-page web application inspired by Eventbrite. The platfo
 * React.js with Redux
 
 
-## Notable Features and Implementation
+## Features and Implementation
 ### User Login/Signup format
 * Secure user accounts with front-end user authentication using BCrypt
 ![Session Form](docs/images/session_form_rev1.gif)

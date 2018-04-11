@@ -3,12 +3,11 @@ import thunk from 'redux-thunk';
 import rootReducer from '../reducers/root_reducer';
 import logger from 'redux-logger';
 
-
 const middlewares = [thunk];
 
 if (process.env.NODE_ENV === 'development') {
   const { logger } = require('redux-logger');
-  
+
   middlewares.push(logger);
 }
 
@@ -21,11 +20,3 @@ const configureStore = (preloadedState = {}) => (
 );
 
 export default configureStore;
-
-
-// getState(); // should return initial app state
-//
-// const getSuccess = currentUser => dispatch(receiveCurrentUser(currentUser));
-// fetchAllEvents().then(getSuccess);
-//
-// getState();

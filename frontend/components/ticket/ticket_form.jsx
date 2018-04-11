@@ -33,11 +33,6 @@ class TicketForm extends React.Component {
       })
   }
 
-  // componentWillMount() {
-  //   this.props.requestEvent(this.props.match.params.eventId);
-  //   console.log("componentWillMount: ", this.props);
-  // }
-
   render() {
     const { quantity } = this.state;
     const { event, dateTime } = this.props;
